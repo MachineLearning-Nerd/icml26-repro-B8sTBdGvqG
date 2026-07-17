@@ -28,6 +28,7 @@ passed again, and the repository secret/path scan was clean.  The public GitHub
 repository is https://github.com/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG
 at commit `0c8de38`.
 
-This paper is `publication_queued`.  Publish its prepared logbook to
-`DineshAI/B8sTBdGvqG` after the Hugging Face Space creation quota resets, then
-verify the Space, tags, and artifact bucket before moving it to `under_verdict`.
+Published successfully to https://huggingface.co/spaces/DineshAI/B8sTBdGvqG.
+The Space is public and carries the required `icml2026-repro` and
+`paper-B8sTBdGvqG` tags; Trackio uploaded the full synthetic artifacts. This
+paper is now `under_verdict`.
