@@ -1,0 +1,7 @@
+.venv/
+upstream/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+outputs/*.tmp
