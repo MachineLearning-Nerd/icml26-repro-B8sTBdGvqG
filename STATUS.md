@@ -22,6 +22,12 @@ Full source-scale synthetic reproduction and independent re-aggregation passed.
 
 ## Next action
 
-Create the Trackio logbook and capture the verified full command with clean
-relative paths; then run the publication gate (including a secret scan).  Do
-not publish until the Hugging Face Space quota resets.
+Publication gate passed: the full source command was captured in Trackio with
+relative paths, the independent verifier and five source-equivalence tests
+passed again, and the repository secret/path scan was clean.  The public GitHub
+repository is https://github.com/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG
+at commit `0c8de38`.
+
+This paper is `publication_queued`.  Publish its prepared logbook to
+`DineshAI/B8sTBdGvqG` after the Hugging Face Space creation quota resets, then
+verify the Space, tags, and artifact bucket before moving it to `under_verdict`.
