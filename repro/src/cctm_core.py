@@ -202,6 +202,11 @@ def normal_trial(
     shift: float = 0.0,
     delay: int = 0,
     ci_delta: float = 0.1,
+    warmup: int = 0,
+    D: float = 0.5,
+    clip_C: float = 0.1,
+    smooth: float = 1e-6,
+    test_alpha: float = 0.05,
     include_standard: bool = True,
 ) -> tuple[MartingaleRun, MartingaleRun | None]:
     """Author-compatible normal-stream generator used by the main protocol."""
@@ -211,7 +216,27 @@ def normal_trial(
     calibration = rng.normal(0.0, 1.0, calibration_size)
     stream = rng.normal(0.0, 1.0, test_size)
     stream[delay:] += shift
-    conditional = run_conditional_ctm(calibration, stream, ci_delta=ci_delta)
-    standard = run_standard_ctm(calibration, stream, rng=rng) if include_standard else None
+    conditional = run_conditional_ctm(
+        calibration,
+        stream,
+        ci_delta=ci_delta,
+        D=D,
+        clip_C=clip_C,
+        smooth=smooth,
+        warmup=warmup,
+        test_alpha=test_alpha,
+    )
+    standard = (
+        run_standard_ctm(
+            calibration,
+            stream,
+            rng=rng,
+            D=D,
+            clip_C=clip_C,
+            warmup=warmup,
+            test_alpha=test_alpha,
+        )
+        if include_standard
+        else None
+    )
     return conditional, standard
-

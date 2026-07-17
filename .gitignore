@@ -1,7 +1,9 @@
 .venv/
 upstream/
+.trackio/
 __pycache__/
 .pytest_cache/
 *.py[cod]
 .env
 outputs/*.tmp
+outputs/quick_*.json

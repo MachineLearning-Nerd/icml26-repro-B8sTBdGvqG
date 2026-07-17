@@ -57,6 +57,44 @@ def test_growing_reference_transitions_match_pinned_source():
     assert reproduced.first_crossing == expected_crossing
 
 
+def test_warmup_transitions_match_pinned_source():
+    generator = np.random.RandomState(29)
+    calibration = generator.normal(size=31)
+    stream = generator.normal(size=83)
+    rng_state = generator.get_state()
+    warmup = 9
+
+    source_conditional = CondCTM(0.1, calibration, D=0.5, C=0.1, smooth_param=1e-6)
+    for value in stream[:warmup]:
+        source_conditional.optim.step(source_conditional.cal_ecdf(value), smooth_param=1e-6)
+    source_bets = [source_conditional.step(value)[0] for value in stream[warmup:]]
+    reproduced_conditional = run_conditional_ctm(calibration, stream, warmup=warmup)
+    np.testing.assert_allclose(
+        reproduced_conditional.wealth[warmup:], np.cumprod(source_bets), rtol=1e-13, atol=1e-13
+    )
+
+    original_global_state = np.random.get_state()
+    try:
+        np.random.set_state(rng_state)
+        source_standard = ConformalTest(alpha=0.05, D=0.5)
+        source_crossing, source_wealth = source_standard.test_exchangeability(
+            np.concatenate((calibration, stream)),
+            cal_set_size=len(calibration),
+            C=0.1,
+            warmup_samples=warmup,
+        )
+    finally:
+        np.random.set_state(original_global_state)
+    replay_rng = np.random.RandomState()
+    replay_rng.set_state(rng_state)
+    reproduced_standard = run_standard_ctm(calibration, stream, rng=replay_rng, warmup=warmup)
+    np.testing.assert_allclose(
+        reproduced_standard.wealth, source_wealth[len(calibration):], rtol=1e-13, atol=1e-13
+    )
+    expected_crossing = -1 if source_crossing == -1 else source_crossing - len(calibration)
+    assert reproduced_standard.first_crossing == expected_crossing
+
+
 def test_shift_has_earlier_conditional_crossing_in_source_primary_setting_prefix():
     crossings = []
     for seed in range(12):
@@ -69,4 +107,3 @@ def test_shift_has_earlier_conditional_crossing_in_source_primary_setting_prefix
     standard_crossings = [b for _, b in crossings if b >= 0]
     assert conditional_crossings and standard_crossings
     assert float(np.median(conditional_crossings)) < float(np.median(standard_crossings))
-

@@ -28,3 +28,31 @@ authors' exact arrays become available.
 
 See [STATUS.md](STATUS.md) and [the primary-source audit](docs/PRIMARY_SOURCE_AUDIT.md).
 
+## Full synthetic result
+
+The complete released synthetic notebook protocol was run with 100 repetitions
+per source configuration (Figures 1, 2, 3, 5, and 6).  The saved artifact and
+an implementation-independent re-aggregation are in
+[`outputs/full_synthetic_summary.json`](outputs/full_synthetic_summary.json) and
+[`outputs/independent_verification.json`](outputs/independent_verification.json).
+
+- C1: in the primary `N(0,1) -> N(1,1)` setting, both methods detected all
+  100 shifts, while conditional CTM's median crossing was 21 observations
+  versus 31 for the growing-reference CTM.  Every bias, delayed-shift, and
+  gradual-drift source sweep also had a lower conditional median delay.  The
+  fixed-reference mechanism control retained a late-stream mean ECDF value of
+  0.7434 versus 0.5551 for the growing-reference p-values.
+- C2: conditional CTM's finite-sample false-positive rate was 0–1% across all
+  11 released null configurations (nominal level 5%), whereas the deliberately
+  uncorrected fixed-reference control reached 88% with no calibration data.
+  Conditional CTM detected every mean-shift stream in each 100-run increasing-
+  horizon check.  These numerical checks support the empirical behavior; they
+  do not replace the paper's asymptotic proof.
+
+Run the full reproduction from this directory with:
+
+```bash
+source .venv/bin/activate
+python repro/run_full_synthetic.py --output outputs/full_synthetic_summary.json
+python repro/verify_full_synthetic.py --input outputs/full_synthetic_summary.json --output outputs/independent_verification.json
+```
