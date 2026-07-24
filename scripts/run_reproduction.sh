@@ -35,6 +35,11 @@ uv run python repro/verify_claim2_counterexample.py \
   --artifact-dir .openresearch/artifacts/claim_2
 uv run python repro/independent_check_claim2.py \
   --artifact-dir .openresearch/artifacts/claim_2
+uv run python repro/verify_frozen_claim2.py \
+  --artifact-dir .openresearch/artifacts/claim_2
+printf 'CLAIM2_TRAJECTORY_CSV_BEGIN\n'
+cat .openresearch/artifacts/claim_2/trajectory.csv
+printf 'CLAIM2_TRAJECTORY_CSV_END\n'
 claim2_elapsed_seconds="$((SECONDS - claim2_started_seconds))"
 uv run python repro/write_run_metadata.py \
   --output .openresearch/artifacts/claim_2/run_metadata.json \

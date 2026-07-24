@@ -1,0 +1,16 @@
+{
+  "source_run_id": "37ba4602-498e-4fe7-a42e-64e907f368fc",
+  "fixed_command": "uv sync --frozen && bash scripts/run_reproduction.sh",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "expected_core_count": 4,
+  "actual_cpu_allocation": {
+    "os_cpu_count": 64,
+    "affinity_count": 64
+  },
+  "job_wall_time": "7m35s",
+  "cumulative_baseline_runtime_seconds": 414,
+  "claim_2_runtime_seconds": 3,
+  "python": "3.12.12",
+  "git_sha": "491e1fe27e4bd6785bd621b0a94d9069c6bcf1c8"
+}

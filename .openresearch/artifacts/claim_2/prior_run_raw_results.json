@@ -1,0 +1,48 @@
+{
+  "source_run_id": "37ba4602-498e-4fe7-a42e-64e907f368fc",
+  "source_git_sha": "491e1fe27e4bd6785bd621b0a94d9069c6bcf1c8",
+  "claim_id": 2,
+  "verdict": "FALSIFIED",
+  "distribution": {
+    "name": "Dirac point mass at 0",
+    "reference_iid_from_P": true,
+    "stream_iid_from_P": true,
+    "within_stated_any_P_domain": true
+  },
+  "parameters": {
+    "alpha": 0.05,
+    "delta": 0.1,
+    "reference_size": 2000,
+    "horizon": 64,
+    "threshold": 20.0,
+    "dkw_epsilon": 0.027366641525559867,
+    "equation8_eta": 0.5,
+    "equation8_k": 1e-06,
+    "released_D": 0.5,
+    "released_C": 0.1
+  },
+  "assumption_audit": {
+    "supremum_ecdf_error": 0.0,
+    "equation6_holds": true,
+    "reference_good_event_probability": 1.0,
+    "ordinary_pit_value": 1.0,
+    "proof_claimed_pit_mean": 0.5,
+    "actual_pit_mean": 1.0
+  },
+  "equation8": {
+    "first_crossing": 9,
+    "final_wealth": 19554270750.41012,
+    "conditional_false_reject_probability": 1.0
+  },
+  "released_algorithm": {
+    "first_crossing": 10,
+    "final_wealth": 13503318515.96557,
+    "conditional_false_reject_probability": 1.0
+  },
+  "theorem_comparison": {
+    "required_inner_probability_at_most": 0.05,
+    "actual_inner_probability": 1.0,
+    "required_outer_probability_at_least": 0.9,
+    "actual_outer_probability": 0.0
+  }
+}
