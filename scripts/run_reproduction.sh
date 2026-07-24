@@ -27,3 +27,25 @@ printf 'BASELINE_VERDICT=VERIFIED\n'
 printf 'BASELINE_RUNTIME_SECONDS=%s\n' "${elapsed_seconds}"
 printf 'BASELINE_EXPECTED_CORES=4\n'
 printf 'BASELINE_SELECTED_FLAVOR=cpu-upgrade\n'
+
+claim2_started_seconds="${SECONDS}"
+uv run python repro/run_claim2_counterexample.py \
+  --output-dir .openresearch/artifacts/claim_2
+uv run python repro/verify_claim2_counterexample.py \
+  --artifact-dir .openresearch/artifacts/claim_2
+uv run python repro/independent_check_claim2.py \
+  --artifact-dir .openresearch/artifacts/claim_2
+claim2_elapsed_seconds="$((SECONDS - claim2_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_2/run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim2_elapsed_seconds}" \
+  --expected-cores 4 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+
+printf 'CLAIM2_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_2/run_metadata.json
+printf '\n'
+printf 'CLAIM2_VERDICT=FALSIFIED\n'
+printf 'CLAIM2_RUNTIME_SECONDS=%s\n' "${claim2_elapsed_seconds}"
