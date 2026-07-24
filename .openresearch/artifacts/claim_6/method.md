@@ -16,12 +16,27 @@ vendored runner, and current public dataset inventories. The executable audit:
 This route can establish whether the released evidence is reproducible. It
 cannot verify or falsify the numerical ImageNet-C claim.
 
+## Route 2 — pinned source-figure digitization
+
+The second route downloads the pinned arXiv source archive with an explicit
+User-Agent, requires the archive and both Figure 4 PNG hashes to match, and
+extracts exact-color curve and marker pixels. It checks three non-circular
+properties:
+
+1. conditional CTM crosses five fixed power levels earlier than standard CTM
+   for each of `n=500` and `n=4000`;
+2. the conditional crossing moves earlier from `n=100` to `500` to `4000`
+   at four fixed power levels;
+3. all six Blur/Weather ratio markers at `n=500,1000,4000` lie above one.
+
+An independent checker reconstructs both axis transforms from raw CSV columns
+without importing the digitizer or author code. Reversing method labels and
+inverting the log-y calibration are required to contradict the result. This
+route verifies what the pinned published figure encodes, not whether its raw
+benchmark data regenerate, so its Claim 6 verdict remains `BLOCKED`.
+
 ## Planned distinct routes
 
-- Route 2: independently digitize the two pinned Figure 4 source images,
-  including axis calibration and deliberately wrong color/axis controls. This
-  checks what the published figure actually encodes, not whether the benchmark
-  regenerates.
 - Route 3: reconstruct clean and severity-5 entropy arrays from pinned public
   raw-image revisions and the pinned `timm` checkpoint, after a CPU throughput
   calibration unrelated to the claimed detection formula.

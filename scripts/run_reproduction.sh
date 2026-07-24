@@ -101,3 +101,33 @@ printf '\n'
 printf 'CLAIM6_ROUTE1_AUDIT=PASSED\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 printf 'CLAIM6_ROUTE1_RUNTIME_SECONDS=%s\n' "${claim6_route1_elapsed_seconds}"
+
+claim6_route2_started_seconds="${SECONDS}"
+uv run python repro/digitize_claim6_figure.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/independent_check_claim6_figure.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/verify_claim6_route2.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/check_claim6_route2_fail_closed.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+printf 'CLAIM6_ROUTE2_POWER_CSV_BEGIN\n'
+cat .openresearch/artifacts/claim_6/route2_power_crossings.csv
+printf 'CLAIM6_ROUTE2_POWER_CSV_END\n'
+printf 'CLAIM6_ROUTE2_RATIO_CSV_BEGIN\n'
+cat .openresearch/artifacts/claim_6/route2_ratio_points.csv
+printf 'CLAIM6_ROUTE2_RATIO_CSV_END\n'
+claim6_route2_elapsed_seconds="$((SECONDS - claim6_route2_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_6/route2_run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim6_route2_elapsed_seconds}" \
+  --expected-cores 1 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+printf 'CLAIM6_ROUTE2_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route2_run_metadata.json
+printf '\n'
+printf 'CLAIM6_ROUTE2_AUDIT=PASSED\n'
+printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
+printf 'CLAIM6_ROUTE2_RUNTIME_SECONDS=%s\n' "${claim6_route2_elapsed_seconds}"
