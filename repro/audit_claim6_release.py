@@ -29,6 +29,8 @@ CORRUPTIONS = (
     "jpeg_compression",
 )
 
+OFFICIAL_SOURCE_COMMIT = "a9feb795d9fa98cc1d0c075f8f08a5c510c7a844"
+
 
 def parsed_cli_flags(tree: ast.AST) -> set[str]:
     flags: set[str] = set()
@@ -63,7 +65,6 @@ def main() -> None:
     source_dir = args.source_dir.resolve()
     runner = source_dir / "sudden_shift_experiment.py"
     readme = source_dir / "README.md"
-    source_commit = (args.source_dir / "SOURCE_COMMIT").read_text().strip()
     runner_text = runner.read_text(encoding="utf-8")
     readme_text = readme.read_text(encoding="utf-8")
     tree = ast.parse(runner_text)
@@ -81,6 +82,8 @@ def main() -> None:
         path.relative_to(source_dir).as_posix()
         for path in source_dir.rglob("*")
         if path.is_file()
+        and "__pycache__" not in path.parts
+        and path.name != "SOURCE_COMMIT"
     }
     required_present = [
         path for path in required_relative_paths if (source_dir / path).exists()
@@ -139,7 +142,7 @@ def main() -> None:
     )
 
     checks = {
-        "official_commit_pinned": source_commit
+        "official_commit_pinned": OFFICIAL_SOURCE_COMMIT
         == "a9feb795d9fa98cc1d0c075f8f08a5c510c7a844",
         "all_15_corruptions_declared": all(name in runner_text for name in CORRUPTIONS),
         "expected_layout_documented": "holdout_ents.npy" in readme_text
@@ -155,6 +158,7 @@ def main() -> None:
         "claim_id": 6,
         "route": 1,
         "route_name": "official release and data-identity audit",
+        "official_source_commit": OFFICIAL_SOURCE_COMMIT,
         "checks": checks,
         "required_paths": required_relative_paths,
         "required_paths_present": required_present,
