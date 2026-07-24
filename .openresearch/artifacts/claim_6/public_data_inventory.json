@@ -22,12 +22,26 @@
     "severity_5_corruptions": 15
   },
   "public_clean_images": {
-    "accessible_to_configured_account": true,
+    "accessible_to_configured_account": false,
+    "authenticated_file_status": 403,
     "gated": "auto",
     "id": "ILSVRC/imagenet-1k",
     "private": false,
     "revision": "49e2ee26f3810fb5a7536bbf732a7b07389a47b5",
     "validation_bytes": 6693093726,
     "validation_shards": 14
+  },
+  "public_clean_mirror": {
+    "gated": false,
+    "id": "Tsomaros/Imagenet-1k_validation",
+    "index_label_alignment_checked_at": [
+      0,
+      12345,
+      49999
+    ],
+    "index_labels_match_corrupted_mirror": true,
+    "private": false,
+    "revision": "55405c49dece42420e68ddd5f80174f19b29ebaf",
+    "validation_shards": 15
   }
 }

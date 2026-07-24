@@ -3,6 +3,8 @@
 - The official entropy arrays and Figure 4 raw tables are absent.
 - The author-specific clean/corrupted 12,500/37,500 index split is not
   identified in the paper or release.
+- The configured account cannot read the gated official ImageNet validation
+  shards. A full reconstruction must disclose use of a pinned ungated mirror.
 - The release's sudden-shift CLI has a missing `--gamma` argument.
 - Source-image digitization is evidence about the plotted report, not an
   independent benchmark reproduction.

@@ -64,11 +64,16 @@ The raw-image inputs are potentially reconstructable:
 - `WNJXYK/TTA-ImageNet-C`, revision
   `bb0fa9db6d8f94ef279a1f6bbb8024736d542fd7`, is public and ungated;
 - `ILSVRC/imagenet-1k`, revision
-  `49e2ee26f3810fb5a7536bbf732a7b07389a47b5`, is gated, and the configured
-  `DineshAI` account can enumerate its 14 validation shards (6,693,093,726
-  bytes).
+  `49e2ee26f3810fb5a7536bbf732a7b07389a47b5`, is gated. The configured
+  `DineshAI` account can enumerate its 14 validation-shard names but receives
+  HTTP 403 when requesting a shard;
+- `Tsomaros/Imagenet-1k_validation`, revision
+  `55405c49dece42420e68ddd5f80174f19b29ebaf`, is an ungated third-party clean
+  validation mirror. Labels at indexes 0, 12,345, and 49,999 match the public
+  corrupted mirror at the same indexes.
 
 These sources make a faithful reconstruction plausible, but they do not
 identify the authors' unpublished 12,500/37,500 split. A compute-calibrated
-full reconstruction is therefore a separate route rather than evidence from
-this release audit.
+full reconstruction would also substitute a pinned third-party clean mirror
+for the gated official dataset. It is therefore a separate route rather than
+evidence from this release audit.

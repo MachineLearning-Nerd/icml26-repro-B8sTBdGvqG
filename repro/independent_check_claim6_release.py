@@ -66,6 +66,16 @@ def main() -> None:
             "public_corrupted_images"
         ]["revision"]
         != inventory["public_clean_images"]["revision"],
+        "official_clean_access_denied": not inventory["public_clean_images"][
+            "accessible_to_configured_account"
+        ]
+        and inventory["public_clean_images"]["authenticated_file_status"] == 403,
+        "ungated_clean_mirror_identified": not inventory["public_clean_mirror"][
+            "gated"
+        ]
+        and inventory["public_clean_mirror"][
+            "index_labels_match_corrupted_mirror"
+        ],
     }
     passed = all(checks.values())
     output = {
