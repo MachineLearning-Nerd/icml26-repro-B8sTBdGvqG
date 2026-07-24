@@ -141,7 +141,7 @@ printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_EXPECTED_CORES=64\n'
 printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_ACTUAL_CPUS=64\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 
-claim6_route3_smoke_started_seconds="${SECONDS}"
+claim6_route3_group_started_seconds="${SECONDS}"
 uv run python repro/run_claim6_group.py \
   --config repro/claim6_group_config.json \
   --artifact-dir .openresearch/artifacts/claim_6
@@ -151,21 +151,39 @@ uv run python repro/verify_claim6_group.py \
   --artifact-dir .openresearch/artifacts/claim_6
 uv run python repro/check_claim6_group_fail_closed.py \
   --artifact-dir .openresearch/artifacts/claim_6
-printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_BEGIN\n'
-cat .openresearch/artifacts/claim_6/route3_smoke_trials.csv
-printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_END\n'
-claim6_route3_smoke_elapsed_seconds="$((SECONDS - claim6_route3_smoke_started_seconds))"
+claim6_route3_mode="$(uv run python -c 'import json; print(json.load(open("repro/claim6_group_config.json"))["mode"])')"
+if [[ "${claim6_route3_mode}" == "full-group" ]]; then
+  printf 'CLAIM6_ROUTE3_GROUP_TRIALS_CSV_BEGIN\n'
+  cat .openresearch/artifacts/claim_6/route3_group_trials.csv
+  printf 'CLAIM6_ROUTE3_GROUP_TRIALS_CSV_END\n'
+  printf 'CLAIM6_ROUTE3_GROUP_AGGREGATES_CSV_BEGIN\n'
+  cat .openresearch/artifacts/claim_6/route3_group_aggregates.csv
+  printf 'CLAIM6_ROUTE3_GROUP_AGGREGATES_CSV_END\n'
+  printf 'CLAIM6_ROUTE3_GROUP_POWER_CSV_BEGIN\n'
+  cat .openresearch/artifacts/claim_6/route3_group_power.csv
+  printf 'CLAIM6_ROUTE3_GROUP_POWER_CSV_END\n'
+else
+  printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_BEGIN\n'
+  cat .openresearch/artifacts/claim_6/route3_smoke_trials.csv
+  printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_END\n'
+fi
+claim6_route3_group_elapsed_seconds="$((SECONDS - claim6_route3_group_started_seconds))"
 uv run python repro/write_run_metadata.py \
-  --output .openresearch/artifacts/claim_6/route3_smoke_run_metadata.json \
+  --output .openresearch/artifacts/claim_6/route3_group_run_metadata.json \
   --started-at "${started_at}" \
-  --runtime-seconds "${claim6_route3_smoke_elapsed_seconds}" \
+  --runtime-seconds "${claim6_route3_group_elapsed_seconds}" \
   --expected-cores 8 \
   --selected-backend hf \
   --selected-flavor cpu-upgrade
-printf 'CLAIM6_ROUTE3_SMOKE_RUN_METADATA='
-tr -d '\n' < .openresearch/artifacts/claim_6/route3_smoke_run_metadata.json
+printf 'CLAIM6_ROUTE3_GROUP_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route3_group_run_metadata.json
 printf '\n'
-printf 'CLAIM6_ROUTE3_SMOKE_PIPELINE=PASSED\n'
-printf 'CLAIM6_ROUTE3_SMOKE_CLAIM_EVIDENCE=INELIGIBLE\n'
+printf 'CLAIM6_ROUTE3_MODE=%s\n' "${claim6_route3_mode}"
+printf 'CLAIM6_ROUTE3_COMPONENT=PASSED\n'
+if [[ "${claim6_route3_mode}" == "smoke" ]]; then
+  printf 'CLAIM6_ROUTE3_SMOKE_CLAIM_EVIDENCE=INELIGIBLE\n'
+else
+  printf 'CLAIM6_ROUTE3_FULL_GROUP_REQUIRES_CONSOLIDATION=TRUE\n'
+fi
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
-printf 'CLAIM6_ROUTE3_SMOKE_RUNTIME_SECONDS=%s\n' "${claim6_route3_smoke_elapsed_seconds}"
+printf 'CLAIM6_ROUTE3_GROUP_RUNTIME_SECONDS=%s\n' "${claim6_route3_group_elapsed_seconds}"
