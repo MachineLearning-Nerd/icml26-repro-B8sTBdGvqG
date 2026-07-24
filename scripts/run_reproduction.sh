@@ -131,3 +131,27 @@ printf '\n'
 printf 'CLAIM6_ROUTE2_AUDIT=PASSED\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 printf 'CLAIM6_ROUTE2_RUNTIME_SECONDS=%s\n' "${claim6_route2_elapsed_seconds}"
+
+claim6_route3_profile_started_seconds="${SECONDS}"
+uv run python repro/profile_claim6_cpu.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/independent_check_claim6_cpu_profile.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/verify_claim6_cpu_profile.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/check_claim6_profile_fail_closed.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+claim6_route3_profile_elapsed_seconds="$((SECONDS - claim6_route3_profile_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_6/route3_profile_run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim6_route3_profile_elapsed_seconds}" \
+  --expected-cores 64 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+printf 'CLAIM6_ROUTE3_PROFILE_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route3_profile_run_metadata.json
+printf '\n'
+printf 'CLAIM6_ROUTE3_PROFILE=PASSED\n'
+printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
+printf 'CLAIM6_ROUTE3_PROFILE_RUNTIME_SECONDS=%s\n' "${claim6_route3_profile_elapsed_seconds}"

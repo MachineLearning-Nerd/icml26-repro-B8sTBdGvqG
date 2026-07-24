@@ -23,3 +23,12 @@ subprocess test that removes one raw ratio row and requires the verifier to
 exit nonzero. The verifier also exits nonzero on a source/image hash mismatch,
 a missing curve/marker, a failed plotted comparison, a control that does not
 expose the wrong interpretation, or an overclaim beyond `BLOCKED`.
+
+Route 3's calibration stage emits `route3_input_manifest.json`,
+`route3_preprocess_profile.csv`, `route3_inference_profile.csv`,
+`route3_profile_controls.json`, `route3_cpu_profile.json`, and
+`route3_profile_independent_checker.json`. The current verifier is
+`route3_profile_verifier_output.json`, and
+`route3_profile_fail_closed.json` must show that removing one sweep row makes
+the independent checker exit nonzero. This stage selects compute from measured
+sweeps and remains `BLOCKED`; it is not numerical Claim 6 evidence.

@@ -37,9 +37,17 @@ benchmark data regenerate, so its Claim 6 verdict remains `BLOCKED`.
 
 ## Planned distinct routes
 
-- Route 3: reconstruct clean and severity-5 entropy arrays from pinned public
-  raw-image revisions and the pinned `timm` checkpoint, after a CPU throughput
-  calibration unrelated to the claimed detection formula.
+- Route 3 begins with a CPU calibration over 192 images selected independently
+  of the claim formula. It sweeps 1/8/16 preprocessing workers and all
+  combinations of 8/16/32/64 inference threads with batch sizes 8/16/32,
+  using three hash-verified Parquet files and the hash-verified default
+  `timm` checkpoint. An independent checker recomputes the best setting and
+  full 575,000-image projection. Only then will the full benchmark be run.
+- The full Route 3 reconstruction will use a fixed, claim-independent
+  12,500/37,500 partition of aligned clean/corrupted validation indexes,
+  all 15 severity-5 corruptions, 10 seeds, and reference sizes at and above
+  500. It will use the source-equivalent optimized CTM recurrences already
+  regression-tested against the released implementation.
 - Route 4, required if confidence remains LOW: seek an assumption-matched
   falsification using the complete reconstructed benchmark; missing data,
   runner crashes, and reduced subsets are explicitly ineligible.

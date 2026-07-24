@@ -77,3 +77,11 @@ identify the authors' unpublished 12,500/37,500 split. A compute-calibrated
 full reconstruction would also substitute a pinned third-party clean mirror
 for the gated official dataset. It is therefore a separate route rather than
 evidence from this release audit.
+
+The primary ImageNet-C paper (Hendrycks and Dietterich, arXiv:1903.12261) was
+also consulted through the alphaXiv corpus on 2026-07-24. It confirms that the
+benchmark applies 15 corruptions—Noise (3), Blur (4), Weather (3), and Digital
+(5)—at five severities to ImageNet validation images, and that the benchmark is
+for evaluation rather than training. This supports the public mirror's
+benchmark identity; it does not recover the conditional-CTM authors' private
+index split.
