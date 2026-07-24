@@ -1,12 +1,10 @@
 {
   "clean_pool_size": 12500,
   "corruptions": [
-    "gaussian_noise",
-    "shot_noise",
-    "impulse_noise"
+    "shot_noise"
   ],
   "group": "Noise",
-  "mode": "full-group",
+  "mode": "full-corruption",
   "reference_sizes": [
     100,
     250,

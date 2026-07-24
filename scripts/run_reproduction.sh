@@ -152,7 +152,7 @@ uv run python repro/verify_claim6_group.py \
 uv run python repro/check_claim6_group_fail_closed.py \
   --artifact-dir .openresearch/artifacts/claim_6
 claim6_route3_mode="$(uv run python -c 'import json; print(json.load(open("repro/claim6_group_config.json"))["mode"])')"
-if [[ "${claim6_route3_mode}" == "full-group" ]]; then
+if [[ "${claim6_route3_mode}" == "full-group" || "${claim6_route3_mode}" == "full-corruption" ]]; then
   printf 'CLAIM6_ROUTE3_GROUP_TRIALS_CSV_BEGIN\n'
   cat .openresearch/artifacts/claim_6/route3_group_trials.csv
   printf 'CLAIM6_ROUTE3_GROUP_TRIALS_CSV_END\n'
@@ -183,7 +183,7 @@ printf 'CLAIM6_ROUTE3_COMPONENT=PASSED\n'
 if [[ "${claim6_route3_mode}" == "smoke" ]]; then
   printf 'CLAIM6_ROUTE3_SMOKE_CLAIM_EVIDENCE=INELIGIBLE\n'
 else
-  printf 'CLAIM6_ROUTE3_FULL_GROUP_REQUIRES_CONSOLIDATION=TRUE\n'
+  printf 'CLAIM6_ROUTE3_FULL_COMPONENT_REQUIRES_CONSOLIDATION=TRUE\n'
 fi
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 printf 'CLAIM6_ROUTE3_GROUP_RUNTIME_SECONDS=%s\n' "${claim6_route3_group_elapsed_seconds}"
