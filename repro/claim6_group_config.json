@@ -1,17 +1,31 @@
 {
+  "clean_pool_size": 12500,
   "corruptions": [
-    "gaussian_noise"
+    "gaussian_noise",
+    "shot_noise",
+    "impulse_noise"
   ],
   "group": "Noise",
-  "mode": "smoke",
+  "mode": "full-group",
   "reference_sizes": [
-    32,
-    64
+    100,
+    250,
+    500,
+    1000,
+    4000
   ],
   "seeds": [
     0,
-    1
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
   ],
-  "smoke_clean_images": 128,
-  "smoke_corruption_images": 256
+  "split_protocol": "numpy.default_rng(seed) permutation; first 12500 aligned indexes are clean reference pool and remaining 37500 are corruption stream",
+  "stream_size": 37500
 }
