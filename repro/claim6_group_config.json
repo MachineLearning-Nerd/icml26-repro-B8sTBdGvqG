@@ -1,12 +1,10 @@
 {
   "clean_pool_size": 12500,
   "corruptions": [
-    "snow",
-    "frost",
-    "fog"
+    "frost"
   ],
   "group": "Weather",
-  "mode": "full-group",
+  "mode": "full-corruption",
   "reference_sizes": [
     100,
     250,
