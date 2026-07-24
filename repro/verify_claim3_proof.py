@@ -59,14 +59,18 @@ def main() -> None:
             "interior_benchmark_growth",
             "If d <= c M2 and M2 <= 1/c^2, q=d/(2M2) is feasible and growth >= c^2 d^2/4.",
             sp.simplify(interior_growth - d**2 / (4 * m2)) == 0
-            and sp.factor(interior_margin)
-            == d**2 * (-c**2 * m2 + 1) / (4 * m2),
+            and sp.simplify(
+                interior_margin
+                - d**2 * (-c**2 * m2 + 1) / (4 * m2)
+            )
+            == 0,
             "Exact symbolic completion of the square; remaining factor is nonnegative under M2<=1/c^2.",
         ),
         obligation(
             "boundary_benchmark_growth",
             "If d > c M2, q=c/2 is feasible and growth > cd/4 >= c^2d^2/4.",
-            boundary_vs_linear == c * (d - c * m2) / 4,
+            sp.simplify(boundary_vs_linear - c * (d - c * m2) / 4)
+            == 0,
             "Exact symbolic factorization plus cd<=1 from |Z|<=1/c.",
         ),
         obligation(
