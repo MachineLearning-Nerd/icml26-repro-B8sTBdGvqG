@@ -1,5 +1,7 @@
 .venv/
-upstream/
+upstream/*
+!upstream/README.md
+!upstream/*.py
 .trackio/
 __pycache__/
 .pytest_cache/

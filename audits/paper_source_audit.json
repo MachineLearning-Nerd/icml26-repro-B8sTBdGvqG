@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2602.13848",
+  "retrieval": {
+    "retrieved_at_utc": "2026-07-24T15:36:32Z",
+    "sha256": "ef9032cb84ff680f5b31cd19e67b2991839e669f7ce0f8d2cbaabd1120d273a3",
+    "url": "https://ar5iv.labs.arxiv.org/html/2602.13848",
+    "user_agent": "OpenResearch-Reproduction/1.0 (research audit; contact via repository)"
+  },
+  "source_anchors": {
+    "algorithm_1": "alg1",
+    "equation_6": "S3.E6",
+    "equation_8": "S3.E8",
+    "figure_4": "S4.F4",
+    "figure_4_reference_size_statement": "S4.SS2.p2",
+    "theorem_3_1": "S3.Thmtheorem1",
+    "theorem_3_1_proof": "A5.SS1",
+    "theorem_3_3": "S3.Thmtheorem3",
+    "theorem_3_3_proof": "A5.SS5"
+  },
+  "exact_quantifiers": {
+    "theorem_3_1": "For any null distribution P, confidence bounds satisfying Eq. 6 at delta in (0,1), and any alpha in (0,1), the conditional false-rejection probability is at most alpha with probability at least 1-delta over D0.",
+    "theorem_3_3": "Under a fixed alternative Xt iid~Q != P for all t>=1, fixed D0, sufficiently small k, and Delta_k>0, Algorithm 1 has asymptotic power one; as k->0 its expected stopping time is O(Delta_0^-2 log(1/(alpha Delta_0)) + Delta_0^-2).",
+    "figure_4": "At severity 5 over all 15 ImageNet-C corruptions and n in {100,500,4000}, conditional CTM outperforms standard CTM for reasonable n>=500; standard/conditional median rejection-time ratios tend to exceed 1 for larger-shift Blur and Weather groups."
+  }
+}

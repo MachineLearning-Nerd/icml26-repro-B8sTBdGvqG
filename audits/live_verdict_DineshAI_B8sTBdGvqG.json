@@ -1,0 +1,19 @@
+{
+  "dataset_sha256": "db76a81908077327e128bcf3a74507cb6a36d7a2d540863c1dd346e0b9f76fda",
+  "dataset_url": "https://huggingface.co/datasets/ICML-2026-agent-repro/verdicts/resolve/main/verdicts.json",
+  "filter": {
+    "field": "space_id",
+    "value": "DineshAI/B8sTBdGvqG"
+  },
+  "judge_head": "14b47abfde98661247d9397ef36bb3a45198d2fb",
+  "judged_at": "2026-07-23T13:48:02+00:00",
+  "score": "6/12",
+  "verdicts": {
+    "claim_1": "VERIFIED",
+    "claim_2": "INCONCLUSIVE",
+    "claim_3": "INCONCLUSIVE",
+    "claim_4": "VERIFIED",
+    "claim_5": "VERIFIED",
+    "claim_6": "INCONCLUSIVE"
+  }
+}
