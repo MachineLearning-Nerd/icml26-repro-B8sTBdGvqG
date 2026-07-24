@@ -53,7 +53,9 @@ def run_full_check(artifact_dir: Path) -> None:
     power = csv_rows(artifact_dir / "route3_group_power.csv")
     inference = csv_rows(artifact_dir / "route3_group_inference.csv")
     group = manifest["config"]["group"]
-    corruptions = GROUPS.get(group, [])
+    config = manifest["config"]
+    corruptions = config.get("corruptions", [])
+    canonical_group = GROUPS.get(group, [])
 
     observed_grid = {
         (
@@ -236,7 +238,14 @@ def run_full_check(artifact_dir: Path) -> None:
                 )
             )
 
-    config = manifest["config"]
+    canonical_scope = (
+        config["mode"] == "full-group"
+        and corruptions == canonical_group
+    ) or (
+        config["mode"] == "full-corruption"
+        and len(corruptions) == 1
+        and corruptions[0] in canonical_group
+    )
     checks = {
         "checker_is_independent": True,
         "pinned_revisions_reconstructed": (
@@ -245,9 +254,8 @@ def run_full_check(artifact_dir: Path) -> None:
             and manifest["corruption"]["revision"]
             == PINNED_REVISIONS["corruption"]
         ),
-        "canonical_group_reconstructed": (
-            corruptions
-            and config["corruptions"] == corruptions
+        "canonical_scope_reconstructed": (
+            canonical_scope
             and config["reference_sizes"] == FULL_REFERENCE_SIZES
             and config["seeds"] == FULL_SEEDS
             and config["clean_pool_size"] == 12_500
@@ -287,7 +295,7 @@ def run_full_check(artifact_dir: Path) -> None:
         ),
         "result_checks_pass": all(result["checks"].values()),
         "component_cannot_decide_full_claim": (
-            manifest["mode"] == "full-group"
+            manifest["mode"] in {"full-group", "full-corruption"}
             and result["claim_verdict"] == "BLOCKED"
         ),
     }
@@ -295,7 +303,11 @@ def run_full_check(artifact_dir: Path) -> None:
     output = {
         "claim_id": 6,
         "route": 3,
-        "stage": f"independent full-group check: {group}",
+        "stage": (
+            f"independent full-group check: {group}"
+            if config["mode"] == "full-group"
+            else "independent full-corruption check: " + corruptions[0]
+        ),
         "imports_runner_or_author_code": False,
         "checks": checks,
         "passed": passed,
