@@ -239,10 +239,22 @@ def validate_smoke_config(config: dict[str, Any]) -> None:
 
 def validate_full_config(config: dict[str, Any]) -> None:
     group = config.get("group")
+    mode = config.get("mode")
+    corruptions = config.get("corruptions")
+    canonical_corruptions = GROUPS.get(group)
+    valid_scope = (
+        mode == "full-group" and corruptions == canonical_corruptions
+    ) or (
+        mode == "full-corruption"
+        and isinstance(corruptions, list)
+        and len(corruptions) == 1
+        and canonical_corruptions is not None
+        and corruptions[0] in canonical_corruptions
+    )
     expected = {
-        "mode": "full-group",
+        "mode": mode,
         "group": group,
-        "corruptions": GROUPS.get(group),
+        "corruptions": corruptions,
         "reference_sizes": FULL_REFERENCE_SIZES,
         "seeds": FULL_SEEDS,
         "clean_pool_size": FULL_CLEAN_POOL_SIZE,
@@ -252,8 +264,10 @@ def validate_full_config(config: dict[str, Any]) -> None:
             "are clean reference pool and remaining 37500 are corruption stream"
         ),
     }
-    if group not in GROUPS or config != expected:
-        raise SystemExit("full-group config is not a canonical preregistered group")
+    if not valid_scope or config != expected:
+        raise SystemExit(
+            "full config is not a canonical preregistered group or corruption"
+        )
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -275,9 +289,10 @@ def array_sha256(values: np.ndarray) -> str:
 def summarize_trials(
     trial_rows: list[dict[str, Any]],
     group: str,
+    corruptions: list[str],
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     aggregates: list[dict[str, Any]] = []
-    entities = GROUPS[group] + ["__group__"]
+    entities = corruptions + ["__group__"]
     bootstrap_rng = np.random.default_rng(260_213_848)
     for entity in entities:
         for reference_size in FULL_REFERENCE_SIZES:
@@ -442,7 +457,17 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
         "corruption_revision_pinned": corrupt_info.sha == CORRUPT_REVISION,
         "model_revision_pinned": model_info.sha == MODEL_REVISION,
         "clean_has_15_shards": len(clean_records) == 15,
-        "canonical_group": config["corruptions"] == GROUPS[group],
+        "canonical_scope": (
+            (
+                config["mode"] == "full-group"
+                and config["corruptions"] == GROUPS[group]
+            )
+            or (
+                config["mode"] == "full-corruption"
+                and len(config["corruptions"]) == 1
+                and config["corruptions"][0] in GROUPS[group]
+            )
+        ),
         "model_hash_pinned": model_record["sha256"] == MODEL_SHA256,
         "model_size_pinned": model_record["bytes"] == MODEL_BYTES,
         "all_files_have_lfs_hashes": all(
@@ -521,6 +546,11 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
             "entropy_float64_sha256": array_sha256(clean_entropies),
         }
     ]
+    print(
+        "CLAIM6_ROUTE3_CLEAN_INFERENCE_CHECKPOINT="
+        + json.dumps(inference_rows[0], sort_keys=True),
+        flush=True,
+    )
     aligned_labels: dict[str, bool] = {}
     rolled_mismatches: dict[str, int] = {}
     partition_checks: list[bool] = []
@@ -571,6 +601,11 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
                 ),
             }
         )
+        print(
+            "CLAIM6_ROUTE3_CORRUPTION_INFERENCE_CHECKPOINT="
+            + json.dumps(inference_rows[-1], sort_keys=True),
+            flush=True,
+        )
         for seed in FULL_SEEDS:
             permutation = np.random.default_rng(seed).permutation(
                 FULL_IMAGE_COUNT
@@ -613,7 +648,7 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
                 )
                 trial_rows.append(
                     {
-                        "mode": "full-group",
+                        "mode": config["mode"],
                         "group": group,
                         "corruption": corruption,
                         "seed": seed,
@@ -631,7 +666,9 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
                     }
                 )
 
-    aggregates, power_rows = summarize_trials(trial_rows, group)
+    aggregates, power_rows = summarize_trials(
+        trial_rows, group, config["corruptions"]
+    )
     synthetic_logits = torch.zeros((2, 1000), dtype=torch.float32)
     synthetic_logits[1, 0] = 100.0
     entropy_control_values = entropy(synthetic_logits).numpy()
@@ -683,7 +720,9 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
         },
     }
     expected_trials = (
-        len(GROUPS[group]) * len(FULL_SEEDS) * len(FULL_REFERENCE_SIZES)
+        len(config["corruptions"])
+        * len(FULL_SEEDS)
+        * len(FULL_REFERENCE_SIZES)
     )
     checks = {
         "manifest_checks_pass": all(manifest_checks.values()),
@@ -703,7 +742,7 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
         ),
         "trial_grid_complete": len(trial_rows) == expected_trials,
         "aggregate_grid_complete": len(aggregates)
-        == (len(GROUPS[group]) + 1) * len(FULL_REFERENCE_SIZES),
+        == (len(config["corruptions"]) + 1) * len(FULL_REFERENCE_SIZES),
         "power_grid_complete": len(power_rows)
         == len(FULL_REFERENCE_SIZES) * len(POWER_HORIZONS),
         "finite_outputs": all(
@@ -720,7 +759,7 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
     passed = all(checks.values())
     manifest = {
         "claim_id": 6,
-        "mode": "full-group",
+        "mode": config["mode"],
         "config": config,
         "model": {
             "repo": MODEL_REPO,
@@ -754,10 +793,17 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
     result = {
         "claim_id": 6,
         "route": 3,
-        "stage": f"full ImageNet-C {group} group component",
+        "stage": (
+            f"full ImageNet-C {group} group component"
+            if config["mode"] == "full-group"
+            else (
+                "full ImageNet-C corruption component: "
+                + config["corruptions"][0]
+            )
+        ),
         "scope": {
             "group": group,
-            "corruptions": GROUPS[group],
+            "corruptions": config["corruptions"],
             "clean_images_inferred": FULL_IMAGE_COUNT,
             "corruption_images_inferred_each": FULL_IMAGE_COUNT,
             "clean_pool_size_per_seed": FULL_CLEAN_POOL_SIZE,
@@ -781,7 +827,7 @@ def run_full_group(args: argparse.Namespace, config: dict[str, Any]) -> None:
         },
         "claim_verdict": "BLOCKED",
         "reason": (
-            "One canonical corruption group is a component of the full "
+            "This canonical corruption scope is a component of the full "
             "15-corruption claim; consolidation is required."
         ),
     }
@@ -819,7 +865,7 @@ def main() -> None:
     args = parser.parse_args()
     args.artifact_dir.mkdir(parents=True, exist_ok=True)
     config = json.loads(args.config.read_text())
-    if config.get("mode") == "full-group":
+    if config.get("mode") in {"full-group", "full-corruption"}:
         run_full_group(args, config)
         return
     validate_smoke_config(config)
