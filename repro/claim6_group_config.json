@@ -1,13 +1,10 @@
 {
   "clean_pool_size": 12500,
   "corruptions": [
-    "defocus_blur",
-    "glass_blur",
-    "motion_blur",
-    "zoom_blur"
+    "glass_blur"
   ],
   "group": "Blur",
-  "mode": "full-group",
+  "mode": "full-corruption",
   "reference_sizes": [
     100,
     250,
