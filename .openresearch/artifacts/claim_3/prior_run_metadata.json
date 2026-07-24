@@ -1,0 +1,16 @@
+{
+  "actual_cpu_allocation": {
+    "affinity_count": 64,
+    "os_cpu_count": 64
+  },
+  "expected_core_count": 4,
+  "git_branch": "orx/theorem-3-3-algebraic-equality-fix",
+  "git_sha": "a693f6e7060b4241fb6defcb37229d3efbcf07ee",
+  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+  "python": "3.12.12",
+  "run_id": "dbf0c946-185a-485a-a114-08cda4561258",
+  "runtime_seconds": 3.0,
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "started_at_utc": "2026-07-24T16:36:45Z"
+}

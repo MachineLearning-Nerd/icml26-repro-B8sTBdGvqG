@@ -1,0 +1,21 @@
+{
+  "burn_in_checks": 25,
+  "checks": {
+    "burn_in_grid_nonvacuous": true,
+    "certificate_declares_all_obligations": true,
+    "certificate_obligations_pass": true,
+    "explicit_burn_in_holds": true,
+    "final_verdict_verified": true,
+    "rational_benchmark_bound_holds": true,
+    "rational_case_split_nonvacuous": true,
+    "rational_variance_coupling_holds": true,
+    "tail_rate_error_detected": true,
+    "unconstrained_error_detected": true
+  },
+  "claim_id": 3,
+  "imports_sympy_or_author_code": false,
+  "independent": true,
+  "passed": true,
+  "rational_grid_checks": 952,
+  "verdict": "VERIFIED"
+}

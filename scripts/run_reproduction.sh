@@ -63,6 +63,8 @@ uv run python repro/independent_check_claim3.py \
   --artifact-dir .openresearch/artifacts/claim_3
 uv run python repro/verify_claim3_contract.py \
   --artifact-dir .openresearch/artifacts/claim_3
+uv run python repro/verify_frozen_claim3.py \
+  --artifact-dir .openresearch/artifacts/claim_3
 claim3_elapsed_seconds="$((SECONDS - claim3_started_seconds))"
 uv run python repro/write_run_metadata.py \
   --output .openresearch/artifacts/claim_3/run_metadata.json \
@@ -76,3 +78,26 @@ tr -d '\n' < .openresearch/artifacts/claim_3/run_metadata.json
 printf '\n'
 printf 'CLAIM3_VERDICT=VERIFIED\n'
 printf 'CLAIM3_RUNTIME_SECONDS=%s\n' "${claim3_elapsed_seconds}"
+
+claim6_route1_started_seconds="${SECONDS}"
+mkdir -p .openresearch/artifacts/claim_6
+uv run python repro/audit_claim6_release.py \
+  --artifact-dir .openresearch/artifacts/claim_6 \
+  --source-dir upstream
+uv run python repro/independent_check_claim6_release.py \
+  --artifact-dir .openresearch/artifacts/claim_6 \
+  --source-dir upstream
+claim6_route1_elapsed_seconds="$((SECONDS - claim6_route1_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_6/route1_run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim6_route1_elapsed_seconds}" \
+  --expected-cores 1 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+printf 'CLAIM6_ROUTE1_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route1_run_metadata.json
+printf '\n'
+printf 'CLAIM6_ROUTE1_AUDIT=PASSED\n'
+printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
+printf 'CLAIM6_ROUTE1_RUNTIME_SECONDS=%s\n' "${claim6_route1_elapsed_seconds}"

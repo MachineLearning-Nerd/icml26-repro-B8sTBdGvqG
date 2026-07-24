@@ -1,0 +1,108 @@
+{
+  "all_negative_controls_passed": true,
+  "all_obligations_passed": true,
+  "assumptions": {
+    "bet_range": [
+      -0.5,
+      0.5
+    ],
+    "confidence_scale_constant": "c=C0>0 fixed conditional on D0",
+    "delta0_positive": true,
+    "eta_domain": [
+      -0.5,
+      0.5
+    ],
+    "fixed_D0": true,
+    "iid_fixed_alternative": true,
+    "k_limit": "k -> 0 through positive values"
+  },
+  "certificate_type": "independent corrected symbolic derivation",
+  "claim_id": 3,
+  "obligations": [
+    {
+      "method": "Derivative factors as x(1+2x)/(1+x), so the gap is minimized at x=0 with value 0.",
+      "name": "log_quadratic_lower_bound",
+      "passed": true,
+      "statement": "log(1+x) >= x-x^2 for x in [-1/2,1/2]"
+    },
+    {
+      "method": "SymPy exact limit",
+      "name": "ons_regret_is_sublinear",
+      "passed": true,
+      "statement": "(2 log(1+4t)+1/2)/t tends to zero"
+    },
+    {
+      "method": "Exact symbolic completion of the square; remaining factor is nonnegative under M2<=1/c^2.",
+      "name": "interior_benchmark_growth",
+      "passed": true,
+      "statement": "If d <= c M2 and M2 <= 1/c^2, q=d/(2M2) is feasible and growth >= c^2 d^2/4."
+    },
+    {
+      "method": "Exact symbolic factorization plus cd<=1 from |Z|<=1/c.",
+      "name": "boundary_benchmark_growth",
+      "passed": true,
+      "statement": "If d > c M2, q=c/2 is feasible and growth > cd/4 >= c^2d^2/4."
+    },
+    {
+      "method": "Interior: q^2 Var(Z)<=q^2 M2 equals the bound. Boundary: q^2 M2<cd/4<the bound.",
+      "name": "variance_mean_coupling",
+      "passed": true,
+      "statement": "For either benchmark, Var(g) is no larger than its quadratic log-growth lower bound."
+    },
+    {
+      "method": "Strong law for bounded iid log increments plus the exact regret-to-wealth inequality.",
+      "name": "asymptotic_power",
+      "passed": true,
+      "statement": "Positive iid benchmark mean and o(t) pathwise regret imply log S_t/t has positive liminf almost surely."
+    },
+    {
+      "method": "For L=A+log(64/mu)+1>=1, LHS<=A+2log(5)+2log(64/mu)+2log L+1/2<9L<32L.",
+      "name": "explicit_burn_in",
+      "passed": true,
+      "statement": "t0=ceil(64/mu*(A+log(64/mu)+1)) satisfies regret+log(1/alpha)<=t mu/2."
+    },
+    {
+      "method": "Direct substitution c=mu/2 in Bernstein with B=32+(4/3)log 3.",
+      "name": "bernstein_tail",
+      "passed": true,
+      "statement": "Var(log increment)<=4mu and range<=log 3 give P(tau>t)<=exp(-t mu/B)."
+    },
+    {
+      "method": "Geometric series and 1/(1-exp(-y))<=1+1/y for y>0.",
+      "name": "geometric_tail_sum",
+      "passed": true,
+      "statement": "Sum_{t>=t0} exp(-t mu/B) <= 1+B/mu."
+    },
+    {
+      "method": "Substitute 1/mu<=4/(c^2d^2) and log(64/mu)<=log(256/(c^2d^2)).",
+      "name": "stopping_time_order",
+      "passed": true,
+      "statement": "mu>=c^2 d^2/4 yields O(d^-2 log(1/(alpha d))+d^-2) for fixed c."
+    },
+    {
+      "method": "Equation 8 and C_k are continuous in k at zero for eta!=0 on compact p in [0,1].",
+      "name": "positive_k_continuity",
+      "passed": true,
+      "statement": "The fixed nonzero benchmark's mean and variance converge uniformly to their k=0 values."
+    }
+  ],
+  "runtime_context": {
+    "affinity_count": 64,
+    "expected_core_count": 4,
+    "os_cpu_count": 64,
+    "selected_backend": "hf",
+    "selected_flavor": "cpu-upgrade",
+    "stochastic_seeds": []
+  },
+  "symbolic_values": {
+    "bernstein_constant": 33.46481638489081,
+    "boundary_growth": "c*(-c*m2 + 2*d)/4",
+    "boundary_vs_linear": "-c*(c*m2 - d)/4",
+    "interior_growth": "d**2/(4*m2)",
+    "interior_margin": "-d**2*(c**2*m2 - 1)/(4*m2)",
+    "log_gap_derivative": "x*(2*x + 1)/(x + 1)",
+    "regret_ratio_limit": "0"
+  },
+  "sympy_version": "1.14.0",
+  "verdict": "VERIFIED"
+}
