@@ -62,7 +62,7 @@ def main() -> None:
         "claim_id": 6,
         "route": 3,
         "stage": (
-            "full-group verifier fail-closed control"
+            "full component verifier fail-closed control"
             if full_group
             else "smoke verifier fail-closed control"
         ),
