@@ -35,14 +35,16 @@ inverting the log-y calibration are required to contradict the result. This
 route verifies what the pinned published figure encodes, not whether its raw
 benchmark data regenerate, so its Claim 6 verdict remains `BLOCKED`.
 
-## Planned distinct routes
+## Route 3 — calibrated full reconstruction
 
-- Route 3 begins with a CPU calibration over 192 images selected independently
+- Route 3 began with a CPU calibration over 192 images selected independently
   of the claim formula. It sweeps 1/8/16 preprocessing workers and all
   combinations of 8/16/32/64 inference threads with batch sizes 8/16/32,
   using three hash-verified Parquet files and the hash-verified default
-  `timm` checkpoint. An independent checker recomputes the best setting and
-  full 575,000-image projection. Only then will the full benchmark be run.
+  `timm` checkpoint. An independent checker recomputed the best setting and
+  full 575,000-image projection. The accepted calibration is frozen as
+  `prior_run_cpu_profile.json`; descendants verify that certificate instead of
+  repeating the expensive calibration.
 - The full Route 3 reconstruction will use a fixed, claim-independent
   12,500/37,500 partition of aligned clean/corrupted validation indexes,
   all 15 severity-5 corruptions, 10 seeds, and reference sizes at and above
@@ -51,3 +53,15 @@ benchmark data regenerate, so its Claim 6 verdict remains `BLOCKED`.
 - Route 4, required if confidence remains LOW: seek an assumption-matched
   falsification using the complete reconstructed benchmark; missing data,
   runner crashes, and reduced subsets are explicitly ineligible.
+
+### End-to-end smoke gate
+
+Before spending hours on the complete reconstruction, the same pinned data,
+checkpoint, `timm` preprocessing, entropy score, and source-equivalent CTM
+recurrences are exercised on 128 clean and 256 Gaussian-noise images. The
+preregistered smoke grid has reference sizes 32/64 and seeds 0/1. It checks
+download hashes, label alignment, preprocessing, inference, both martingales,
+raw-row arithmetic, an independent checker, and fail-closed behavior.
+
+This gate is explicitly ineligible as evidence for Claim 6. Its only decision
+is whether the full pipeline is safe to scale.

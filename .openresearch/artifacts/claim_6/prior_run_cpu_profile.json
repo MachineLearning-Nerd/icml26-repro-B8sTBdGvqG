@@ -1,0 +1,81 @@
+{
+  "actual_cpu_allocation": {
+    "affinity_count": 64,
+    "os_cpu_count": 64
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "expected_core_count": 64,
+  "git_sha": "26c20c77ebc3b00b10fb9e1396620247fdd1231b",
+  "input_anchors": {
+    "clean_dataset": {
+      "repo": "Tsomaros/Imagenet-1k_validation",
+      "revision": "55405c49dece42420e68ddd5f80174f19b29ebaf"
+    },
+    "corruption_dataset": {
+      "repo": "WNJXYK/TTA-ImageNet-C",
+      "revision": "bb0fa9db6d8f94ef279a1f6bbb8024736d542fd7"
+    },
+    "model": {
+      "bytes": 346284714,
+      "repo": "timm/vit_base_patch16_224.augreg2_in21k_ft_in1k",
+      "revision": "063c6c38a5d8510b2e57df480445e94b231dad2c",
+      "sha256": "32aa17d6e17b43500f531d5f6dc9bc93e56ed8841b8a75682e1bb295d722405b"
+    },
+    "profile_files": [
+      {
+        "bytes": 495278643,
+        "path": "data/validation-00000-of-00015.parquet",
+        "sha256": "834de65c4e8fd824bdf621b95419d49f6ef01afced1e56d926325df49c55ba59"
+      },
+      {
+        "bytes": 101318019,
+        "path": "data/contrast/severity_5/data-00000.parquet",
+        "sha256": "71910a70bd5c447b84dda845a1c5f5f0a95c5daf9cf22426383e52b713eb7a57"
+      },
+      {
+        "bytes": 227133158,
+        "path": "data/defocus_blur/severity_5/data-00000.parquet",
+        "sha256": "cbb300024f54900914df90b761acc3e27139acd820b74e895736953b93511b1a"
+      }
+    ]
+  },
+  "negative_controls": {
+    "ignore_io_and_preprocessing_detected": true,
+    "reverse_throughput_selection_detected": true,
+    "wrong_selected_inference_images_per_second": 0.5298180882166253
+  },
+  "projection": {
+    "calibrated_total_seconds": 39993.42511299664,
+    "full_data_bytes": 17243147240,
+    "full_image_count": 575000,
+    "full_run_feasible_with_12h_timeout": false,
+    "safety_adjusted_seconds": 79986.85022599329,
+    "safety_factor": 2.0
+  },
+  "run_id": "f2719089-1984-45b1-b50a-1f82ec8dda9e",
+  "runtime_seconds": 1088.0,
+  "selected": {
+    "batch_size": 8,
+    "combined_images_per_second": 14.643929178185857,
+    "inference_images_per_second": 15.04956307060548,
+    "measured_data_bytes_per_second": 134704577.52891865,
+    "preprocess_images_per_second": 543.3094716370557,
+    "threads": 8
+  },
+  "source_entropies": {
+    "clean_mean": 1.3598347902297974,
+    "contrast_mean": 5.275947570800781,
+    "defocus_blur_mean": 2.4727697372436523
+  },
+  "stage": "cpu calibration",
+  "verification": {
+    "fail_closed_passed": true,
+    "independent_checker_passed": true,
+    "profile_passed": true,
+    "profile_sample_images": 192,
+    "profile_sample_was_formula_derived": false,
+    "sweep_grid_points": 12,
+    "verifier_passed": true
+  }
+}

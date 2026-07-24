@@ -1,0 +1,17 @@
+{
+  "corruptions": [
+    "gaussian_noise"
+  ],
+  "group": "Noise",
+  "mode": "smoke",
+  "reference_sizes": [
+    32,
+    64
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "smoke_clean_images": 128,
+  "smoke_corruption_images": 256
+}

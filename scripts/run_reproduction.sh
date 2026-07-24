@@ -132,26 +132,40 @@ printf 'CLAIM6_ROUTE2_AUDIT=PASSED\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 printf 'CLAIM6_ROUTE2_RUNTIME_SECONDS=%s\n' "${claim6_route2_elapsed_seconds}"
 
-claim6_route3_profile_started_seconds="${SECONDS}"
-uv run python repro/profile_claim6_cpu.py \
+uv run python repro/verify_frozen_claim6_profile.py \
   --artifact-dir .openresearch/artifacts/claim_6
-uv run python repro/independent_check_claim6_cpu_profile.py \
+printf 'CLAIM6_ROUTE3_PROFILE_FROZEN_REGRESSION=PASSED\n'
+printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_RUN=f2719089-1984-45b1-b50a-1f82ec8dda9e\n'
+printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_RUNTIME_SECONDS=1088\n'
+printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_EXPECTED_CORES=64\n'
+printf 'CLAIM6_ROUTE3_PROFILE_SOURCE_ACTUAL_CPUS=64\n'
+printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
+
+claim6_route3_smoke_started_seconds="${SECONDS}"
+uv run python repro/run_claim6_group.py \
+  --config repro/claim6_group_config.json \
   --artifact-dir .openresearch/artifacts/claim_6
-uv run python repro/verify_claim6_cpu_profile.py \
+uv run python repro/independent_check_claim6_group.py \
   --artifact-dir .openresearch/artifacts/claim_6
-uv run python repro/check_claim6_profile_fail_closed.py \
+uv run python repro/verify_claim6_group.py \
   --artifact-dir .openresearch/artifacts/claim_6
-claim6_route3_profile_elapsed_seconds="$((SECONDS - claim6_route3_profile_started_seconds))"
+uv run python repro/check_claim6_group_fail_closed.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_BEGIN\n'
+cat .openresearch/artifacts/claim_6/route3_smoke_trials.csv
+printf 'CLAIM6_ROUTE3_SMOKE_TRIALS_CSV_END\n'
+claim6_route3_smoke_elapsed_seconds="$((SECONDS - claim6_route3_smoke_started_seconds))"
 uv run python repro/write_run_metadata.py \
-  --output .openresearch/artifacts/claim_6/route3_profile_run_metadata.json \
+  --output .openresearch/artifacts/claim_6/route3_smoke_run_metadata.json \
   --started-at "${started_at}" \
-  --runtime-seconds "${claim6_route3_profile_elapsed_seconds}" \
-  --expected-cores 64 \
+  --runtime-seconds "${claim6_route3_smoke_elapsed_seconds}" \
+  --expected-cores 8 \
   --selected-backend hf \
   --selected-flavor cpu-upgrade
-printf 'CLAIM6_ROUTE3_PROFILE_RUN_METADATA='
-tr -d '\n' < .openresearch/artifacts/claim_6/route3_profile_run_metadata.json
+printf 'CLAIM6_ROUTE3_SMOKE_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route3_smoke_run_metadata.json
 printf '\n'
-printf 'CLAIM6_ROUTE3_PROFILE=PASSED\n'
+printf 'CLAIM6_ROUTE3_SMOKE_PIPELINE=PASSED\n'
+printf 'CLAIM6_ROUTE3_SMOKE_CLAIM_EVIDENCE=INELIGIBLE\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
-printf 'CLAIM6_ROUTE3_PROFILE_RUNTIME_SECONDS=%s\n' "${claim6_route3_profile_elapsed_seconds}"
+printf 'CLAIM6_ROUTE3_SMOKE_RUNTIME_SECONDS=%s\n' "${claim6_route3_smoke_elapsed_seconds}"
