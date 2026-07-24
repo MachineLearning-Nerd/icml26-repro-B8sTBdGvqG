@@ -25,6 +25,7 @@ not state a continuity assumption or use randomized tie handling.
 - Exact source and assumption audit: `source_audit.md`
 - Method: `method.md`
 - Raw result: `prior_run_raw_results.json`
+- Full raw 64-step trajectory: `prior_run_trajectory.csv`
 - Raw controls: `prior_run_negative_controls.json`
 - Fail-closed verifier: `prior_run_verifier_output.json`
 - Independent checker: `prior_run_independent_checker_output.json`
