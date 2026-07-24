@@ -18,9 +18,10 @@ def verify_full(artifact_dir: Path) -> None:
         "component_passed": result["component_passed"],
         "all_component_checks_pass": all(result["checks"].values()),
         "independent_checker_passed": checker["passed"],
-        "exact_full_group_scope_disclosed": (
+        "exact_full_component_scope_disclosed": (
             result["scope"]["clean_images_inferred"] == 50_000
             and result["scope"]["corruption_images_inferred_each"] == 50_000
+            and len(result["scope"]["corruptions"]) >= 1
             and result["scope"]["clean_pool_size_per_seed"] == 12_500
             and result["scope"]["stream_size_per_seed"] == 37_500
             and result["scope"]["reference_sizes"]

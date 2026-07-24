@@ -1,14 +1,10 @@
 {
   "clean_pool_size": 12500,
   "corruptions": [
-    "brightness",
-    "contrast",
-    "elastic_transform",
-    "pixelate",
-    "jpeg_compression"
+    "brightness"
   ],
   "group": "Digital",
-  "mode": "full-group",
+  "mode": "full-corruption",
   "reference_sizes": [
     100,
     250,
