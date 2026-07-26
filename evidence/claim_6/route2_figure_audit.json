@@ -1,0 +1,48 @@
+{
+  "audited_counts": {
+    "blur_weather_ratio_points": 6,
+    "method_points": 10,
+    "size_levels": 4
+  },
+  "calibration": {
+    "power_pixels_per_decade": 318.5,
+    "power_x_zero": 272.0,
+    "power_y_one": 56.0,
+    "power_y_zero": 892.0,
+    "ratio_half_span_pixels": 415.0,
+    "ratio_y_one": 550.0
+  },
+  "checks": {
+    "all_20_ratio_markers_extracted": true,
+    "all_21_power_rows_extracted": true,
+    "blur_weather_ratios_above_one_for_n_ge_500": true,
+    "conditional_crossings_improve_with_size_at_4_levels": true,
+    "conditional_earlier_at_10_method_points": true,
+    "negative_controls_detected": true,
+    "source_archive_hash_matches": true,
+    "source_image_hashes_match": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "reason": "The pinned published figure encodes the claimed comparisons, but digitizing the authors' plot is not an independent ImageNet-C run.",
+  "retrieval": {
+    "image_sha256": {
+      "power_vs_step_by_calibsize_logx_w50.png": "3ec26c59a6101229a024cd6493a4db55cffb6b35700ee9b50281c432b5e6600c",
+      "rejection_time_ratio_vs_ctm_by_group_logy_logx.png": "842f96dc197d8dd1cc24d59d722024f33e5a83d6876a86326436874dee5be96a"
+    },
+    "retrieved_at_utc": "2026-07-24T17:22:56.489496+00:00",
+    "source_sha256": "850ea40712686ee84543348bf39550ead19e6240ad5f085c07654ef3ed1e4b4e",
+    "url": "https://export.arxiv.org/e-print/2602.13848",
+    "user_agent": "OpenResearch-Reproduction/1.0 (claim audit; contact via MachineLearning-Nerd/icml26-repro-B8sTBdGvqG)"
+  },
+  "route": 2,
+  "route_audit_passed": true,
+  "route_name": "pinned source-figure digitization",
+  "runtime_context": {
+    "affinity_count": null,
+    "expected_core_count": 1,
+    "os_cpu_count": 8,
+    "selected_backend": "hf",
+    "selected_flavor": "cpu-upgrade"
+  }
+}

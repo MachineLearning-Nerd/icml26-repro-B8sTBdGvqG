@@ -1,0 +1,38 @@
+{
+  "claim_id": 2,
+  "paper_anchor": "Theorem 3.1 (ar5iv anchor S3.Thmtheorem1; proof A5.SS1)",
+  "paper_source_sha256": "ef9032cb84ff680f5b31cd19e67b2991839e669f7ce0f8d2cbaabd1120d273a3",
+  "claim": "For any null distribution P, any alpha in (0,1), and confidence bounds satisfying Equation 6 at delta, the conditional probability of ever crossing 1/alpha is at most alpha for at least 1-delta of reference sets.",
+  "verdict_rule": {
+    "FALSIFIED": [
+      "The selected P is within the stated any-distribution domain and the reference and stream are iid from P.",
+      "Equation 6 holds for the realized reference set.",
+      "The exact Equation 8 process or the released Algorithm 1 implementation crosses 1/alpha at a finite time.",
+      "The resulting inner false-rejection probability exceeds alpha and the outer good-reference probability is below 1-delta.",
+      "An independent checker reconstructs the witness without importing released implementation code."
+    ],
+    "VERIFIED": "Not available from finite simulation for this universally quantified theorem.",
+    "BLOCKED": "Use if no assumption-satisfying proof certificate or counterexample is obtained."
+  },
+  "witness": {
+    "P": "Dirac point mass at 0",
+    "reference_size": 2000,
+    "stream_horizon": 64,
+    "alpha": 0.05,
+    "delta": 0.1,
+    "dkw_epsilon": "sqrt(log(2/delta)/(2*n))",
+    "equation_8_eta": 0.5,
+    "equation_8_k": 1e-06,
+    "released_ons_D": 0.5,
+    "released_ons_clip_C": 0.1
+  },
+  "non_circularity": "The 64-step horizon is only a container for a finite crossing witness. It was not derived from the claimed error bound and the checker reports the first crossing. One finite assumption-satisfying crossing with probability one contradicts the anytime universal bound.",
+  "required_outputs": [
+    "raw_results.json",
+    "trajectory.csv",
+    "negative_controls.json",
+    "verifier_output.json",
+    "independent_checker_output.json",
+    "run_metadata.json"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "C1_primary_and_supporting_detection_checks": true,
+    "C1_test_time_contamination_mechanism_control": true,
+    "C2_full_grid_finite_sample_type1_check": true,
+    "C2_increasing_horizon_power_check": true,
+    "C2_no_DKW_negative_control_rejects_excessively": true,
+    "source_artifact_is_full": true
+  },
+  "claim_summary": {
+    "C1": "verified empirically on every released synthetic shift suite and its fixed-reference mechanism control",
+    "C2": "verified empirically for the released finite null grid and increasing-horizon power check; this simulation does not purport to prove the paper's asymptotic theorem"
+  },
+  "headline": {
+    "contamination_late_ecdf_gap": 0.18830723883345868,
+    "max_conditional_type1_rate": 0.01,
+    "max_naive_type1_rate": 0.88,
+    "primary": {
+      "conditional_median_delay": 21.0,
+      "conditional_rate": 1.0,
+      "standard_median_delay": 31.0,
+      "standard_rate": 1.0
+    }
+  },
+  "input": "outputs/full_synthetic_summary.json",
+  "supporting_checks": {
+    "bias_sweep": [
+      true,
+      true,
+      true
+    ],
+    "delayed_shift": [
+      true,
+      true,
+      true
+    ],
+    "drift_sweep": [
+      true,
+      true,
+      true
+    ]
+  }
+}

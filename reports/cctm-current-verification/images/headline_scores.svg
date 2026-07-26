@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<style>text{font-family:Arial, sans-serif;fill:#111827} .small{font-size:22px} .med{font-size:28px;font-weight:600} .big{font-size:36px;font-weight:700} .muted{fill:#4b5563} .green{fill:#0f766e} .red{fill:#b91c1c} .amber{fill:#b45309} .blue{fill:#1d4ed8}</style>
+<rect width="1000" height="560" fill="#ffffff"/>
+<text x="48" y="58" class="big">Forecast after current evidence package</text>
+
+<rect x="70" y="120" width="280" height="310" fill="#e5e7eb" rx="16"/>
+<rect x="70" y="275" width="280" height="155" fill="#60a5fa" rx="16"/>
+<text x="110" y="180" class="med">Previous live judge</text><text x="150" y="255" class="big">6 / 12</text>
+<rect x="390" y="80" width="280" height="350" fill="#e5e7eb" rx="16"/>
+<rect x="390" y="138" width="280" height="292" fill="#14b8a6" rx="16"/>
+<text x="425" y="180" class="med">Conservative forecast</text><text x="470" y="255" class="big">10 / 12</text>
+<rect x="710" y="80" width="220" height="350" fill="#fef3c7" rx="16"/>
+<text x="745" y="155" class="med amber">Blocked risk</text><text x="765" y="230" class="big amber">Claim 6</text><text x="760" y="285" class="small muted">No full-scope</text><text x="750" y="320" class="small muted">ImageNet-C run</text>
+<text x="80" y="495" class="small muted">Forecast only. The live judge has not yet evaluated HF revision 96f4ca15d8223fb2e273c633b8771fbee2f8047f.</text>
+
+</svg>

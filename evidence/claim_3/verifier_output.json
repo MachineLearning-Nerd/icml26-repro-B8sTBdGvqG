@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "asymptotic_power_obligation": true,
+    "corrected_proof_complete": true,
+    "independent_checker_passes": true,
+    "printed_errors_detected": true,
+    "stopping_order_obligation": true,
+    "two_distinct_negative_controls": true
+  },
+  "claim_id": 3,
+  "passed": true,
+  "verdict": "VERIFIED"
+}

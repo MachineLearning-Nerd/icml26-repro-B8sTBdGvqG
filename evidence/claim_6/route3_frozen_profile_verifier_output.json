@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "accepted_checks_passed": true,
+    "cpu_allocation_recorded": true,
+    "fixed_profile_design_matches": true,
+    "identity_matches_accepted_run": true,
+    "negative_controls_detected": true,
+    "pinned_datasets_match": true,
+    "pinned_model_matches": true,
+    "profile_file_hashes_match": true,
+    "projection_matches": true,
+    "selected_setting_matches": true,
+    "stage_does_not_overclaim": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "passed": true,
+  "route": 3,
+  "source_git_sha": "26c20c77ebc3b00b10fb9e1396620247fdd1231b",
+  "source_run_id": "f2719089-1984-45b1-b50a-1f82ec8dda9e",
+  "stage": "frozen CPU-calibration regression"
+}

@@ -1,0 +1,26 @@
+{
+  "claim_id": 3,
+  "paper_anchor": "Theorem 3.3 (S3.Thmtheorem3), with definitions S3.E11-S3.E12 and proof A5.SS5",
+  "paper_source_sha256": "ef9032cb84ff680f5b31cd19e67b2991839e669f7ce0f8d2cbaabd1120d273a3",
+  "claim": {
+    "power": "Conditional on a fixed D0, under Xt iid~Q != P, sufficiently small k, and Delta_k>0, Algorithm 1 stops with probability one.",
+    "stopping_time": "As k tends to zero, E[tau] is O(Delta_0^-2 log(1/(alpha Delta_0)) + Delta_0^-2)."
+  },
+  "verification_route": "Independent corrected symbolic derivation, not finite simulation.",
+  "required_obligations": [
+    "Map the paper loss to the standard logarithmic ONS regret theorem.",
+    "Construct a feasible fixed benchmark for both the interior and boundary cases.",
+    "Lower-bound benchmark log-growth by C0^2 Delta0^2/4.",
+    "Derive almost-sure crossing from the strong law and sublinear regret.",
+    "Bound benchmark log-variance by a constant times its mean.",
+    "Give an explicit burn-in satisfying the regret/threshold inequality.",
+    "Sum a valid Bernstein geometric tail to obtain the stated Delta0 order.",
+    "Check continuity from k=0 to sufficiently small positive k.",
+    "Detect the invalid unconstrained-maximizer equality and tail-rate substitution in the printed proof."
+  ],
+  "verdict_rule": {
+    "VERIFIED": "Every corrected proof obligation and both error-detection controls pass in the symbolic verifier and independent checker.",
+    "FALSIFIED": "A counterexample satisfying every assumption contradicts either theorem conclusion.",
+    "BLOCKED": "Any proof obligation, mapping, or independent check remains unresolved."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "inverted_log_y_axis": {
+    "error_detected": true,
+    "wrong_hypothesis": "Blur and Weather remain above one after inverting the log-y calibration",
+    "wrong_hypothesis_passed": false,
+    "wrong_ratios": [
+      0.7809886536979441,
+      0.7280798939977364,
+      0.6317166040237193,
+      0.7136323948723831,
+      0.6477432474575923,
+      0.5918787203333131
+    ]
+  },
+  "reversed_method_labels": {
+    "error_detected": true,
+    "wrong_hypothesis": "standard CTM crosses earlier at every audited point",
+    "wrong_hypothesis_passed": false
+  }
+}

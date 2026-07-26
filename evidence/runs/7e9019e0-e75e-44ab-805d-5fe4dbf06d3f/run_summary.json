@@ -1,0 +1,23 @@
+{
+  "run_id": "7e9019e0-e75e-44ab-805d-5fe4dbf06d3f",
+  "project_id": "bb7fdc4c-b42f-461a-a45f-5fdcd907f3c2",
+  "experiment_id": "3229d43a-6cb7-46dc-8e70-1973369abaf1",
+  "branch": "orx/release-prep-with-claim-6-blocked-record",
+  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "timeout": "2h",
+  "fixed_command": "uv sync --frozen && bash scripts/run_reproduction.sh",
+  "observed_markers": {
+    "BASELINE_VERDICT": "VERIFIED",
+    "CLAIM2_VERDICT": "FALSIFIED",
+    "CLAIM3_VERDICT": "VERIFIED",
+    "CLAIM6_FINAL_VERDICT": "BLOCKED"
+  },
+  "allocation_reported_in_log": {
+    "os_cpu_count": 64,
+    "affinity_count": 64
+  },
+  "retrieved_at_utc": "2026-07-26T02:01:09.804856+00:00"
+}

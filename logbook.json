@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+  "emoji": "\ud83c\udfaf",
+  "space_id": "DineshAI/B8sTBdGvqG",
+  "paper": {
+    "arxiv_id": "2602.13848",
+    "openreview_id": "B8sTBdGvqG"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-B8sTBdGvqG"
+  ],
+  "updated_at": "2026-07-26T02:05:00+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "current-verification-2026-07-26",
+        "title": "Current verification \u2014 July 26 2026",
+        "file": "pages/current-verification-2026-07-26/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2-falsified-theorem-31",
+        "title": "Claim 2 \u2014 FALSIFIED Theorem 3.1",
+        "file": "pages/claim-2-falsified-theorem-31/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-3-verified-theorem-33",
+        "title": "Claim 3 \u2014 VERIFIED Theorem 3.3",
+        "file": "pages/claim-3-verified-theorem-33/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6-blocked-imagenet-c",
+        "title": "Claim 6 \u2014 BLOCKED ImageNet-C",
+        "file": "pages/claim-6-blocked-imagenet-c/page.md",
+        "children": []
+      },
+      {
+        "slug": "release-gates-2026-07-26",
+        "title": "Release gates \u2014 July 26 2026",
+        "file": "pages/release-gates-2026-07-26/page.md",
+        "children": []
+      },
+      {
+        "slug": "red-team-review-2026-07-26",
+        "title": "Red-team review \u2014 July 26 2026",
+        "file": "pages/red-team-review-2026-07-26/page.md",
+        "children": []
+      },
+      {
+        "slug": "overview",
+        "title": "Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-1-faster-shift-detection",
+        "title": "Claim 1 \u2014 Faster shift detection",
+        "file": "pages/claim-1-faster-shift-detection/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2-validity-power-and-delay",
+        "title": "Historical rejected baseline \u2014 prior validity/power page",
+        "file": "pages/claim-2-validity-power-and-delay/page.md",
+        "children": []
+      },
+      {
+        "slug": "methods-source-audit",
+        "title": "Methods & source audit",
+        "file": "pages/methods-source-audit/page.md",
+        "children": []
+      },
+      {
+        "slug": "negative-controls",
+        "title": "Negative controls",
+        "file": "pages/negative-controls/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 2343,
+  "revision": "20260726-claim2-claim3-claim6-release-candidate"
+}

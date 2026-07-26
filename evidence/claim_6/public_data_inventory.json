@@ -1,0 +1,47 @@
+{
+  "arxiv_source": {
+    "raw_result_tables_present": false,
+    "revision_sha256": "850ea40712686ee84543348bf39550ead19e6240ad5f085c07654ef3ed1e4b4e",
+    "retrieved_at_utc": "2026-07-24T17:06:00Z"
+  },
+  "official_code": {
+    "branches": [
+      "main"
+    ],
+    "commit": "a9feb795d9fa98cc1d0c075f8f08a5c510c7a844",
+    "release_count": 0,
+    "tree_blob_count": 19,
+    "tree_npy_count": 0,
+    "tree_raw_result_count": 0
+  },
+  "public_corrupted_images": {
+    "gated": false,
+    "id": "WNJXYK/TTA-ImageNet-C",
+    "private": false,
+    "revision": "bb0fa9db6d8f94ef279a1f6bbb8024736d542fd7",
+    "severity_5_corruptions": 15
+  },
+  "public_clean_images": {
+    "accessible_to_configured_account": false,
+    "authenticated_file_status": 403,
+    "gated": "auto",
+    "id": "ILSVRC/imagenet-1k",
+    "private": false,
+    "revision": "49e2ee26f3810fb5a7536bbf732a7b07389a47b5",
+    "validation_bytes": 6693093726,
+    "validation_shards": 14
+  },
+  "public_clean_mirror": {
+    "gated": false,
+    "id": "Tsomaros/Imagenet-1k_validation",
+    "index_label_alignment_checked_at": [
+      0,
+      12345,
+      49999
+    ],
+    "index_labels_match_corrupted_mirror": true,
+    "private": false,
+    "revision": "55405c49dece42420e68ddd5f80174f19b29ebaf",
+    "validation_shards": 15
+  }
+}

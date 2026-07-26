@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<style>text{font-family:Arial, sans-serif;fill:#111827} .small{font-size:22px} .med{font-size:28px;font-weight:600} .big{font-size:36px;font-weight:700} .muted{fill:#4b5563} .green{fill:#0f766e} .red{fill:#b91c1c} .amber{fill:#b45309} .blue{fill:#1d4ed8}</style>
+<rect width="1000" height="560" fill="#ffffff"/>
+<text x="48" y="58" class="big">Claim 3 proof certificate route</text>
+
+<rect x="70" y="110" width="250" height="110" fill="#dcfce7" rx="14"/><text x="105" y="155" class="med green">11/11</text><text x="105" y="190" class="small">proof obligations</text>
+<rect x="375" y="110" width="250" height="110" fill="#dbeafe" rx="14"/><text x="410" y="155" class="med blue">952</text><text x="410" y="190" class="small">rational grid checks</text>
+<rect x="680" y="110" width="250" height="110" fill="#dbeafe" rx="14"/><text x="715" y="155" class="med blue">25</text><text x="715" y="190" class="small">burn-in checks</text>
+<text x="90" y="300" class="med">Controls detected intended proof errors</text>
+<text x="120" y="350" class="small">1. Unconstrained maximizer outside feasible betting domain</text>
+<text x="120" y="390" class="small">2. Invalid tail-rate substitution in printed proof</text>
+<text x="90" y="475" class="small muted">Verdict: VERIFIED with MEDIUM confidence because it is a symbolic certificate, not a Lean/Coq proof.</text>
+
+</svg>

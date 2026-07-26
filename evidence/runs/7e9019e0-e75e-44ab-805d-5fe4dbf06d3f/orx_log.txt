@@ -1,0 +1,584 @@
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package perl-modules-5.36.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6695 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u3_all.deb ...
+Unpacking perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../01-libgdbm-compat4_1.23-3_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+Selecting previously unselected package libperl5.36:amd64.
+Preparing to unpack .../02-libperl5.36_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../03-perl_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking perl (5.36.0-7+deb12u3) ...
+Selecting previously unselected package less.
+Preparing to unpack .../04-less_590-2.1~deb12u2_amd64.deb ...
+Unpacking less (590-2.1~deb12u2) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../05-libbsd0_0.11.7-2_amd64.deb ...
+Unpacking libbsd0:amd64 (0.11.7-2) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../06-libedit2_3.1-20221030-2_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20221030-2) ...
+Selecting previously unselected package libcbor0.8:amd64.
+Preparing to unpack .../07-libcbor0.8_0.8.0-2+b1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2+b1) ...
+Preparing to unpack .../08-libssl3_3.0.20-1~deb12u2_amd64.deb ...
+Unpacking libssl3:amd64 (3.0.20-1~deb12u2) over (3.0.18-1~deb12u2) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../09-libfido2-1_1.12.0-2+b1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.12.0-2+b1) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../10-openssh-client_1%3a9.2p1-2+deb12u10_amd64.deb ...
+Unpacking openssh-client (1:9.2p1-2+deb12u10) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../11-libbrotli1_1.0.9-2+b6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../12-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../13-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../14-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../15-libnghttp2-14_1.52.0-1+deb12u3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../16-libpsl5_0.21.2-1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.2-1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../17-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../18-libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../19-libcurl3-gnutls_7.88.1-10+deb12u15_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../20-libexpat1_2.5.0-1+deb12u2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../21-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../22-git-man_1%3a2.39.5-0+deb12u3_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../23-git_1%3a2.39.5-0+deb12u3_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../24-libldap-common_2.5.13+dfsg-5_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-5) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../25-libsasl2-modules_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../26-libxau6_1%3a1.0.9-1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../27-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../28-libxcb1_1.15-1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../29-libx11-data_2%3a1.8.4-2+deb12u2_all.deb ...
+Unpacking libx11-data (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../30-libx11-6_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../31-libxext6_2%3a1.3.4-1+b1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../32-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Preparing to unpack .../33-openssl_3.0.20-1~deb12u2_amd64.deb ...
+Unpacking openssl (3.0.20-1~deb12u2) over (3.0.18-1~deb12u2) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../34-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../35-publicsuffix_20230209.2326-1_all.deb ...
+Unpacking publicsuffix (20230209.2326-1) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../36-xauth_1%3a1.1.2-1_amd64.deb ...
+Unpacking xauth (1:1.1.2-1) ...
+Setting up libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Setting up libxau6:amd64 (1:1.0.9-1) ...
+Setting up libpsl5:amd64 (0.21.2-1) ...
+Setting up libcbor0.8:amd64 (0.8.0-2+b1) ...
+Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+Setting up libssl3:amd64 (3.0.20-1~deb12u2) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+Setting up less (590-2.1~deb12u2) ...
+Setting up libldap-common (2.5.13+dfsg-5) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Setting up perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Setting up libx11-data (2:1.8.4-2+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up patch (2.7.6-7) ...
+Setting up libgdbm-compat4:amd64 (1.23-3) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Setting up git-man (1:2.39.5-0+deb12u3) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up libfido2-1:amd64 (1.12.0-2+b1) ...
+Setting up openssl (3.0.20-1~deb12u2) ...
+Setting up libbsd0:amd64 (0.11.7-2) ...
+Setting up publicsuffix (20230209.2326-1) ...
+Setting up libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
+Setting up libxcb1:amd64 (1.15-1) ...
+Setting up libedit2:amd64 (3.1-20221030-2) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Setting up perl (5.36.0-7+deb12u3) ...
+Setting up libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:9.2p1-2+deb12u10) ...
+Setting up libxext6:amd64 (2:1.3.4-1+b1) ...
+Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git (1:2.39.5-0+deb12u3) ...
+Setting up xauth (1:1.1.2-1) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+Cloning into 'repo'...
+Using CPython 3.12.12 interpreter at: /usr/local/bin/python3
+Creating virtual environment at: .venv
+Downloading torch (167.7MiB)
+Downloading torchvision (1.9MiB)
+Downloading jedi (4.7MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading pillow (6.3MiB)
+Downloading aiohttp (1.7MiB)
+Downloading hf-xet (4.2MiB)
+Downloading pygments (1.2MiB)
+Downloading pandas (11.4MiB)
+Downloading sympy (6.0MiB)
+Downloading numpy (15.9MiB)
+Downloading fonttools (4.8MiB)
+Downloading networkx (2.0MiB)
+Downloading pyarrow (40.8MiB)
+Downloading marimo (29.4MiB)
+Downloading loro (3.3MiB)
+Downloading timm (2.4MiB)
+Downloading matplotlib (8.3MiB)
+Downloading scipy (33.5MiB)
+ Downloaded kiwisolver
+ Downloaded aiohttp
+ Downloaded torchvision
+ Downloaded pygments
+ Downloaded loro
+ Downloaded timm
+ Downloaded hf-xet
+ Downloaded networkx
+ Downloaded fonttools
+ Downloaded pillow
+ Downloaded matplotlib
+ Downloaded sympy
+ Downloaded numpy
+ Downloaded scipy
+ Downloaded pandas
+ Downloaded marimo
+ Downloaded pyarrow
+ Downloaded jedi
+ Downloaded torch
+Prepared 72 packages in 6.71s
+Installed 72 packages in 392ms
+ + aiohappyeyeballs==2.7.1
+ + aiohttp==3.14.3
+ + aiosignal==1.4.0
+ + anyio==4.14.2
+ + attrs==26.1.0
+ + certifi==2026.7.22
+ + charset-normalizer==3.4.9
+ + click==8.4.2
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + datasets==4.0.0
+ + dill==0.3.8
+ + docutils==0.23
+ + filelock==3.32.0
+ + fonttools==4.63.0
+ + frozenlist==1.8.0
+ + fsspec==2025.3.0
+ + h11==0.16.0
+ + hf-xet==1.5.2
+ + huggingface-hub==0.34.3
+ + idna==3.18
+ + iniconfig==2.3.0
+ + itsdangerous==2.2.0
+ + jedi==0.20.0
+ + jinja2==3.1.6
+ + kiwisolver==1.5.0
+ + loguru==0.7.3
+ + loro==1.13.2
+ + marimo==0.14.17
+ + markdown==3.10.2
+ + markupsafe==3.0.3
+ + matplotlib==3.10.5
+ + mpmath==1.3.0
+ + multidict==6.7.1
+ + multiprocess==0.70.16
+ + narwhals==2.24.0
+ + networkx==3.6.1
+ + numpy==2.3.2
+ + packaging==26.2
+ + pandas==2.3.1
+ + parso==0.8.7
+ + pillow==11.3.0
+ + pluggy==1.6.0
+ + propcache==0.5.2
+ + psutil==7.2.2
+ + pyarrow==21.0.0
+ + pygments==2.20.0
+ + pymdown-extensions==10.21.3
+ + pyparsing==3.3.2
+ + pytest==8.4.1
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.2
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + safetensors==0.8.0
+ + scipy==1.16.1
+ + setuptools==83.0.0
+ + six==1.17.0
+ + starlette==1.3.1
+ + sympy==1.14.0
+ + timm==1.0.19
+ + tomlkit==0.15.1
+ + torch==2.7.1+cpu
+ + torchvision==0.22.1+cpu
+ + tqdm==4.69.1
+ + typing-extensions==4.16.0
+ + tzdata==2026.3
+ + urllib3==2.7.0
+ + uvicorn==0.51.0
+ + websockets==16.1.1
+ + xxhash==3.8.1
+ + yarl==1.24.5
+.....                                                                    [100%]
+5 passed in 0.91s
+wrote outputs/full_synthetic_summary.json
+{
+  "ar1": {
+    "conditional": 1.0,
+    "conditional_median_crossing_or_horizon": 12.0,
+    "pairwise_detection_rate": 0.94,
+    "pairwise_median_crossing_or_horizon": 149.0,
+    "standard": 1.0,
+    "standard_median_crossing_or_horizon": 17.0
+  },
+  "contamination_control": {
+    "conditional_late_mean_ecdf": 0.7434000000000001,
+    "fixed_reference_retains_more_shift_evidence": true,
+    "protocol": "fixed N(0,1) calibration; 300 null then 2000 N(1,1) stream points",
+    "standard_late_mean_rank_pvalue": 0.5550927611665414
+  },
+  "mode": "full-released-synthetic-protocol",
+  "primary_power": {
+    "conditional_faster": true,
+    "conditional_median_crossing_or_horizon": 21.0,
+    "conditional_rejection_rate": 1.0,
+    "standard_median_crossing_or_horizon": 31.0,
+    "standard_rejection_rate": 1.0
+  },
+  "type1_rates": [
+    {
+      "calibration_size": 0,
+      "conditional": 0.0,
+      "naive": 0.88
+    },
+    {
+      "calibration_size": 500,
+      "conditional": 0.0,
+      "naive": 0.33
+    },
+    {
+      "calibration_size": 1000,
+      "conditional": 0.0,
+      "naive": 0.17
+    },
+    {
+      "calibration_size": 1500,
+      "conditional": 0.0,
+      "naive": 0.15
+    },
+    {
+      "calibration_size": 2000,
+      "conditional": 0.0,
+      "naive": 0.07
+    },
+    {
+      "calibration_size": 2500,
+      "conditional": 0.01,
+      "naive": 0.08
+    },
+    {
+      "calibration_size": 3000,
+      "conditional": 0.0,
+      "naive": 0.03
+    },
+    {
+      "calibration_size": 3500,
+      "conditional": 0.01,
+      "naive": 0.05
+    },
+    {
+      "calibration_size": 4000,
+      "conditional": 0.0,
+      "naive": 0.06
+    },
+    {
+      "calibration_size": 4500,
+      "conditional": 0.01,
+      "naive": 0.07
+    },
+    {
+      "calibration_size": 5000,
+      "conditional": 0.0,
+      "naive": 0.07
+    }
+  ]
+}
+{
+  "checks": {
+    "C1_primary_and_supporting_detection_checks": true,
+    "C1_test_time_contamination_mechanism_control": true,
+    "C2_full_grid_finite_sample_type1_check": true,
+    "C2_increasing_horizon_power_check": true,
+    "C2_no_DKW_negative_control_rejects_excessively": true,
+    "source_artifact_is_full": true
+  },
+  "claim_summary": {
+    "C1": "verified empirically on every released synthetic shift suite and its fixed-reference mechanism control",
+    "C2": "verified empirically for the released finite null grid and increasing-horizon power check; this simulation does not purport to prove the paper's asymptotic theorem"
+  },
+  "headline": {
+    "contamination_late_ecdf_gap": 0.18830723883345868,
+    "max_conditional_type1_rate": 0.01,
+    "max_naive_type1_rate": 0.88,
+    "primary": {
+      "conditional_median_delay": 21.0,
+      "conditional_rate": 1.0,
+      "standard_median_delay": 31.0,
+      "standard_rate": 1.0
+    }
+  },
+  "input": "outputs/full_synthetic_summary.json",
+  "supporting_checks": {
+    "bias_sweep": [
+      true,
+      true,
+      true
+    ],
+    "delayed_shift": [
+      true,
+      true,
+      true
+    ],
+    "drift_sweep": [
+      true,
+      true,
+      true
+    ]
+  }
+}
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 4, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 297.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+BASELINE_VERDICT=VERIFIED
+BASELINE_RUNTIME_SECONDS=297
+BASELINE_EXPECTED_CORES=4
+BASELINE_SELECTED_FLAVOR=cpu-upgrade
+CLAIM2_RAW_RESULTS_BEGIN
+{"assumption_audit": {"actual_pit_mean": 1.0, "equation6_holds": true, "ordinary_pit_value": 1.0, "proof_claimed_pit_mean": 0.5, "reference_good_event_probability": 1.0, "supremum_ecdf_error": 0.0}, "claim_id": 2, "distribution": {"continuous": false, "name": "Dirac point mass", "reference_iid_from_P": true, "stream_iid_from_P": true, "support_point": 0.0, "within_stated_any_P_domain": true}, "equation8": {"conditional_false_reject_probability": 1.0, "final_wealth": 19554270750.41012, "first_crossing": 9}, "parameters": {"alpha": 0.05, "delta": 0.1, "dkw_epsilon": 0.027366641525559867, "equation8_eta": 0.5, "equation8_k": 1e-06, "horizon": 64, "reference_size": 2000, "released_C": 0.1, "released_D": 0.5, "threshold": 20.0}, "released_algorithm": {"conditional_false_reject_probability": 1.0, "final_wealth": 13503318515.96557, "first_crossing": 10}, "runtime_context": {"affinity_count": 64, "expected_core_count": 4, "os_cpu_count": 64, "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255], "selected_backend": "hf", "selected_flavor": "cpu-upgrade"}, "theorem_comparison": {"actual_inner_probability": 1.0, "actual_outer_probability": 0.0, "required_inner_probability_at_most": 0.05, "required_outer_probability_at_least": 0.9}, "verdict_candidate": "FALSIFIED"}
+CLAIM2_RAW_RESULTS_END
+CLAIM2_NEGATIVE_CONTROLS_BEGIN
+{"randomized_pit_repair": {"description": "At the point-mass atom, use V~Uniform(0,1) instead of ordinary F(X)=1.", "expected": "not deterministic rejection and rejection rate <= alpha", "horizon": 1000, "records": [{"crossing": -1, "rejected": false, "seed": 0}, {"crossing": -1, "rejected": false, "seed": 1}, {"crossing": -1, "rejected": false, "seed": 2}, {"crossing": -1, "rejected": false, "seed": 3}, {"crossing": -1, "rejected": false, "seed": 4}, {"crossing": -1, "rejected": false, "seed": 5}, {"crossing": -1, "rejected": false, "seed": 6}, {"crossing": -1, "rejected": false, "seed": 7}, {"crossing": -1, "rejected": false, "seed": 8}, {"crossing": -1, "rejected": false, "seed": 9}, {"crossing": -1, "rejected": false, "seed": 10}, {"crossing": -1, "rejected": false, "seed": 11}, {"crossing": -1, "rejected": false, "seed": 12}, {"crossing": -1, "rejected": false, "seed": 13}, {"crossing": -1, "rejected": false, "seed": 14}, {"crossing": -1, "rejected": false, "seed": 15}, {"crossing": -1, "rejected": false, "seed": 16}, {"crossing": -1, "rejected": false, "seed": 17}, {"crossing": -1, "rejected": false, "seed": 18}, {"crossing": -1, "rejected": false, "seed": 19}, {"crossing": -1, "rejected": false, "seed": 20}, {"crossing": -1, "rejected": false, "seed": 21}, {"crossing": -1, "rejected": false, "seed": 22}, {"crossing": -1, "rejected": false, "seed": 23}, {"crossing": -1, "rejected": false, "seed": 24}, {"crossing": -1, "rejected": false, "seed": 25}, {"crossing": -1, "rejected": false, "seed": 26}, {"crossing": -1, "rejected": false, "seed": 27}, {"crossing": -1, "rejected": false, "seed": 28}, {"crossing": -1, "rejected": false, "seed": 29}, {"crossing": -1, "rejected": false, "seed": 30}, {"crossing": -1, "rejected": false, "seed": 31}, {"crossing": -1, "rejected": false, "seed": 32}, {"crossing": -1, "rejected": false, "seed": 33}, {"crossing": -1, "rejected": false, "seed": 34}, {"crossing": -1, "rejected": false, "seed": 35}, {"crossing": -1, "rejected": false, "seed": 36}, {"crossing": -1, "rejected": false, "seed": 37}, {"crossing": -1, "rejected": false, "seed": 38}, {"crossing": -1, "rejected": false, "seed": 39}, {"crossing": -1, "rejected": false, "seed": 40}, {"crossing": -1, "rejected": false, "seed": 41}, {"crossing": -1, "rejected": false, "seed": 42}, {"crossing": -1, "rejected": false, "seed": 43}, {"crossing": -1, "rejected": false, "seed": 44}, {"crossing": -1, "rejected": false, "seed": 45}, {"crossing": -1, "rejected": false, "seed": 46}, {"crossing": -1, "rejected": false, "seed": 47}, {"crossing": -1, "rejected": false, "seed": 48}, {"crossing": -1, "rejected": false, "seed": 49}, {"crossing": -1, "rejected": false, "seed": 50}, {"crossing": -1, "rejected": false, "seed": 51}, {"crossing": -1, "rejected": false, "seed": 52}, {"crossing": -1, "rejected": false, "seed": 53}, {"crossing": -1, "rejected": false, "seed": 54}, {"crossing": -1, "rejected": false, "seed": 55}, {"crossing": -1, "rejected": false, "seed": 56}, {"crossing": -1, "rejected": false, "seed": 57}, {"crossing": -1, "rejected": false, "seed": 58}, {"crossing": -1, "rejected": false, "seed": 59}, {"crossing": -1, "rejected": false, "seed": 60}, {"crossing": -1, "rejected": false, "seed": 61}, {"crossing": -1, "rejected": false, "seed": 62}, {"crossing": -1, "rejected": false, "seed": 63}, {"crossing": -1, "rejected": false, "seed": 64}, {"crossing": -1, "rejected": false, "seed": 65}, {"crossing": -1, "rejected": false, "seed": 66}, {"crossing": -1, "rejected": false, "seed": 67}, {"crossing": -1, "rejected": false, "seed": 68}, {"crossing": -1, "rejected": false, "seed": 69}, {"crossing": -1, "rejected": false, "seed": 70}, {"crossing": -1, "rejected": false, "seed": 71}, {"crossing": -1, "rejected": false, "seed": 72}, {"crossing": -1, "rejected": false, "seed": 73}, {"crossing": -1, "rejected": false, "seed": 74}, {"crossing": -1, "rejected": false, "seed": 75}, {"crossing": -1, "rejected": false, "seed": 76}, {"crossing": -1, "rejected": false, "seed": 77}, {"crossing": -1, "rejected": false, "seed": 78}, {"crossing": -1, "rejected": false, "seed": 79}, {"crossing": -1, "rejected": false, "seed": 80}, {"crossing": -1, "rejected": false, "seed": 81}, {"crossing": -1, "rejected": false, "seed": 82}, {"crossing": -1, "rejected": false, "seed": 83}, {"crossing": -1, "rejected": false, "seed": 84}, {"crossing": -1, "rejected": false, "seed": 85}, {"crossing": -1, "rejected": false, "seed": 86}, {"crossing": -1, "rejected": false, "seed": 87}, {"crossing": -1, "rejected": false, "seed": 88}, {"crossing": -1, "rejected": false, "seed": 89}, {"crossing": -1, "rejected": false, "seed": 90}, {"crossing": -1, "rejected": false, "seed": 91}, {"crossing": -1, "rejected": false, "seed": 92}, {"crossing": -1, "rejected": false, "seed": 93}, {"crossing": -1, "rejected": false, "seed": 94}, {"crossing": -1, "rejected": false, "seed": 95}, {"crossing": -1, "rejected": false, "seed": 96}, {"crossing": -1, "rejected": false, "seed": 97}, {"crossing": -1, "rejected": false, "seed": 98}, {"crossing": -1, "rejected": false, "seed": 99}, {"crossing": -1, "rejected": false, "seed": 100}, {"crossing": -1, "rejected": false, "seed": 101}, {"crossing": -1, "rejected": false, "seed": 102}, {"crossing": -1, "rejected": false, "seed": 103}, {"crossing": -1, "rejected": false, "seed": 104}, {"crossing": -1, "rejected": false, "seed": 105}, {"crossing": -1, "rejected": false, "seed": 106}, {"crossing": -1, "rejected": false, "seed": 107}, {"crossing": -1, "rejected": false, "seed": 108}, {"crossing": -1, "rejected": false, "seed": 109}, {"crossing": -1, "rejected": false, "seed": 110}, {"crossing": -1, "rejected": false, "seed": 111}, {"crossing": -1, "rejected": false, "seed": 112}, {"crossing": -1, "rejected": false, "seed": 113}, {"crossing": -1, "rejected": false, "seed": 114}, {"crossing": -1, "rejected": false, "seed": 115}, {"crossing": -1, "rejected": false, "seed": 116}, {"crossing": -1, "rejected": false, "seed": 117}, {"crossing": -1, "rejected": false, "seed": 118}, {"crossing": -1, "rejected": false, "seed": 119}, {"crossing": -1, "rejected": false, "seed": 120}, {"crossing": -1, "rejected": false, "seed": 121}, {"crossing": -1, "rejected": false, "seed": 122}, {"crossing": -1, "rejected": false, "seed": 123}, {"crossing": -1, "rejected": false, "seed": 124}, {"crossing": -1, "rejected": false, "seed": 125}, {"crossing": -1, "rejected": false, "seed": 126}, {"crossing": -1, "rejected": false, "seed": 127}, {"crossing": -1, "rejected": false, "seed": 128}, {"crossing": -1, "rejected": false, "seed": 129}, {"crossing": -1, "rejected": false, "seed": 130}, {"crossing": -1, "rejected": false, "seed": 131}, {"crossing": -1, "rejected": false, "seed": 132}, {"crossing": -1, "rejected": false, "seed": 133}, {"crossing": -1, "rejected": false, "seed": 134}, {"crossing": -1, "rejected": false, "seed": 135}, {"crossing": -1, "rejected": false, "seed": 136}, {"crossing": -1, "rejected": false, "seed": 137}, {"crossing": -1, "rejected": false, "seed": 138}, {"crossing": 109, "rejected": true, "seed": 139}, {"crossing": -1, "rejected": false, "seed": 140}, {"crossing": -1, "rejected": false, "seed": 141}, {"crossing": -1, "rejected": false, "seed": 142}, {"crossing": -1, "rejected": false, "seed": 143}, {"crossing": -1, "rejected": false, "seed": 144}, {"crossing": -1, "rejected": false, "seed": 145}, {"crossing": -1, "rejected": false, "seed": 146}, {"crossing": -1, "rejected": false, "seed": 147}, {"crossing": -1, "rejected": false, "seed": 148}, {"crossing": -1, "rejected": false, "seed": 149}, {"crossing": -1, "rejected": false, "seed": 150}, {"crossing": -1, "rejected": false, "seed": 151}, {"crossing": -1, "rejected": false, "seed": 152}, {"crossing": -1, "rejected": false, "seed": 153}, {"crossing": -1, "rejected": false, "seed": 154}, {"crossing": -1, "rejected": false, "seed": 155}, {"crossing": -1, "rejected": false, "seed": 156}, {"crossing": -1, "rejected": false, "seed": 157}, {"crossing": -1, "rejected": false, "seed": 158}, {"crossing": -1, "rejected": false, "seed": 159}, {"crossing": -1, "rejected": false, "seed": 160}, {"crossing": -1, "rejected": false, "seed": 161}, {"crossing": -1, "rejected": false, "seed": 162}, {"crossing": -1, "rejected": false, "seed": 163}, {"crossing": -1, "rejected": false, "seed": 164}, {"crossing": -1, "rejected": false, "seed": 165}, {"crossing": -1, "rejected": false, "seed": 166}, {"crossing": -1, "rejected": false, "seed": 167}, {"crossing": -1, "rejected": false, "seed": 168}, {"crossing": -1, "rejected": false, "seed": 169}, {"crossing": -1, "rejected": false, "seed": 170}, {"crossing": -1, "rejected": false, "seed": 171}, {"crossing": -1, "rejected": false, "seed": 172}, {"crossing": -1, "rejected": false, "seed": 173}, {"crossing": -1, "rejected": false, "seed": 174}, {"crossing": -1, "rejected": false, "seed": 175}, {"crossing": -1, "rejected": false, "seed": 176}, {"crossing": -1, "rejected": false, "seed": 177}, {"crossing": -1, "rejected": false, "seed": 178}, {"crossing": -1, "rejected": false, "seed": 179}, {"crossing": -1, "rejected": false, "seed": 180}, {"crossing": -1, "rejected": false, "seed": 181}, {"crossing": -1, "rejected": false, "seed": 182}, {"crossing": -1, "rejected": false, "seed": 183}, {"crossing": -1, "rejected": false, "seed": 184}, {"crossing": -1, "rejected": false, "seed": 185}, {"crossing": -1, "rejected": false, "seed": 186}, {"crossing": -1, "rejected": false, "seed": 187}, {"crossing": -1, "rejected": false, "seed": 188}, {"crossing": -1, "rejected": false, "seed": 189}, {"crossing": -1, "rejected": false, "seed": 190}, {"crossing": -1, "rejected": false, "seed": 191}, {"crossing": -1, "rejected": false, "seed": 192}, {"crossing": -1, "rejected": false, "seed": 193}, {"crossing": -1, "rejected": false, "seed": 194}, {"crossing": -1, "rejected": false, "seed": 195}, {"crossing": -1, "rejected": false, "seed": 196}, {"crossing": -1, "rejected": false, "seed": 197}, {"crossing": -1, "rejected": false, "seed": 198}, {"crossing": -1, "rejected": false, "seed": 199}, {"crossing": -1, "rejected": false, "seed": 200}, {"crossing": -1, "rejected": false, "seed": 201}, {"crossing": -1, "rejected": false, "seed": 202}, {"crossing": -1, "rejected": false, "seed": 203}, {"crossing": -1, "rejected": false, "seed": 204}, {"crossing": -1, "rejected": false, "seed": 205}, {"crossing": -1, "rejected": false, "seed": 206}, {"crossing": -1, "rejected": false, "seed": 207}, {"crossing": -1, "rejected": false, "seed": 208}, {"crossing": -1, "rejected": false, "seed": 209}, {"crossing": -1, "rejected": false, "seed": 210}, {"crossing": -1, "rejected": false, "seed": 211}, {"crossing": -1, "rejected": false, "seed": 212}, {"crossing": -1, "rejected": false, "seed": 213}, {"crossing": -1, "rejected": false, "seed": 214}, {"crossing": -1, "rejected": false, "seed": 215}, {"crossing": -1, "rejected": false, "seed": 216}, {"crossing": -1, "rejected": false, "seed": 217}, {"crossing": -1, "rejected": false, "seed": 218}, {"crossing": -1, "rejected": false, "seed": 219}, {"crossing": -1, "rejected": false, "seed": 220}, {"crossing": -1, "rejected": false, "seed": 221}, {"crossing": -1, "rejected": false, "seed": 222}, {"crossing": -1, "rejected": false, "seed": 223}, {"crossing": -1, "rejected": false, "seed": 224}, {"crossing": -1, "rejected": false, "seed": 225}, {"crossing": -1, "rejected": false, "seed": 226}, {"crossing": -1, "rejected": false, "seed": 227}, {"crossing": -1, "rejected": false, "seed": 228}, {"crossing": -1, "rejected": false, "seed": 229}, {"crossing": -1, "rejected": false, "seed": 230}, {"crossing": -1, "rejected": false, "seed": 231}, {"crossing": -1, "rejected": false, "seed": 232}, {"crossing": -1, "rejected": false, "seed": 233}, {"crossing": -1, "rejected": false, "seed": 234}, {"crossing": -1, "rejected": false, "seed": 235}, {"crossing": -1, "rejected": false, "seed": 236}, {"crossing": -1, "rejected": false, "seed": 237}, {"crossing": -1, "rejected": false, "seed": 238}, {"crossing": -1, "rejected": false, "seed": 239}, {"crossing": -1, "rejected": false, "seed": 240}, {"crossing": -1, "rejected": false, "seed": 241}, {"crossing": -1, "rejected": false, "seed": 242}, {"crossing": -1, "rejected": false, "seed": 243}, {"crossing": -1, "rejected": false, "seed": 244}, {"crossing": -1, "rejected": false, "seed": 245}, {"crossing": -1, "rejected": false, "seed": 246}, {"crossing": -1, "rejected": false, "seed": 247}, {"crossing": -1, "rejected": false, "seed": 248}, {"crossing": -1, "rejected": false, "seed": 249}, {"crossing": -1, "rejected": false, "seed": 250}, {"crossing": -1, "rejected": false, "seed": 251}, {"crossing": -1, "rejected": false, "seed": 252}, {"crossing": -1, "rejected": false, "seed": 253}, {"crossing": -1, "rejected": false, "seed": 254}, {"crossing": -1, "rejected": false, "seed": 255}], "rejection_rate": 0.00390625, "rejections": 1, "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]}, "reverse_direction": {"crossing": -1, "eta": -0.5, "expected": "no crossing", "final_wealth": 5.421010862400482e-20}}
+CLAIM2_NEGATIVE_CONTROLS_END
+CLAIM2_VERIFIER_OUTPUT={"checks": {"dkw_error_is_exactly_zero": true, "equation6_holds": true, "equation8_crosses": true, "inner_probability_exceeds_alpha": true, "null_is_inside_stated_any_P_domain": true, "outer_probability_below_required": true, "randomized_tie_repair_at_most_alpha": true, "randomized_tie_repair_not_deterministic": true, "reference_is_iid_from_null": true, "released_algorithm_crosses": true, "reverse_direction_does_not_cross": true, "stream_is_iid_from_null": true}, "claim_id": 2, "passed": true, "reason": "An assumption-satisfying finite witness contradicts both probability inequalities.", "verdict": "FALSIFIED"}
+CLAIM2_INDEPENDENT_OUTPUT={"checks": {"all_transitions_reconstructed": true, "deterministic_reference_contradicts_outer_bound": true, "dkw_recomputed": true, "equation8_crossing_reconstructed": true, "finite_witness_contradicts_inner_bound": true, "point_mass_ecdf_equals_true_cdf": true, "released_crossing_reconstructed": true, "trajectory_has_declared_horizon": true}, "claim_id": 2, "imports_released_code": false, "independent": true, "passed": true, "reconstructed": {"dkw_epsilon": 0.027366641525559867, "equation8_final_wealth": 19554270750.41012, "equation8_first_crossing": 9, "released_final_wealth": 13503318515.96557, "released_first_crossing": 10}, "verdict": "FALSIFIED"}
+CLAIM2_FROZEN_REGRESSION={"checks": {"assumptions_stable": true, "equation8_crossing_stable": true, "randomized_control_crossings_stable": true, "randomized_control_rate_stable": true, "released_crossing_stable": true, "reverse_control_stable": true, "theorem_probabilities_stable": true}, "claim_id": 2, "passed": true, "verdict": "FALSIFIED"}
+CLAIM2_TRAJECTORY_CSV_BEGIN
+time,x_t,true_cdf,empirical_cdf,eta_before,eta_used,eta_after,released_bet,released_wealth,equation8_bet,equation8_wealth,reverse_bet,reverse_wealth
+1,0.0,1.0,1.0,0.0,0.0,0.5,0.9999999481069943,0.9999999481069943,1.4481069916625224,1.4481069916625224,0.49999999999996103,0.49999999999996103
+2,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1.4481068932622922,1.4481069916625224,2.097013859301881,0.49999999999996103,0.24999999999996103
+3,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,2.097013683134111,1.4481069916625224,3.0367004312682626,0.49999999999996103,0.12499999999997077
+4,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,3.0367001273953513,1.4481069916625224,4.397467126104169,0.49999999999996103,0.062499999999980516
+5,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,4.397466615449449,1.4481069916625224,6.368002890917546,0.49999999999996103,0.031249999999987822
+6,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,6.368002049177916,1.4481069916625224,9.221549509264854,0.49999999999996103,0.015624999999992693
+7,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,9.221548142256793,1.4481069916625224,13.353790318328537,0.49999999999996103,0.007812499999995738
+8,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,13.353788124320351,1.4481069916625224,19.337717125166854,0.49999999999996103,0.0039062499999975644
+9,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,19.33771363748452,1.4481069916625224,28.003083371746214,0.49999999999996103,0.00195312499999863
+10,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,28.003077871537446,1.4481069916625224,40.55146081873421,0.49999999999996103,0.0009765624999992389
+11,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,40.55145220267087,1.4481069916625224,58.72285393373785,0.49999999999996103,0.0004882812499995814
+12,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,58.72284051378875,1.4481069916625224,85.03697535182285,0.49999999999996103,0.00024414062499977167
+13,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,85.03695455278287,1.4481069916625224,123.14263855680825,0.49999999999996103,0.00012207031249987632
+14,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,123.14260646015713,1.4481069916625224,178.32371586588494,0.49999999999996103,6.10351562499334e-05
+15,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,178.32366652299027,1.4481069916625224,258.2318197246291,0.49999999999996103,3.0517578124964323e-05
+16,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,258.23174412416984,1.4481069916625224,373.94730361297144,0.49999999999996103,1.5258789062480972e-05
+17,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,373.9471881305983,1.4481069916625224,541.5157048752919,0.49999999999996103,7.6293945312398915e-06
+18,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,541.5155289488391,1.4481069916625224,784.1726783249693,0.49999999999996103,3.8146972656196484e-06
+19,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,784.1724109724537,1.4481069916625224,1135.5659381531143,0.49999999999996103,1.9073486328096756e-06
+20,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1135.56553276323,1.4481069916625224,1644.4209745333364,0.49999999999996103,9.536743164047635e-07
+21,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1644.420361079416,1.4481069916625224,2381.2975104582233,0.49999999999996103,4.7683715820234457e-07
+22,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,2381.296583872607,1.4481069916625224,3448.3735741231117,0.49999999999996103,2.384185791011537e-07
+23,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,3448.372176954267,1.4481069916625224,4993.613882551959,0.49999999999996103,1.1920928955056756e-07
+24,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,4993.611779114895,1.4481069916625224,7231.287176986526,0.49999999999996103,5.9604644775279134e-08
+25,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,7231.284014865121,1.4481069916625224,10471.677519713732,0.49999999999996103,2.9802322387637244e-08
+26,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,10471.672772470181,1.4481069916625224,15164.109430732717,0.49999999999996103,1.4901161193817461e-08
+27,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,15164.102312711977,1.4481069916625224,21959.25288897964,0.49999999999996103,7.45058059690815e-09
+28,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,21959.242228703963,1.4481069916625224,31799.347640216864,0.49999999999996103,3.7252902984537845e-09
+29,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,31799.33169236553,1.4481069916625224,46048.85764810517,0.49999999999996103,1.862645149226747e-09
+30,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,46048.833814460995,1.4481069916625224,66683.67271829332,0.49999999999996103,9.31322574613301e-10
+31,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,66683.63713382506,1.4481069916625224,96565.09269309597,0.49999999999996103,4.656612873066142e-10
+32,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,96565.03961234358,1.4481069916625224,139836.58587941184,0.49999999999996103,2.3283064365328895e-10
+33,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,139836.50676731768,1.4481069916625224,202498.33770219304,0.49999999999996103,1.164153218266354e-10
+34,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,202498.2198877132,1.4481069916625224,293239.2586265843,0.49999999999996103,5.8207660913313164e-11
+35,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,293239.0833097983,1.4481069916625224,424641.8206470914,0.49999999999996103,2.9103830456654314e-11
+36,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,424641.55995076144,1.4481069916625224,614926.7894313559,0.49999999999996103,1.4551915228326023e-11
+37,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,614926.4020407299,1.4481069916625224,890479.7831361342,0.49999999999996103,7.275957614162444e-12
+38,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,890479.2078538032,1.4481069916625224,1289509.9998935626,0.49999999999996103,3.6379788070809386e-12
+39,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1289509.1461163433,1.4481069916625224,1867348.4466646067,0.49999999999996103,1.8189894035403275e-12
+40,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1867347.1803181071,1.4481069916625224,2704120.341485168,0.49999999999996103,9.094947017700929e-13
+41,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,2704118.4642573902,1.4481069916625224,3915855.572801519,0.49999999999996103,4.54747350885011e-13
+42,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,3915852.7914943416,1.4481069916625224,5670577.8333145315,0.49999999999996103,2.2737367544248778e-13
+43,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,5670573.714626459,1.4481069916625224,8211603.407189291,0.49999999999996103,1.1368683772123503e-13
+44,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,8211597.311027004,1.4481069916625224,11891280.306710603,0.49999999999996103,5.6843418860613084e-14
+45,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,11891271.287866117,1.4481069916625224,17219846.15196649,0.49999999999996103,2.8421709430304327e-14
+46,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,17219832.81519978,1.4481069916625224,24936179.608015656,0.49999999999996103,1.4210854715151056e-14
+47,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,24936159.894527316,1.4481069916625224,36110256.035719894,0.49999999999996103,7.105427357574974e-15
+48,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,36110226.908623934,1.4481069916625224,52291514.23604978,0.49999999999996103,3.5527136787872102e-15
+49,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,52291471.21720544,1.4481069916625224,75723707.369844,0.49999999999996103,1.7763568393934667e-15
+50,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,75723643.85798943,1.4481069916625224,109656030.07687798,0.49999999999996103,8.881784196966641e-16
+51,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,109655936.34406947,1.4481069916625224,158793663.83228284,0.49999999999996103,4.4408920984829744e-16
+52,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,158793525.54725143,1.4481069916625224,229950214.827237,0.49999999999996103,2.2204460492413142e-16
+53,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,229950010.88319394,1.4481069916625224,332992513.82562095,0.49999999999996103,1.1102230246205705e-16
+54,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,332992213.1456591,1.4481069916625224,482208787.44216084,0.49999999999996103,5.55111512310242e-17
+55,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,482208344.2821358,1.4481069916625224,698289916.5361003,0.49999999999996103,2.7755575615509937e-17
+56,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,698289263.5798862,1.4481069916625224,1011198510.343366,0.49999999999996103,1.3877787807753887e-17
+57,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1011197548.555163,1.4481069916625224,1464323632.7869558,0.49999999999996103,6.938893903876403e-18
+58,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,1464322216.500744,1.4481069916625224,2120497290.6954548,0.49999999999996103,3.469446951937931e-18
+59,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,2120495205.710716,1.4481069916625224,3070706952.4575243,0.49999999999996103,1.7347234759688303e-18
+60,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,3070703883.8673844,1.4481069916625224,4446712207.200458,0.49999999999996103,8.673617379843475e-19
+61,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,4446707692.148681,1.4481069916625224,6439315037.15807,0.49999999999996103,4.3368086899213997e-19
+62,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,6439308395.47803,1.4481069916625224,9324817126.826216,0.49999999999996103,2.1684043449605308e-19
+63,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,9324807359.225767,1.4481069916625224,13503332877.331478,0.49999999999996103,1.0842021724801809e-19
+64,0.0,1.0,1.0,0.5,0.5,0.5,1.4481069684089154,13503318515.96557,1.4481069916625224,19554270750.41012,0.49999999999996103,5.421010862400482e-20
+CLAIM2_TRAJECTORY_CSV_END
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 4, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 2.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM2_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 4,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 2.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM2_VERDICT=FALSIFIED
+CLAIM2_RUNTIME_SECONDS=2
+CLAIM3_PROOF_CERTIFICATE={"all_negative_controls_passed": true, "all_obligations_passed": true, "assumptions": {"bet_range": [-0.5, 0.5], "confidence_scale_constant": "c=C0>0 fixed conditional on D0", "delta0_positive": true, "eta_domain": [-0.5, 0.5], "fixed_D0": true, "iid_fixed_alternative": true, "k_limit": "k -> 0 through positive values"}, "certificate_type": "independent corrected symbolic derivation", "claim_id": 3, "obligations": [{"method": "Derivative factors as x(1+2x)/(1+x), so the gap is minimized at x=0 with value 0.", "name": "log_quadratic_lower_bound", "passed": true, "statement": "log(1+x) >= x-x^2 for x in [-1/2,1/2]"}, {"method": "SymPy exact limit", "name": "ons_regret_is_sublinear", "passed": true, "statement": "(2 log(1+4t)+1/2)/t tends to zero"}, {"method": "Exact symbolic completion of the square; remaining factor is nonnegative under M2<=1/c^2.", "name": "interior_benchmark_growth", "passed": true, "statement": "If d <= c M2 and M2 <= 1/c^2, q=d/(2M2) is feasible and growth >= c^2 d^2/4."}, {"method": "Exact symbolic factorization plus cd<=1 from |Z|<=1/c.", "name": "boundary_benchmark_growth", "passed": true, "statement": "If d > c M2, q=c/2 is feasible and growth > cd/4 >= c^2d^2/4."}, {"method": "Interior: q^2 Var(Z)<=q^2 M2 equals the bound. Boundary: q^2 M2<cd/4<the bound.", "name": "variance_mean_coupling", "passed": true, "statement": "For either benchmark, Var(g) is no larger than its quadratic log-growth lower bound."}, {"method": "Strong law for bounded iid log increments plus the exact regret-to-wealth inequality.", "name": "asymptotic_power", "passed": true, "statement": "Positive iid benchmark mean and o(t) pathwise regret imply log S_t/t has positive liminf almost surely."}, {"method": "For L=A+log(64/mu)+1>=1, LHS<=A+2log(5)+2log(64/mu)+2log L+1/2<9L<32L.", "name": "explicit_burn_in", "passed": true, "statement": "t0=ceil(64/mu*(A+log(64/mu)+1)) satisfies regret+log(1/alpha)<=t mu/2."}, {"method": "Direct substitution c=mu/2 in Bernstein with B=32+(4/3)log 3.", "name": "bernstein_tail", "passed": true, "statement": "Var(log increment)<=4mu and range<=log 3 give P(tau>t)<=exp(-t mu/B)."}, {"method": "Geometric series and 1/(1-exp(-y))<=1+1/y for y>0.", "name": "geometric_tail_sum", "passed": true, "statement": "Sum_{t>=t0} exp(-t mu/B) <= 1+B/mu."}, {"method": "Substitute 1/mu<=4/(c^2d^2) and log(64/mu)<=log(256/(c^2d^2)).", "name": "stopping_time_order", "passed": true, "statement": "mu>=c^2 d^2/4 yields O(d^-2 log(1/(alpha d))+d^-2) for fixed c."}, {"method": "Equation 8 and C_k are continuous in k at zero for eta!=0 on compact p in [0,1].", "name": "positive_k_continuity", "passed": true, "statement": "The fixed nonzero benchmark's mean and variance converge uniformly to their k=0 values."}], "runtime_context": {"affinity_count": 64, "expected_core_count": 4, "os_cpu_count": 64, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "stochastic_seeds": []}, "symbolic_values": {"bernstein_constant": 33.46481638489081, "boundary_growth": "c*(-c*m2 + 2*d)/4", "boundary_vs_linear": "-c*(c*m2 - d)/4", "interior_growth": "d**2/(4*m2)", "interior_margin": "-d**2*(c**2*m2 - 1)/(4*m2)", "log_gap_derivative": "x*(2*x + 1)/(x + 1)", "regret_ratio_limit": "0"}, "sympy_version": "1.14.0", "verdict": "VERIFIED"}
+CLAIM3_NEGATIVE_CONTROLS={"geometric_rate_substitution_error": {"equation73_exponent": 1.152316384890813, "error_detected": true, "parameters": {"omega": 0.1, "t": 100}, "printed_substituted_exponent": -146.7941384890813}, "unconstrained_maximizer_error": {"domain_upper_bound": 0.5, "error_detected": true, "feasible_boundary_value": 0.09000000000000001, "parameters": {"M2": 0.04, "c": 1.0, "d": 0.2}, "unconstrained_eta": 2.5, "unconstrained_quadratic_value": 0.25000000000000006}}
+CLAIM3_INDEPENDENT_OUTPUT={"burn_in_checks": 25, "checks": {"burn_in_grid_nonvacuous": true, "certificate_declares_all_obligations": true, "certificate_obligations_pass": true, "explicit_burn_in_holds": true, "final_verdict_verified": true, "rational_benchmark_bound_holds": true, "rational_case_split_nonvacuous": true, "rational_variance_coupling_holds": true, "tail_rate_error_detected": true, "unconstrained_error_detected": true}, "claim_id": 3, "imports_sympy_or_author_code": false, "independent": true, "passed": true, "rational_grid_checks": 952, "verdict": "VERIFIED"}
+CLAIM3_VERIFIER_OUTPUT={"checks": {"asymptotic_power_obligation": true, "corrected_proof_complete": true, "independent_checker_passes": true, "printed_errors_detected": true, "stopping_order_obligation": true, "two_distinct_negative_controls": true}, "claim_id": 3, "passed": true, "verdict": "VERIFIED"}
+CLAIM3_FROZEN_REGRESSION={"checks": {"all_obligations_still_pass": true, "assumptions_stable": true, "independent_checks_still_pass": true, "independent_grid_counts_stable": true, "negative_controls_stable": true, "obligation_names_stable": true, "symbolic_values_stable": true, "top_level_verifier_stable": true}, "claim_id": 3, "passed": true, "verdict": "VERIFIED"}
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 4, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 2.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM3_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 4,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 2.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM3_VERDICT=VERIFIED
+CLAIM3_RUNTIME_SECONDS=2
+CLAIM6_RELEASE_AUDIT={"args_attributes": ["C", "D", "alpha", "calibration_size", "corruption", "corruptions", "gamma", "level", "model", "output", "seed", "shift_delay", "smooth_param", "warmup"], "checks": {"all_15_corruptions_declared": true, "cli_omits_gamma": true, "documented_cli_negative_control": true, "expected_layout_documented": true, "no_npy_files_released": true, "no_required_arrays_released": true, "official_commit_pinned": true, "runner_requires_gamma": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "cli_flags": ["--C", "--D", "--alpha", "--calibration-size", "--corruption", "--corruptions", "--level", "--model", "--output", "--seed", "--shift-delay", "--smooth-param", "--warmup"], "official_source_commit": "a9feb795d9fa98cc1d0c075f8f08a5c510c7a844", "reason": "The official release has neither required entropy arrays nor a working acquisition/runner path; numerical Figure 4 results cannot be regenerated from it.", "released_file_count_in_vendored_snapshot": 8, "required_paths": ["offline_imagenet/vitbase_timm/holdout_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_gaussian_noise_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_shot_noise_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_impulse_noise_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_defocus_blur_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_glass_blur_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_motion_blur_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_zoom_blur_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_snow_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_frost_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_fog_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_brightness_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_contrast_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_elastic_transform_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_pixelate_ents.npy", "offline_imagenet/vitbase_timm/imagenet_c/s5_jpeg_compression_ents.npy"], "required_paths_present": [], "route": 1, "route_audit_passed": true, "route_name": "official release and data-identity audit", "runtime_context": {"affinity_count": 64, "expected_core_count": 1, "os_cpu_count": 64, "selected_backend": "hf", "selected_flavor": "cpu-upgrade"}}
+CLAIM6_RELEASE_NEGATIVE_CONTROL={"command_redacted": "python upstream/sudden_shift_experiment.py --model vitbase_timm --corruptions gaussian_noise --level 5 --calibration-size 500 --alpha 0.05 --D 0.5 --C 0.05 --warmup 50 --seed 0", "expected_failure": "args.gamma is referenced but --gamma is not declared", "gamma_attribute_error_detected": true, "name": "documented_cli_must_expose_release_defect", "passed": true, "returncode": 1}
+CLAIM6_INDEPENDENT_RELEASE_AUDIT={"checks": {"all_required_inputs_are_numpy": true, "audit_route_is_nonclaiming": true, "gamma_load_reconstructed": true, "gamma_parser_declaration_absent": true, "negative_control_failed_for_expected_reason": true, "none_of_required_inputs_present": true, "official_clean_access_denied": true, "raw_reconstruction_sources_distinct": true, "remote_tree_has_no_numpy": true, "remote_tree_has_no_raw_results": true, "required_input_count_is_16": true, "ungated_clean_mirror_identified": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "imports_author_code": false, "independent": true, "passed": true, "route": 1}
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 1, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 2.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE1_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 1,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 2.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE1_AUDIT=PASSED
+CLAIM6_CURRENT_VERDICT=BLOCKED
+CLAIM6_ROUTE1_RUNTIME_SECONDS=2
+CLAIM6_ROUTE2_FIGURE_AUDIT={"audited_counts": {"blur_weather_ratio_points": 6, "method_points": 10, "size_levels": 4}, "calibration": {"power_pixels_per_decade": 318.5, "power_x_zero": 272.0, "power_y_one": 56.0, "power_y_zero": 892.0, "ratio_half_span_pixels": 415.0, "ratio_y_one": 550.0}, "checks": {"all_20_ratio_markers_extracted": true, "all_21_power_rows_extracted": true, "blur_weather_ratios_above_one_for_n_ge_500": true, "conditional_crossings_improve_with_size_at_4_levels": true, "conditional_earlier_at_10_method_points": true, "negative_controls_detected": true, "source_archive_hash_matches": true, "source_image_hashes_match": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "reason": "The pinned published figure encodes the claimed comparisons, but digitizing the authors' plot is not an independent ImageNet-C run.", "retrieval": {"image_sha256": {"power_vs_step_by_calibsize_logx_w50.png": "3ec26c59a6101229a024cd6493a4db55cffb6b35700ee9b50281c432b5e6600c", "rejection_time_ratio_vs_ctm_by_group_logy_logx.png": "842f96dc197d8dd1cc24d59d722024f33e5a83d6876a86326436874dee5be96a"}, "retrieved_at_utc": "2026-07-26T01:56:12.758035+00:00", "source_sha256": "850ea40712686ee84543348bf39550ead19e6240ad5f085c07654ef3ed1e4b4e", "url": "https://export.arxiv.org/e-print/2602.13848", "user_agent": "OpenResearch-Reproduction/1.0 (claim audit; contact via MachineLearning-Nerd/icml26-repro-B8sTBdGvqG)"}, "route": 2, "route_audit_passed": true, "route_name": "pinned source-figure digitization", "runtime_context": {"affinity_count": 64, "expected_core_count": 1, "os_cpu_count": 64, "selected_backend": "hf", "selected_flavor": "cpu-upgrade"}}
+CLAIM6_ROUTE2_NEGATIVE_CONTROLS={"inverted_log_y_axis": {"error_detected": true, "wrong_hypothesis": "Blur and Weather remain above one after inverting the log-y calibration", "wrong_hypothesis_passed": false, "wrong_ratios": [0.7809886536979441, 0.7280798939977364, 0.6317166040237193, 0.7136323948723831, 0.6477432474575923, 0.5918787203333131]}, "reversed_method_labels": {"error_detected": true, "wrong_hypothesis": "standard CTM crosses earlier at every audited point", "wrong_hypothesis_passed": false}}
+CLAIM6_ROUTE2_INDEPENDENT={"checks": {"audit_remains_nonclaiming": true, "axis_calibration_reconstructed": true, "blur_weather_ratios_above_one": true, "conditional_precedes_standard": true, "image_hashes_reconstructed": true, "inverted_axis_control_detected": true, "larger_reference_crosses_earlier": true, "method_grid_nonvacuous": true, "ratio_grid_nonvacuous": true, "ratio_transform_recomputed": true, "raw_row_counts_match": true, "reversed_method_control_detected": true, "route_audit_passed": true, "size_grid_nonvacuous": true, "source_hash_reconstructed": true, "time_transform_recomputed": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "imports_digitizer_or_author_code": false, "independent": true, "passed": true, "route": 2}
+CLAIM6_ROUTE2_VERIFIER={"checks": {"both_negative_controls_detect_errors": true, "independent_checker_passes": true, "raw_power_rows_present": true, "raw_ratio_rows_present": true, "route_does_not_overclaim": true, "source_figure_audit_passes": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "passed": true, "reason": "Route 2 verifies the exact content of the pinned source figure but cannot independently verify the underlying benchmark.", "route": 2}
+CLAIM6_ROUTE2_FAIL_CLOSED={"claim_id": 6, "control": "remove one raw ratio row", "missing_row_detected": true, "passed": true, "route": 2, "tampered_verifier_passed": false, "tampered_verifier_returncode": 1}
+CLAIM6_ROUTE2_POWER_CSV_BEGIN
+reference_size,power,sampled_y,conditional_x,standard_x,conditional_time,standard_time,x_group_count
+100,0.1,808,614.5,687.5,11.894692473017603,20.162881153969295,2
+100,0.3,641,665.0,734.0,17.135980062611452,28.21950883690142,2
+100,0.4,558,689.0,749.0,20.382721306852403,31.45177875032514,2
+100,0.5,474,721.0,770.5,25.68816747804701,36.74084467734931,2
+100,0.6,390,765.0,792.5,35.30861567337443,43.0747653135066,2
+100,0.7,307,813.5,,50.13684321913126,,1
+100,0.8,223,864.0,,72.22918522309223,,1
+500,0.1,808,583.5,639.5,9.506529014323881,14.251026703029977,2
+500,0.3,641,606.5,671.5,11.226269888792677,17.96044577023589,2
+500,0.4,558,630.5,,13.353302794628636,,1
+500,0.5,474,650.0,701.5,15.374931403548405,22.310465625513437,2
+500,0.6,390,673.5,,18.22202114707027,,1
+500,0.7,307,700.0,741.0,22.06983356759693,29.684345142566674,2
+500,0.8,223,744.5,772.0,30.445035410462012,37.141437868830444,2
+4000,0.1,808,555.5,625.5,7.764435563198173,12.8792362543363,2
+4000,0.3,641,582.5,659.0,9.438049713566613,16.408566581547067,2
+4000,0.4,558,595.0,671.5,10.33067570009039,17.96044577023589,2
+4000,0.5,474,613.0,687.0,11.766400918008863,20.090129285159623,2
+4000,0.6,390,636.0,702.5,13.894954943731374,22.472342828110506,2
+4000,0.7,307,663.0,725.0,16.88999470203444,26.441859528248933,2
+4000,0.8,223,705.5,749.0,22.96505574341977,31.45177875032514,2
+CLAIM6_ROUTE2_POWER_CSV_END
+CLAIM6_ROUTE2_RATIO_CSV_BEGIN
+group,reference_size,marker_x,marker_y,ratio,exact_pixel_count
+Noise,100,371,656.0,0.8377422343801512,346
+Noise,250,623,499.0,1.0889151688107863,344
+Noise,500,814,457.0,1.1680454283818604,342
+Noise,1000,1004,385.0,1.3173058630522956,341
+Noise,4000,1385,260.0,1.6231487073292428,41
+Blur,100,371,598.0,0.9229582853283068,344
+Blur,250,623,462.0,1.1583314992453801,341
+Blur,500,814,402.0,1.2804283330686657,341
+Blur,1000,1004,360.0,1.3734756422254795,341
+Blur,4000,1385,275.0,1.58298831094592,341
+Weather,100,371,472.0,1.1391453237976485,341
+Weather,250,623,377.0,1.335025658361751,341
+Weather,500,814,348.0,1.401281678333601,341
+Weather,1000,1004,290.0,1.5438215742503283,341
+Weather,4000,1385,236.0,1.6895353146618546,341
+Digital,100,371,838.0,0.6181479548926183,357
+Digital,250,623,618.0,0.8926364217019931,351
+Digital,500,814,543.0,1.0117602535476784,291
+Digital,1000,1004,457.0,1.1680454283818604,341
+Digital,4000,1385,369.0,1.3529838122442728,341
+CLAIM6_ROUTE2_RATIO_CSV_END
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 1, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 2.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE2_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 1,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 2.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE2_AUDIT=PASSED
+CLAIM6_CURRENT_VERDICT=BLOCKED
+CLAIM6_ROUTE2_RUNTIME_SECONDS=2
+CLAIM6_ROUTE3_FULL_RECONSTRUCTION_STALL={"checks": {"all_15_components_recorded": true, "all_cancel_requested": true, "log_lengths_are_nonempty": true, "no_run_reached_clean_checkpoint": true, "no_run_reached_corruption_checkpoint": true, "no_terminal_claim6_summary_found": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "observed_from": {"evidence_channel": "orx runs plus orx logs --bytes 1000000", "observed_at_local_time": "2026-07-26 Asia/Kolkata", "project_id": "bb7fdc4c-b42f-461a-a45f-5fdcd907f3c2"}, "passed": true, "reason": "All 15 full-reconstruction component jobs remained marked running after roughly 26 hours, exceeded the intended 16-hour HF timeout, and their logs stopped before the first clean-inference checkpoint. No full-scope ImageNet-C numerical evidence was produced.", "route": 3, "route_name": "full ImageNet-C reconstruction attempt", "runs": [{"cancel_requested": true, "clean_checkpoint_found": false, "component": "gaussian_noise", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66696, "run_id": "98293293-7f81-4c36-a2ec-3a4a741f91c4", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "shot_noise", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66764, "run_id": "ec485fb7-aed7-4d62-bc11-db24857213bf", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "impulse_noise", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66699, "run_id": "dbcd0fb0-9c92-4032-92fa-22bf4a03cca5", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "defocus_blur", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66650, "run_id": "fd62248b-888b-48fe-9da1-1812b2f0d08e", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "glass_blur", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66640, "run_id": "c8caee94-8974-4a6e-a457-89c2340316cc", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "motion_blur", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66699, "run_id": "0503cc0d-f0d3-4820-856c-67eb478f450c", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "zoom_blur", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66659, "run_id": "6f2f522e-637b-468a-8b8a-768157647a9a", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "snow", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66646, "run_id": "25eaca56-6a05-4bbb-bb56-bd14539107e0", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "frost", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66649, "run_id": "1786946a-9716-434b-b8ef-9d7c68b9dbce", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "fog", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66635, "run_id": "7ea602c8-0e5a-4def-8b9b-ee86a5f6fe54", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "brightness", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66704, "run_id": "62b90f5e-675b-4eee-b40c-841d91e7a98b", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "contrast", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66722, "run_id": "e1aa95a8-353e-41ca-a3bd-d1c263830924", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "elastic_transform", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66761, "run_id": "2afb935a-d180-4376-8328-19720f1bf23d", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "pixelate", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66700, "run_id": "c0196538-109a-4d46-aad6-b99bd9a04272", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}, {"cancel_requested": true, "clean_checkpoint_found": false, "component": "jpeg_compression", "corruption_checkpoint_found": false, "duration_before_cancel_request": "about 25h48m to 26h03m", "log_bytes_before_cancel": 66780, "run_id": "52059e09-134b-4e18-91af-c98db7a0867e", "status_before_cancel_request": "running", "terminal_summary_found": false, "traceback_or_oom_marker_found": false}]}
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 1, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 0.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE3_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 1,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 0.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE3_FULL_RECONSTRUCTION=BLOCKED_STALLED
+CLAIM6_ROUTE3_RUNTIME_SECONDS=0
+CLAIM6_CURRENT_VERDICT=BLOCKED
+CLAIM6_ROUTE4_FALSIFICATION={"assumption_matched_counterexample_found": false, "checks": {"all_invalid_controls_rejected": true, "does_not_treat_missing_data_as_falsification": true, "does_not_treat_subset_as_falsification": true, "exact_claim_rested": true, "requires_full_scope_assumption_matched_counterexample": true}, "claim_id": 6, "claim_verdict": "BLOCKED", "exact_claim": {"benchmark": "ImageNet-C severity 5 with timm ViT-B/16 entropy scores", "power_statement": "Conditional CTM improves empirical power with reference size n>=500.", "ratio_statement": "Larger-shift Blur and Weather corruption groups have median standard/conditional rejection-time ratio above one.", "scope": "all 15 corruptions, 37,500-example streams, 10 realizations, alpha=0.05"}, "invalid_counterexample_controls": {"digital_group_ratio_at_n100": {"observation": "Digitized Digital-group ratio at n=100 is below one.", "rejected_as_falsification": true, "why_invalid": "The audited ratio clause concerns larger-shift Blur/Weather groups and reference sizes n>=500."}, "missing_official_arrays": {"observation": "The official release omits the required entropy arrays.", "rejected_as_falsification": true, "why_invalid": "Missing evidence blocks regeneration but does not contradict the numerical Figure 4 statement."}, "smoke_subset": {"observation": "The smoke validation used only tiny clean/corrupt subsets.", "rejected_as_falsification": true, "why_invalid": "A reduced subset is explicitly ineligible for the full-scope ImageNet-C benchmark claim."}, "stalled_full_runs": {"observation": "The full reconstruction jobs stalled before inference checkpoints.", "rejected_as_falsification": true, "why_invalid": "A non-result from infrastructure is not an assumption-satisfying numerical counterexample."}}, "passed": true, "reason": "No assumption-matched full-scope counterexample was available. The route rejects missing data, reduced runs, and off-scope plotted points as invalid falsifications, so Claim 6 remains BLOCKED.", "route": 4, "route_name": "mandatory falsification search"}
+CLAIM6_FINAL_BLOCKED_VERIFIER={"checks": {"all_route_numbers_present": true, "route1_passes_and_blocks": true, "route2_passes_and_blocks": true, "route3_stall_record_passes_and_blocks": true, "route4_falsification_search_passes_and_blocks": true, "route4_found_no_valid_counterexample": true}, "claim_id": 6, "confidence": "LOW", "passed": true, "reason": "Claim 6 is not verified or falsified: the official data are absent, the source figure is only plotted evidence, full reconstruction stalled before inference, and the required falsification route found no valid full-scope counterexample.", "verdict": "BLOCKED"}
+{"actual_cpu_allocation": {"affinity_count": 64, "os_cpu_count": 64}, "expected_core_count": 1, "git_branch": "orx/release-prep-with-claim-6-blocked-record", "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a", "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36", "python": "3.12.12", "runtime_seconds": 0.0, "selected_backend": "hf", "selected_flavor": "cpu-upgrade", "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE4_RUN_METADATA={  "actual_cpu_allocation": {    "affinity_count": 64,    "os_cpu_count": 64  },  "expected_core_count": 1,  "git_branch": "orx/release-prep-with-claim-6-blocked-record",  "git_sha": "9d56f3e05e10e5f0cd57b6bd8bfef419d909612a",  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",  "python": "3.12.12",  "runtime_seconds": 0.0,  "selected_backend": "hf",  "selected_flavor": "cpu-upgrade",  "started_at_utc": "2026-07-26T01:51:07Z"}
+CLAIM6_ROUTE4_FALSIFICATION=NO_VALID_COUNTEREXAMPLE
+CLAIM6_FINAL_VERDICT=BLOCKED
+CLAIM6_ROUTE4_RUNTIME_SECONDS=0

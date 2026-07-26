@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<style>text{font-family:Arial, sans-serif;fill:#111827} .small{font-size:22px} .med{font-size:28px;font-weight:600} .big{font-size:36px;font-weight:700} .muted{fill:#4b5563} .green{fill:#0f766e} .red{fill:#b91c1c} .amber{fill:#b45309} .blue{fill:#1d4ed8}</style>
+<rect width="1000" height="560" fill="#ffffff"/>
+<text x="48" y="58" class="big">Claim 2 falsification: discrete null witness</text>
+
+<rect x="70" y="115" width="860" height="92" fill="#fee2e2" rx="12"/><text x="100" y="155" class="med red">Theorem requires false-reject probability ≤ 0.05</text><text x="100" y="190" class="small">Dirac null witness gives probability 1.0 under the stated any-P domain.</text>
+<rect x="70" y="245" width="220" height="70" fill="#fecaca" rx="10"/><text x="100" y="290" class="med">P = δ₀</text>
+<text x="330" y="290" class="med">ECDF error = 0; Eq. 6 holds with probability 1</text>
+<rect x="70" y="360" width="390" height="62" fill="#fca5a5" rx="10"/><text x="95" y="400" class="small">Eq. 8 crosses at t=9</text>
+<rect x="505" y="360" width="390" height="62" fill="#fca5a5" rx="10"/><text x="530" y="400" class="small">Released algorithm crosses at t=10</text>
+<text x="70" y="500" class="small muted">Negative controls: randomized PIT repair is not deterministic; reverse-direction bet does not cross.</text>
+
+</svg>

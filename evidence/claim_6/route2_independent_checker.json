@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "audit_remains_nonclaiming": true,
+    "axis_calibration_reconstructed": true,
+    "blur_weather_ratios_above_one": true,
+    "conditional_precedes_standard": true,
+    "image_hashes_reconstructed": true,
+    "inverted_axis_control_detected": true,
+    "larger_reference_crosses_earlier": true,
+    "method_grid_nonvacuous": true,
+    "ratio_grid_nonvacuous": true,
+    "ratio_transform_recomputed": true,
+    "raw_row_counts_match": true,
+    "reversed_method_control_detected": true,
+    "route_audit_passed": true,
+    "size_grid_nonvacuous": true,
+    "source_hash_reconstructed": true,
+    "time_transform_recomputed": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "imports_digitizer_or_author_code": false,
+  "independent": true,
+  "passed": true,
+  "route": 2
+}

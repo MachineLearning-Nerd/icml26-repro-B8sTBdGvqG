@@ -1,0 +1,20 @@
+{
+  "source_run_id": "37ba4602-498e-4fe7-a42e-64e907f368fc",
+  "encoding": "For randomized_pit_repair, every seed in [0,255] not listed in crossings had crossing=-1 and rejected=false.",
+  "reverse_direction": {
+    "eta": -0.5,
+    "crossing": -1,
+    "final_wealth": 5.421010862400482e-20
+  },
+  "randomized_pit_repair": {
+    "seed_start": 0,
+    "seed_stop_inclusive": 255,
+    "horizon": 1000,
+    "crossings": {
+      "139": 109
+    },
+    "rejections": 1,
+    "non_rejections": 255,
+    "rejection_rate": 0.00390625
+  }
+}

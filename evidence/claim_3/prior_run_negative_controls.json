@@ -1,0 +1,23 @@
+{
+  "geometric_rate_substitution_error": {
+    "equation73_exponent": 1.152316384890813,
+    "error_detected": true,
+    "parameters": {
+      "omega": 0.1,
+      "t": 100
+    },
+    "printed_substituted_exponent": -146.7941384890813
+  },
+  "unconstrained_maximizer_error": {
+    "domain_upper_bound": 0.5,
+    "error_detected": true,
+    "feasible_boundary_value": 0.09000000000000001,
+    "parameters": {
+      "M2": 0.04,
+      "c": 1.0,
+      "d": 0.2
+    },
+    "unconstrained_eta": 2.5,
+    "unconstrained_quadratic_value": 0.25000000000000006
+  }
+}

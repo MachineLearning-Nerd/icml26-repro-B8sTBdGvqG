@@ -1,0 +1,31 @@
+{
+  "claim_id": 6,
+  "paper_anchor": "Figure 4 (S4.F4), discussion S4.SS2.p2, implementation appendix A6.SS6",
+  "paper_source_sha256": "ef9032cb84ff680f5b31cd19e67b2991839e669f7ce0f8d2cbaabd1120d273a3",
+  "claim": {
+    "benchmark": "ImageNet-C at severity 5 using entropy scores from timm vit_base_patch16_224",
+    "scope": "all 15 standard corruption types, a 37,500-example test stream, 10 realizations, alpha=0.05",
+    "reference_sizes": [
+      100,
+      500,
+      4000
+    ],
+    "power_statement": "Conditional CTM has a steeper empirical-power curve than standard CTM for moderate reference sizes n>=500.",
+    "ratio_statement": "The median standard-CTM/conditional-CTM rejection-time ratio tends to exceed one for the larger-shift Blur and Weather groups."
+  },
+  "required_inputs": {
+    "clean_entropy_count": 12500,
+    "corruption_entropy_count_per_file": 37500,
+    "severity_5_corruption_files": 15,
+    "model": "timm/vit_base_patch16_224",
+    "warmup": 50,
+    "ons_D": 0.5,
+    "clipping_C": 0.05,
+    "smoothing_k": 1e-06
+  },
+  "verdict_rule": {
+    "VERIFIED": "A full-scope reconstruction or released raw arrays reproduce both statements with independent re-aggregation and controls.",
+    "FALSIFIED": "An assumption-matched full-scope run contradicts either exact statement, with implementation and data identity independently checked.",
+    "BLOCKED": "The source data or exact protocol cannot be reconstructed, or only the plotted source figure/proxies can be checked."
+  }
+}

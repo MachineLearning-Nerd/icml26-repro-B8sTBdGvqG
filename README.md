@@ -1,58 +1,61 @@
-# Conditional Conformal Test Martingales — reproduction
+# OpenResearch reproduction — Testing For Distribution Shifts with Conditional Conformal Test Martingales
 
-This repository reproduces the two live Judge claims for **Testing For
-Distribution Shifts with Conditional Conformal Test Martingales** (OpenReview
-`B8sTBdGvqG`, arXiv `2602.13848`).  It pins the author implementation at
-`shaersh/cctm@a9feb795d9fa98cc1d0c075f8f08a5c510c7a844` in `upstream/`.
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG/blob/main/notebooks/cctm_reproduction_summary.py)
 
-The reproduction targets the released full synthetic protocol: the normal-null
-and mean-shift streams, 100 independent repetitions, a 2,000-point calibration
-set for the primary power experiment, and the paper's 20,000-step type-I sweep.
-It uses a source-equivalent but asymptotically faster rank/ECDF evaluator so the
-full CPU protocol is practical locally; unit tests compare its transitions with
-the pinned implementation on identical streams.
+This repository mirrors the July 26, 2026 evaluator-visible evidence package published to the existing Hugging Face Space: https://huggingface.co/spaces/DineshAI/B8sTBdGvqG.
 
-## Live claims
+Previous live judged score: `6/12`. Current published HF revision: `96f4ca15d8223fb2e273c633b8771fbee2f8047f`. Conservative projected score after judge re-evaluation: `10/12`; best-supported possible score: `10/12` forecast, not a live judge result. Claim 6 remains `BLOCKED`, so this update does not claim a perfect score.
 
-1. Conditional CTM detects shifts faster than standard CTM because its reference
-   set remains fixed rather than becoming contaminated by post-shift samples.
-2. Conditional CTM gives anytime-valid type-I control and empirical power/delay
-   behavior consistent with the paper's guarantee.
+## Current claim assessments
 
-The paper also reports ImageNet-C results, but its repository requires private
-precomputed entropy arrays and supplies neither the arrays nor download
-instructions.  Those results will not be represented as reproduced unless the
-authors' exact arrays become available.
+| Claim | Paper statement tested | Assessment | Paper number / target | Observed evidence | Compute |
+|---|---|---|---|---|---|
+| 1 | Fixed-reference conditional CTM avoids contamination | VERIFIED | conditional faster than growing-reference CTM | median crossing 21 vs 31; fixed ECDF 0.7434 vs growing p-value 0.5551 | HF `cpu-upgrade`, CPU only |
+| 2 | Theorem 3.1 anytime type-I guarantee over any null distribution | FALSIFIED | false-reject probability <= 0.05 with outer probability >= 0.9 | Dirac null gives inner false rejection 1.0 and outer good-reference probability 0.0 | HF `cpu-upgrade`, CPU only |
+| 3 | Theorem 3.3 asymptotic power and stopping-time order | VERIFIED | power one and stated Big-O bound | 11 proof obligations, 952 rational checks, 25 burn-in checks pass | HF `cpu-upgrade`, CPU only |
+| 4 | Eq. 8 DKW correction removes spurious wealth gains | VERIFIED | no spurious estimation-gain rejection | no-DKW control 88% vs corrected 0% at zero calibration | HF `cpu-upgrade`, CPU only |
+| 5 | Synthetic immediate/delayed/gradual shifts detected faster with type-I control | VERIFIED | conditional faster across synthetic suites | all 9 bias/delay/drift settings faster; null grid max 1% | HF `cpu-upgrade`, CPU only |
+| 6 | ImageNet-C Figure 4 performance improves with reference size | BLOCKED | full ImageNet-C benchmark required | required arrays absent; digitization non-claiming; full reconstruction stalled | HF `cpu-upgrade`, CPU only |
 
-## Status
+## Reports and notebooks
 
-See [STATUS.md](STATUS.md) and [the primary-source audit](docs/PRIMARY_SOURCE_AUDIT.md).
+- [Illustrated reproduction report](reports/cctm-current-verification/report.md)
+- [Marimo summary notebook](notebooks/cctm_reproduction_summary.py)
+- [Mirrored Space entrypoint](pages/index.md)
+- [Current verification matrix](pages/current-verification-2026-07-26/page.md)
+- [Release gates](pages/release-gates-2026-07-26/page.md)
 
-## Full synthetic result
-
-The complete released synthetic notebook protocol was run with 100 repetitions
-per source configuration (Figures 1, 2, 3, 5, and 6).  The saved artifact and
-an implementation-independent re-aggregation are in
-[`outputs/full_synthetic_summary.json`](outputs/full_synthetic_summary.json) and
-[`outputs/independent_verification.json`](outputs/independent_verification.json).
-
-- C1: in the primary `N(0,1) -> N(1,1)` setting, both methods detected all
-  100 shifts, while conditional CTM's median crossing was 21 observations
-  versus 31 for the growing-reference CTM.  Every bias, delayed-shift, and
-  gradual-drift source sweep also had a lower conditional median delay.  The
-  fixed-reference mechanism control retained a late-stream mean ECDF value of
-  0.7434 versus 0.5551 for the growing-reference p-values.
-- C2: conditional CTM's finite-sample false-positive rate was 0–1% across all
-  11 released null configurations (nominal level 5%), whereas the deliberately
-  uncorrected fixed-reference control reached 88% with no calibration data.
-  Conditional CTM detected every mean-shift stream in each 100-run increasing-
-  horizon check.  These numerical checks support the empirical behavior; they
-  do not replace the paper's asymptotic proof.
-
-Run the full reproduction from this directory with:
+Run the notebook locally with:
 
 ```bash
-source .venv/bin/activate
-python repro/run_full_synthetic.py --output outputs/full_synthetic_summary.json
-python repro/verify_full_synthetic.py --input outputs/full_synthetic_summary.json --output outputs/independent_verification.json
+uv run marimo edit notebooks/cctm_reproduction_summary.py
+uv run marimo run notebooks/cctm_reproduction_summary.py
 ```
+
+## Experiment log
+
+| Branch/experiment | Purpose or change | Exact run command | Assessment/outcome | Compute |
+|---|---|---|---|---|
+| `main` | Publication surface; not launched as formal experiment in this release step | Not run as an experiment (publication surface) | Mirrors published Space text paths and reader-facing report/notebook | local git only |
+| [`orx/release-prep-with-claim-6-blocked-record`](https://github.com/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG/tree/orx/release-prep-with-claim-6-blocked-record) / `3229d43a-6cb7-46dc-8e70-1973369abaf1` | Cumulative verifier run for Claims 1–6, with Claim 6 blocked record | `uv sync --frozen && bash scripts/run_reproduction.sh` | Run `7e9019e0-e75e-44ab-805d-5fe4dbf06d3f` done; baseline VERIFIED, Claim 2 FALSIFIED, Claim 3 VERIFIED, Claim 6 BLOCKED | Hugging Face `cpu-upgrade`, CPU only, 64 logical CPUs reported |
+
+---
+
+---
+title: CCTM Reproduction Logbook
+emoji: 🎯
+colorFrom: blue
+colorTo: indigo
+sdk: static
+pinned: false
+tags:
+- icml2026-repro
+- paper-B8sTBdGvqG
+---
+
+# CCTM reproduction logbook
+
+Current evaluator entrypoint: [pages/index.md](pages/index.md).
+
+This July 26, 2026 candidate preserves the previously judged Space files and adds visible evidence for Claim 2 (FALSIFIED), Claim 3 (VERIFIED), and Claim 6 (BLOCKED). Forecast only: conservative projected score `10/12`; live score changes only after the official judge evaluates this revision.
+

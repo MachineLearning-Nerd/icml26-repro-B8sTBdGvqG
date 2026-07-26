@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_required_inputs_are_numpy": true,
+    "audit_route_is_nonclaiming": true,
+    "gamma_load_reconstructed": true,
+    "gamma_parser_declaration_absent": true,
+    "negative_control_failed_for_expected_reason": true,
+    "none_of_required_inputs_present": true,
+    "official_clean_access_denied": true,
+    "raw_reconstruction_sources_distinct": true,
+    "remote_tree_has_no_numpy": true,
+    "remote_tree_has_no_raw_results": true,
+    "required_input_count_is_16": true,
+    "ungated_clean_mirror_identified": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "imports_author_code": false,
+  "independent": true,
+  "passed": true,
+  "route": 1
+}

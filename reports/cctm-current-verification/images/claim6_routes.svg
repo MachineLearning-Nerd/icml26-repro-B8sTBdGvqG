@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<style>text{font-family:Arial, sans-serif;fill:#111827} .small{font-size:22px} .med{font-size:28px;font-weight:600} .big{font-size:36px;font-weight:700} .muted{fill:#4b5563} .green{fill:#0f766e} .red{fill:#b91c1c} .amber{fill:#b45309} .blue{fill:#1d4ed8}</style>
+<rect width="1000" height="560" fill="#ffffff"/>
+<text x="48" y="58" class="big">Claim 6 remains blocked after four routes</text>
+
+<rect x="70" y="105" width="860" height="68" fill="#fef3c7" rx="10"/><text x="100" y="148" class="small">Route 1: official entropy arrays absent; required 16 .npy files not released</text>
+<rect x="70" y="195" width="860" height="68" fill="#fef3c7" rx="10"/><text x="100" y="238" class="small">Route 2: source figure digitized; useful but not independent benchmark evidence</text>
+<rect x="70" y="285" width="860" height="68" fill="#fee2e2" rx="10"/><text x="100" y="328" class="small">Route 3: 15 full reconstruction jobs stalled/cancelled before inference checkpoints</text>
+<rect x="70" y="375" width="860" height="68" fill="#fef3c7" rx="10"/><text x="100" y="418" class="small">Route 4: falsification search found no valid full-scope counterexample</text>
+<text x="70" y="505" class="med amber">Final honest status: BLOCKED, expected 0 points</text>
+
+</svg>

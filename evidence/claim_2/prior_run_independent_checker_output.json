@@ -1,0 +1,25 @@
+{
+  "source_run_id": "37ba4602-498e-4fe7-a42e-64e907f368fc",
+  "claim_id": 2,
+  "independent": true,
+  "imports_released_code": false,
+  "passed": true,
+  "verdict": "FALSIFIED",
+  "checks": {
+    "all_transitions_reconstructed": true,
+    "deterministic_reference_contradicts_outer_bound": true,
+    "dkw_recomputed": true,
+    "equation8_crossing_reconstructed": true,
+    "finite_witness_contradicts_inner_bound": true,
+    "point_mass_ecdf_equals_true_cdf": true,
+    "released_crossing_reconstructed": true,
+    "trajectory_has_declared_horizon": true
+  },
+  "reconstructed": {
+    "dkw_epsilon": 0.027366641525559867,
+    "equation8_first_crossing": 9,
+    "released_first_crossing": 10,
+    "equation8_final_wealth": 19554270750.41012,
+    "released_final_wealth": 13503318515.96557
+  }
+}

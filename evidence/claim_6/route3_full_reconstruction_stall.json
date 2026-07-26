@@ -1,0 +1,203 @@
+{
+  "checks": {
+    "all_15_components_recorded": true,
+    "all_cancel_requested": true,
+    "log_lengths_are_nonempty": true,
+    "no_run_reached_clean_checkpoint": true,
+    "no_run_reached_corruption_checkpoint": true,
+    "no_terminal_claim6_summary_found": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "observed_from": {
+    "evidence_channel": "orx runs plus orx logs --bytes 1000000",
+    "observed_at_local_time": "2026-07-26 Asia/Kolkata",
+    "project_id": "bb7fdc4c-b42f-461a-a45f-5fdcd907f3c2"
+  },
+  "passed": true,
+  "reason": "All 15 full-reconstruction component jobs remained marked running after roughly 26 hours, exceeded the intended 16-hour HF timeout, and their logs stopped before the first clean-inference checkpoint. No full-scope ImageNet-C numerical evidence was produced.",
+  "route": 3,
+  "route_name": "full ImageNet-C reconstruction attempt",
+  "runs": [
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "gaussian_noise",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66696,
+      "run_id": "98293293-7f81-4c36-a2ec-3a4a741f91c4",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "shot_noise",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66764,
+      "run_id": "ec485fb7-aed7-4d62-bc11-db24857213bf",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "impulse_noise",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66699,
+      "run_id": "dbcd0fb0-9c92-4032-92fa-22bf4a03cca5",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "defocus_blur",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66650,
+      "run_id": "fd62248b-888b-48fe-9da1-1812b2f0d08e",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "glass_blur",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66640,
+      "run_id": "c8caee94-8974-4a6e-a457-89c2340316cc",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "motion_blur",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66699,
+      "run_id": "0503cc0d-f0d3-4820-856c-67eb478f450c",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "zoom_blur",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66659,
+      "run_id": "6f2f522e-637b-468a-8b8a-768157647a9a",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "snow",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66646,
+      "run_id": "25eaca56-6a05-4bbb-bb56-bd14539107e0",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "frost",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66649,
+      "run_id": "1786946a-9716-434b-b8ef-9d7c68b9dbce",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "fog",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66635,
+      "run_id": "7ea602c8-0e5a-4def-8b9b-ee86a5f6fe54",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "brightness",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66704,
+      "run_id": "62b90f5e-675b-4eee-b40c-841d91e7a98b",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "contrast",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66722,
+      "run_id": "e1aa95a8-353e-41ca-a3bd-d1c263830924",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "elastic_transform",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66761,
+      "run_id": "2afb935a-d180-4376-8328-19720f1bf23d",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "pixelate",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66700,
+      "run_id": "c0196538-109a-4d46-aad6-b99bd9a04272",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    },
+    {
+      "cancel_requested": true,
+      "clean_checkpoint_found": false,
+      "component": "jpeg_compression",
+      "corruption_checkpoint_found": false,
+      "duration_before_cancel_request": "about 25h48m to 26h03m",
+      "log_bytes_before_cancel": 66780,
+      "run_id": "52059e09-134b-4e18-91af-c98db7a0867e",
+      "status_before_cancel_request": "running",
+      "terminal_summary_found": false,
+      "traceback_or_oom_marker_found": false
+    }
+  ]
+}

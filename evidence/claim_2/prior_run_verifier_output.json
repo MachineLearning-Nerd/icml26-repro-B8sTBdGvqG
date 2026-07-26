@@ -1,0 +1,20 @@
+{
+  "source_run_id": "37ba4602-498e-4fe7-a42e-64e907f368fc",
+  "claim_id": 2,
+  "passed": true,
+  "verdict": "FALSIFIED",
+  "checks": {
+    "dkw_error_is_exactly_zero": true,
+    "equation6_holds": true,
+    "equation8_crosses": true,
+    "inner_probability_exceeds_alpha": true,
+    "null_is_inside_stated_any_P_domain": true,
+    "outer_probability_below_required": true,
+    "randomized_tie_repair_at_most_alpha": true,
+    "randomized_tie_repair_not_deterministic": true,
+    "reference_is_iid_from_null": true,
+    "released_algorithm_crosses": true,
+    "reverse_direction_does_not_cross": true,
+    "stream_is_iid_from_null": true
+  }
+}

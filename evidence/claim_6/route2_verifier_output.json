@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "both_negative_controls_detect_errors": true,
+    "independent_checker_passes": true,
+    "raw_power_rows_present": true,
+    "raw_ratio_rows_present": true,
+    "route_does_not_overclaim": true,
+    "source_figure_audit_passes": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "passed": true,
+  "reason": "Route 2 verifies the exact content of the pinned source figure but cannot independently verify the underlying benchmark.",
+  "route": 2
+}
