@@ -35,11 +35,30 @@ inverting the log-y calibration are required to contradict the result. This
 route verifies what the pinned published figure encodes, not whether its raw
 benchmark data regenerate, so its Claim 6 verdict remains `BLOCKED`.
 
-## Planned distinct routes
+## Route 3 — full reconstruction attempt, stalled before evidence
 
-- Route 3: reconstruct clean and severity-5 entropy arrays from pinned public
-  raw-image revisions and the pinned `timm` checkpoint, after a CPU throughput
-  calibration unrelated to the claimed detection formula.
-- Route 4, required if confidence remains LOW: seek an assumption-matched
-  falsification using the complete reconstructed benchmark; missing data,
-  runner crashes, and reduced subsets are explicitly ineligible.
+The third route attempted to reconstruct clean and severity-5 entropy arrays
+from pinned public raw-image revisions and the pinned `timm` checkpoint, after a
+CPU throughput calibration unrelated to the claimed detection formula. The work
+was split into 15 component runs, one for each ImageNet-C corruption.
+
+All 15 component jobs remained marked running after roughly 26 hours, exceeded
+the intended 16-hour Hugging Face timeout, and their logs stopped before the
+first clean-inference checkpoint. Cancel requests were submitted. This route
+therefore produced no eligible ImageNet-C numerical evidence and remains
+`BLOCKED`.
+
+## Route 4 — mandatory falsification search
+
+The fourth route seeks a valid counterexample under the exact full-scope
+ImageNet-C assumptions. It explicitly rejects invalid counterexamples:
+
+1. missing official entropy arrays block regeneration but do not contradict the
+   claim;
+2. reduced smoke subsets are not full-scope ImageNet-C evidence;
+3. a Digital-group plotted ratio below one at `n=100` is outside the audited
+   Blur/Weather, `n>=500` ratio clause;
+4. stalled infrastructure is not a numerical counterexample.
+
+No assumption-matched full-scope counterexample is available, so the route also
+ends in `BLOCKED`.

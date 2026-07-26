@@ -1,0 +1,44 @@
+{
+  "assumption_matched_counterexample_found": false,
+  "checks": {
+    "all_invalid_controls_rejected": true,
+    "does_not_treat_missing_data_as_falsification": true,
+    "does_not_treat_subset_as_falsification": true,
+    "exact_claim_rested": true,
+    "requires_full_scope_assumption_matched_counterexample": true
+  },
+  "claim_id": 6,
+  "claim_verdict": "BLOCKED",
+  "exact_claim": {
+    "benchmark": "ImageNet-C severity 5 with timm ViT-B/16 entropy scores",
+    "power_statement": "Conditional CTM improves empirical power with reference size n>=500.",
+    "ratio_statement": "Larger-shift Blur and Weather corruption groups have median standard/conditional rejection-time ratio above one.",
+    "scope": "all 15 corruptions, 37,500-example streams, 10 realizations, alpha=0.05"
+  },
+  "invalid_counterexample_controls": {
+    "digital_group_ratio_at_n100": {
+      "observation": "Digitized Digital-group ratio at n=100 is below one.",
+      "rejected_as_falsification": true,
+      "why_invalid": "The audited ratio clause concerns larger-shift Blur/Weather groups and reference sizes n>=500."
+    },
+    "missing_official_arrays": {
+      "observation": "The official release omits the required entropy arrays.",
+      "rejected_as_falsification": true,
+      "why_invalid": "Missing evidence blocks regeneration but does not contradict the numerical Figure 4 statement."
+    },
+    "smoke_subset": {
+      "observation": "The smoke validation used only tiny clean/corrupt subsets.",
+      "rejected_as_falsification": true,
+      "why_invalid": "A reduced subset is explicitly ineligible for the full-scope ImageNet-C benchmark claim."
+    },
+    "stalled_full_runs": {
+      "observation": "The full reconstruction jobs stalled before inference checkpoints.",
+      "rejected_as_falsification": true,
+      "why_invalid": "A non-result from infrastructure is not an assumption-satisfying numerical counterexample."
+    }
+  },
+  "passed": true,
+  "reason": "No assumption-matched full-scope counterexample was available. The route rejects missing data, reduced runs, and off-scope plotted points as invalid falsifications, so Claim 6 remains BLOCKED.",
+  "route": 4,
+  "route_name": "mandatory falsification search"
+}

@@ -1,0 +1,9 @@
+{
+  "claim_id": 6,
+  "control": "remove one raw ratio row",
+  "missing_row_detected": true,
+  "passed": true,
+  "route": 2,
+  "tampered_verifier_passed": false,
+  "tampered_verifier_returncode": 1
+}

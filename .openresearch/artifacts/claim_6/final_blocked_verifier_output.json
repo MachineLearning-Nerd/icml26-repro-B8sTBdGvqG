@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "all_route_numbers_present": true,
+    "route1_passes_and_blocks": true,
+    "route2_passes_and_blocks": true,
+    "route3_stall_record_passes_and_blocks": true,
+    "route4_falsification_search_passes_and_blocks": true,
+    "route4_found_no_valid_counterexample": true
+  },
+  "claim_id": 6,
+  "confidence": "LOW",
+  "passed": true,
+  "reason": "Claim 6 is not verified or falsified: the official data are absent, the source figure is only plotted evidence, full reconstruction stalled before inference, and the required falsification route found no valid full-scope counterexample.",
+  "verdict": "BLOCKED"
+}

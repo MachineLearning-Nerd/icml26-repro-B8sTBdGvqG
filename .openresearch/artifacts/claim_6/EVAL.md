@@ -23,3 +23,16 @@ subprocess test that removes one raw ratio row and requires the verifier to
 exit nonzero. The verifier also exits nonzero on a source/image hash mismatch,
 a missing curve/marker, a failed plotted comparison, a control that does not
 expose the wrong interpretation, or an overclaim beyond `BLOCKED`.
+
+For Route 3, inspect `route3_full_reconstruction_stall.json`. It records the 15
+full component runs, their run IDs, log byte counts, and the absence of clean
+or corruption inference checkpoints. This is a stalled full-reconstruction
+attempt, not ImageNet-C claim evidence.
+
+For Route 4, inspect `route4_falsification_attempt.json`. It is the mandatory
+falsification route and must reject missing data, reduced smoke runs,
+off-scope plotted points, and stalled infrastructure as invalid falsifications.
+
+The final Claim 6 verifier is `final_blocked_verifier_output.json`. It requires
+Routes 1-4 to be present, pass their own blocked-route checks, and agree that
+Claim 6 remains **BLOCKED**.

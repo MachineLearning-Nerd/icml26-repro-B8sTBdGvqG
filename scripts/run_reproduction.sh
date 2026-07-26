@@ -131,3 +131,41 @@ printf '\n'
 printf 'CLAIM6_ROUTE2_AUDIT=PASSED\n'
 printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
 printf 'CLAIM6_ROUTE2_RUNTIME_SECONDS=%s\n' "${claim6_route2_elapsed_seconds}"
+
+claim6_route3_started_seconds="${SECONDS}"
+uv run python repro/record_claim6_full_run_stall.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+claim6_route3_elapsed_seconds="$((SECONDS - claim6_route3_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_6/route3_run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim6_route3_elapsed_seconds}" \
+  --expected-cores 1 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+printf 'CLAIM6_ROUTE3_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route3_run_metadata.json
+printf '\n'
+printf 'CLAIM6_ROUTE3_FULL_RECONSTRUCTION=BLOCKED_STALLED\n'
+printf 'CLAIM6_ROUTE3_RUNTIME_SECONDS=%s\n' "${claim6_route3_elapsed_seconds}"
+printf 'CLAIM6_CURRENT_VERDICT=BLOCKED\n'
+
+claim6_route4_started_seconds="${SECONDS}"
+uv run python repro/run_claim6_falsification_route.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+uv run python repro/verify_claim6_blocked_routes.py \
+  --artifact-dir .openresearch/artifacts/claim_6
+claim6_route4_elapsed_seconds="$((SECONDS - claim6_route4_started_seconds))"
+uv run python repro/write_run_metadata.py \
+  --output .openresearch/artifacts/claim_6/route4_run_metadata.json \
+  --started-at "${started_at}" \
+  --runtime-seconds "${claim6_route4_elapsed_seconds}" \
+  --expected-cores 1 \
+  --selected-backend hf \
+  --selected-flavor cpu-upgrade
+printf 'CLAIM6_ROUTE4_RUN_METADATA='
+tr -d '\n' < .openresearch/artifacts/claim_6/route4_run_metadata.json
+printf '\n'
+printf 'CLAIM6_ROUTE4_FALSIFICATION=NO_VALID_COUNTEREXAMPLE\n'
+printf 'CLAIM6_FINAL_VERDICT=BLOCKED\n'
+printf 'CLAIM6_ROUTE4_RUNTIME_SECONDS=%s\n' "${claim6_route4_elapsed_seconds}"
