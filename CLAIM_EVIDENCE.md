@@ -23,9 +23,13 @@ uv sync --frozen
 bash scripts/run_reproduction.sh
 ```
 
+It was run with a separate checkout of the pinned official source under
+`code/upstream/`; that checkout is intentionally not vendored because the
+release still lacks the ImageNet-C entropy arrays and raw Figure 4 tables.
 Its durable outputs are copied into the root `evidence/` tree. The current
 package verifies those outputs without pretending that unavailable ImageNet-C
-arrays exist.
+arrays exist. The focused Claim 2, Claim 3, and Claim 6 commands above do not
+require that ignored source checkout.
 
 ## Claim 1 — faster shift detection
 

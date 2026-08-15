@@ -76,7 +76,7 @@ cd ..
 python3 code/repro/verify_final.py
 ```
 
-The historical full command is `cd code && bash scripts/run_reproduction.sh`. It reproduces the synthetic and theorem evidence, then records Claim 6 as blocked because the official ImageNet-C entropy arrays are not available. It should not be read as a promise that the missing benchmark can run locally.
+The historical full command is `cd code && bash scripts/run_reproduction.sh`. It was run against a separate checkout of the pinned official source listed in [`SOURCE_MANIFEST.md`](SOURCE_MANIFEST.md); that source checkout is not vendored here. The command reproduces the synthetic and theorem evidence, then records Claim 6 as blocked because the official ImageNet-C entropy arrays are not available. For a fresh clone, use the focused commands above and the committed evidence; the historical runner is not a self-contained ImageNet-C reproduction command.
 
 ## Layout
 

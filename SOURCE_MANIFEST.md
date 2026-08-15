@@ -29,7 +29,7 @@ The arXiv abstract states that the method uses a fixed null reference, accounts 
 
 ## Local environment
 
-The executable environment is pinned by `code/pyproject.toml` and `code/uv.lock`: Python 3.12, NumPy 2.3.2, SciPy 1.16.1, SymPy 1.14.0, PyTorch 2.7.1 CPU, torchvision 0.22.1 CPU, timm 1.0.19, and pytest 8.4.1. The clean-room implementation is under `code/repro/`; the committed `code/repro/reference_ctm.py` contains only the upstream recurrences exercised by the source-equivalence tests. The root `evidence/` tree contains the durable outputs used by the final documentation.
+The executable environment is pinned by `code/pyproject.toml` and `code/uv.lock`: Python 3.12, NumPy 2.3.2, SciPy 1.16.1, SymPy 1.14.0, PyTorch 2.7.1 CPU, torchvision 0.22.1 CPU, timm 1.0.19, and pytest 8.4.1. The clean-room implementation is under `code/repro/`; the committed `code/repro/reference_ctm.py` contains only the upstream recurrences exercised by the source-equivalence tests and the focused Claim 2 producer. The full pinned official source checkout used by the historical runner is not vendored. The root `evidence/` tree contains the durable outputs used by the final documentation.
 
 ## Evidence artifacts
 

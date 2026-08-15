@@ -13,11 +13,9 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "upstream"))
+sys.path.insert(0, str(ROOT))
 
-from cond_ctm import CondCTM
-from optimization import ONS
-from utils import betting_function, compute_dkw_band
+from reference_ctm import CondCTM, ONS, betting_function, compute_dkw_band
 
 
 def equation8_bet(u: float, eta: float, epsilon: float, k: float) -> float:
