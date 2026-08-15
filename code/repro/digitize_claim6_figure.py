@@ -22,7 +22,7 @@ SOURCE_URL = "https://export.arxiv.org/e-print/2602.13848"
 SOURCE_SHA256 = "850ea40712686ee84543348bf39550ead19e6240ad5f085c07654ef3ed1e4b4e"
 USER_AGENT = (
     "OpenResearch-Reproduction/1.0 "
-    "(claim audit; contact via MachineLearning-Nerd/icml26-repro-B8sTBdGvqG)"
+    "(claim audit; contact via MachineLearning-Nerd/icml26-conditional-conformal-test-martingales)"
 )
 POWER_MEMBER = "power_vs_step_by_calibsize_logx_w50.png"
 RATIO_MEMBER = "rejection_time_ratio_vs_ctm_by_group_logy_logx.png"

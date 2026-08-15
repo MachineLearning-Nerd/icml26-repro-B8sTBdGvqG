@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If this audit or its evidence artifacts are useful, please cite the paper and this repository."
+title: "ICML 2026 audit — Testing For Distribution Shifts with Conditional Conformal Test Martingales"
+type: software
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-conditional-conformal-test-martingales"
+url: "https://github.com/MachineLearning-Nerd/icml26-conditional-conformal-test-martingales"
+date-released: "2026-08-15"
+version: "1.0.0"
+references:
+  - type: article
+    authors:
+      - family-names: Shaer
+        given-names: Shalev
+      - family-names: Bar
+        given-names: Yarin
+      - family-names: Prinster
+        given-names: Drew
+      - family-names: Romano
+        given-names: Yaniv
+    title: "Testing For Distribution Shifts with Conditional Conformal Test Martingales"
+    year: 2026
+    doi: "10.48550/arXiv.2602.13848"
+    url: "https://arxiv.org/abs/2602.13848"

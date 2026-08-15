@@ -5,17 +5,13 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "repro" / "src"))
-sys.path.insert(0, str(ROOT / "upstream"))
+sys.path.insert(0, str(ROOT / "repro"))
 
 from cctm_core import dkw_band, normal_trial, run_conditional_ctm, run_standard_ctm
-from cond_ctm import CondCTM
-from conformal_test import ConformalTest
-from utils import empirical_cdf
+from reference_ctm import CondCTM, ConformalTest, compute_dkw_band, empirical_cdf
 
 
 def test_dkw_band_matches_pinned_source():
-    from utils import compute_dkw_band
-
     assert dkw_band(2_000, 0.1) == compute_dkw_band(2_000, 0.1)
 
 

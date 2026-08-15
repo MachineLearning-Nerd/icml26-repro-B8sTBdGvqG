@@ -16,7 +16,7 @@ The fixed run command for every experiment node is:
 uv sync --frozen && bash scripts/run_reproduction.sh
 ```
 
-The successful remote run was `7e9019e0-e75e-44ab-805d-5fe4dbf06d3f` on Hugging Face `cpu-upgrade`, CPU only, branch `orx/release-prep-with-claim-6-blocked-record`, commit `9d56f3e05e10e5f0cd57b6bd8bfef419d909612a`.
+The successful historical remote run was `7e9019e0-e75e-44ab-805d-5fe4dbf06d3f` on Hugging Face `cpu-upgrade`, CPU only, original branch `orx/release-prep-with-claim-6-blocked-record` (renamed to `release/claim-6-blocked`), commit `9d56f3e05e10e5f0cd57b6bd8bfef419d909612a`.
 
 The code path is intentionally small: synthetic checks use `repro/run_full_synthetic.py` and `repro/verify_full_synthetic.py`; Claim 2 uses a finite counterexample runner plus independent checker; Claim 3 uses a symbolic proof certificate plus independent checker; Claim 6 uses release/data audits, source-figure digitization, stall recording, and a falsification route.
 

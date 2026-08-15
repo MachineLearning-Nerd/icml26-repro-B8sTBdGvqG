@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "paper": {
+    "title": "Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+    "arxiv": "2602.13848",
+    "arxiv_version": "v2",
+    "openreview": "B8sTBdGvqG",
+    "authors": [
+      "Shalev Shaer",
+      "Yarin Bar",
+      "Drew Prinster",
+      "Yaniv Romano"
+    ]
+  },
+  "repository": {
+    "original_name": "icml26-repro-B8sTBdGvqG",
+    "final_name": "icml26-conditional-conformal-test-martingales",
+    "owner": "MachineLearning-Nerd",
+    "official_source_commit": "a9feb795d9fa98cc1d0c075f8f08a5c510c7a844"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "status": "VERIFIED_SCOPED",
+      "scope": "Full released synthetic shift suites and fixed-versus-growing-reference mechanism control; ImageNet-C excluded.",
+      "producer": "code/repro/run_full_synthetic.py",
+      "evidence": [
+        "evidence/synthetic/full_synthetic_summary.json",
+        "evidence/synthetic/independent_verification.json"
+      ],
+      "independent_check": "code/repro/verify_full_synthetic.py"
+    },
+    {
+      "id": "C2",
+      "status": "FALSIFIED_AS_WRITTEN",
+      "scope": "Theorem 3.1 universal any-null-distribution statement.",
+      "producer": "code/repro/run_claim2_counterexample.py",
+      "evidence": [
+        "evidence/claim_2/prior_run_raw_results.json",
+        "evidence/claim_2/prior_run_trajectory.csv",
+        "evidence/claim_2/prior_run_negative_controls.json"
+      ],
+      "independent_check": "code/repro/independent_check_claim2.py"
+    },
+    {
+      "id": "C3",
+      "status": "VERIFIED_PROOF_AUDIT",
+      "scope": "Corrected audit of Theorem 3.3 power-one and stopping-time-order proof obligations.",
+      "producer": "code/repro/verify_claim3_proof.py",
+      "evidence": [
+        "evidence/claim_3/proof_certificate.json",
+        "evidence/claim_3/verifier_output.json"
+      ],
+      "independent_check": "code/repro/independent_check_claim3.py"
+    },
+    {
+      "id": "C4",
+      "status": "VERIFIED_SCOPED",
+      "scope": "Synthetic evidence that the DKW correction suppresses fixed-reference estimation artifacts.",
+      "producer": "code/repro/run_full_synthetic.py",
+      "evidence": [
+        "evidence/synthetic/full_synthetic_summary.json",
+        "evidence/synthetic/independent_verification.json"
+      ],
+      "independent_check": "code/repro/verify_full_synthetic.py"
+    },
+    {
+      "id": "C5",
+      "status": "VERIFIED_SCOPED",
+      "scope": "Released synthetic immediate, delayed, and gradual shift suites with null controls.",
+      "producer": "code/repro/run_full_synthetic.py",
+      "evidence": [
+        "evidence/synthetic/full_synthetic_summary.json",
+        "evidence/synthetic/independent_verification.json"
+      ],
+      "independent_check": "code/repro/verify_full_synthetic.py"
+    },
+    {
+      "id": "C6",
+      "status": "BLOCKED",
+      "scope": "Full ImageNet-C Figure 4 protocol: 15 corruptions, severity 5, 37,500-step streams, 10 realizations, and specified reference sizes.",
+      "producer": "code/repro/audit_claim6_release.py and the four Claim 6 route producers",
+      "evidence": [
+        "evidence/claim_6/release_audit.json",
+        "evidence/claim_6/route2_figure_audit.json",
+        "evidence/claim_6/route3_full_reconstruction_stall.json",
+        "evidence/claim_6/route4_falsification_attempt.json",
+        "evidence/claim_6/final_blocked_verifier_output.json"
+      ],
+      "independent_check": "code/repro/verify_claim6_blocked_routes.py"
+    }
+  ],
+  "non_claims": [
+    "No complete ImageNet-C reproduction is claimed.",
+    "Historical judge scores and projections are provenance, not a current score.",
+    "No author endorsement is claimed.",
+    "Finite simulations are not presented as proofs of universal or asymptotic theorems."
+  ]
+}

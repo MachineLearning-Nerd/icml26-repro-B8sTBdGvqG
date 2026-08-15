@@ -1,6 +1,8 @@
 .venv/
 upstream/
 .trackio/
+.serve.log
+*.log
 __pycache__/
 .pytest_cache/
 *.py[cod]

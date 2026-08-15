@@ -1,7 +1,7 @@
 [project]
-name = "cctm-reproduction"
+name = "icml26-conditional-conformal-test-martingales"
 version = "0.1.0"
-description = "Claim-by-claim reproduction of conditional conformal test martingales"
+description = "Scoped ICML 2026 audit of conditional conformal test martingales"
 requires-python = "==3.12.*"
 dependencies = [
   "datasets==4.0.0",

@@ -1,6 +1,6 @@
 # Current verification package — CCTM reproduction
 
-This is the current evaluator entrypoint for the July 26, 2026 release candidate. It supersedes the earlier two-claim logbook pages while keeping those historical pages reachable.
+This is the historical evaluator entrypoint for the July 26, 2026 release candidate. The repository-level `README.md`, `STATUS.md`, and `CLAIM_EVIDENCE.md` are the current scoped audit surface; this page remains reachable as publication provenance.
 
 Previous live judged score: `6/12` at HF revision `14b47abfde98661247d9397ef36bb3a45198d2fb`.
 
@@ -18,7 +18,7 @@ Remote cumulative run used for this package:
 
 - Experiment: `3229d43a-6cb7-46dc-8e70-1973369abaf1`
 - Run: `7e9019e0-e75e-44ab-805d-5fe4dbf06d3f`
-- Branch: `orx/release-prep-with-claim-6-blocked-record`
+- Historical branch: `orx/release-prep-with-claim-6-blocked-record` (renamed in the final repository to `release/claim-6-blocked`)
 - Git SHA: `9d56f3e05e10e5f0cd57b6bd8bfef419d909612a`
 - Backend/flavor: Hugging Face `cpu-upgrade`, CPU only, image `ghcr.io/astral-sh/uv:python3.12-bookworm-slim`
 - CPU allocation reported by the run: 64 logical CPUs; expected useful cores: 4 for synthetic/theorem checks, 1 for Claim 6 audit routes

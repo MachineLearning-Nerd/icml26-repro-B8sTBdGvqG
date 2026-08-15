@@ -1,61 +1,109 @@
-# OpenResearch reproduction — Testing For Distribution Shifts with Conditional Conformal Test Martingales
+# ICML 2026 reproduction — Conditional Conformal Test Martingales
 
-[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG/blob/main/notebooks/cctm_reproduction_summary.py)
+This repository is an independent, claim-by-claim audit of [Testing For Distribution Shifts with Conditional Conformal Test Martingales](https://arxiv.org/abs/2602.13848). It preserves the original reproduction package and adds a clear evidence ledger, branch map, source manifest, citation, and reproducibility gate.
 
-This repository mirrors the July 26, 2026 evaluator-visible evidence package published to the existing Hugging Face Space: https://huggingface.co/spaces/DineshAI/B8sTBdGvqG.
+The repository was formerly named `icml26-repro-B8sTBdGvqG`. The final public name is `icml26-conditional-conformal-test-martingales`.
 
-Previous live judged score: `6/12`. Current published HF revision: `96f4ca15d8223fb2e273c633b8771fbee2f8047f`. Conservative projected score after judge re-evaluation: `10/12`; best-supported possible score: `10/12` forecast, not a live judge result. Claim 6 remains `BLOCKED`, so this update does not claim a perfect score.
+## Paper
 
-## Current claim assessments
+- **Title:** *Testing For Distribution Shifts with Conditional Conformal Test Martingales*
+- **Authors:** Shalev Shaer, Yarin Bar, Drew Prinster, and Yaniv Romano
+- **arXiv:** [2602.13848](https://arxiv.org/abs/2602.13848) (v2, 12 June 2026)
+- **OpenReview:** [B8sTBdGvqG](https://openreview.net/forum?id=B8sTBdGvqG)
+- **Official implementation:** [`shaersh/cctm`](https://github.com/shaersh/cctm), pinned at commit `a9feb795d9fa98cc1d0c075f8f08a5c510c7a844`
 
-| Claim | Paper statement tested | Assessment | Paper number / target | Observed evidence | Compute |
-|---|---|---|---|---|---|
-| 1 | Fixed-reference conditional CTM avoids contamination | VERIFIED | conditional faster than growing-reference CTM | median crossing 21 vs 31; fixed ECDF 0.7434 vs growing p-value 0.5551 | HF `cpu-upgrade`, CPU only |
-| 2 | Theorem 3.1 anytime type-I guarantee over any null distribution | FALSIFIED | false-reject probability <= 0.05 with outer probability >= 0.9 | Dirac null gives inner false rejection 1.0 and outer good-reference probability 0.0 | HF `cpu-upgrade`, CPU only |
-| 3 | Theorem 3.3 asymptotic power and stopping-time order | VERIFIED | power one and stated Big-O bound | 11 proof obligations, 952 rational checks, 25 burn-in checks pass | HF `cpu-upgrade`, CPU only |
-| 4 | Eq. 8 DKW correction removes spurious wealth gains | VERIFIED | no spurious estimation-gain rejection | no-DKW control 88% vs corrected 0% at zero calibration | HF `cpu-upgrade`, CPU only |
-| 5 | Synthetic immediate/delayed/gradual shifts detected faster with type-I control | VERIFIED | conditional faster across synthetic suites | all 9 bias/delay/drift settings faster; null grid max 1% | HF `cpu-upgrade`, CPU only |
-| 6 | ImageNet-C Figure 4 performance improves with reference size | BLOCKED | full ImageNet-C benchmark required | required arrays absent; digitization non-claiming; full reconstruction stalled | HF `cpu-upgrade`, CPU only |
+The paper proposes a conditional conformal test martingale that keeps a fixed reference set, accounts for finite-reference ECDF error with a confidence band, and uses online betting to detect distribution shifts. The paper claims finite-sample anytime validity, asymptotic power, bounded expected detection delay, and empirical gains on synthetic and ImageNet-C streams.
 
-## Reports and notebooks
+## Current audit verdict
 
-- [Illustrated reproduction report](reports/cctm-current-verification/report.md)
-- [Marimo summary notebook](notebooks/cctm_reproduction_summary.py)
-- [Mirrored Space entrypoint](pages/index.md)
-- [Current verification matrix](pages/current-verification-2026-07-26/page.md)
-- [Release gates](pages/release-gates-2026-07-26/page.md)
+These are scoped reproduction judgments, not an author endorsement or a new official ICML score.
 
-Run the notebook locally with:
+| Claim | Paper statement | Verdict | How the verdict is produced |
+|---|---|---|---|
+| C1 | Fixed-reference conditional CTM detects shifts faster than the growing-reference CTM | `VERIFIED_SCOPED` | Full released synthetic suites, source-equivalence tests, and independent re-aggregation |
+| C2 | Theorem 3.1 gives an anytime type-I guarantee for **any** null distribution | `FALSIFIED_AS_WRITTEN` | A Dirac-null counterexample satisfies the printed assumptions; the displayed and released processes cross the rejection threshold |
+| C3 | Theorem 3.3 gives asymptotic power one and the stated stopping-time order | `VERIFIED_PROOF_AUDIT` | Corrected symbolic certificate, 11 obligations, 952 rational checks, 25 burn-in checks, and an independent checker |
+| C4 | The DKW correction prevents spurious wealth gains | `VERIFIED_SCOPED` | Corrected versus no-DKW synthetic control; the no-DKW control rejects 88% at zero calibration points while the corrected method rejects 0% |
+| C5 | Conditional CTM improves synthetic shift power/delay while controlling false alarms | `VERIFIED_SCOPED` | All nine released bias, delay, and drift settings, plus the 11-point null grid and independent re-aggregation |
+| C6 | ImageNet-C Figure 4 improves with reference size and for Blur/Weather groups | `BLOCKED` | Required entropy arrays are absent; source-figure digitization is non-claiming; full reconstruction stalled; no valid full-scope counterexample was found |
+
+The finite synthetic C2 checks remain useful empirical evidence, but they do not prove Theorem 3.1. The C2 theorem verdict is based on the explicit assumption-matched counterexample. Likewise, C3 audits a corrected proof path; it is not a proof-assistant formalization of every theorem used by the paper.
+
+The historical evaluator-visible package reported a live score of `6/12` at Hugging Face revision `14b47abfde98661247d9397ef36bb3a45198d2fb`. A later package was published at revision `96f4ca15d8223fb2e273c633b8771fbee2f8047f` with a `10/12` projected score. That projection is historical forecast data, not a current judge result and not claimed here as a new score.
+
+## How claims are produced
+
+The complete claim-to-evidence ledger is in [`CLAIM_EVIDENCE.md`](CLAIM_EVIDENCE.md). The short production paths are:
+
+| Claim | Producer | Stored evidence | Independent check |
+|---|---|---|---|
+| C1, C4, C5 | `code/repro/run_full_synthetic.py` | `evidence/synthetic/full_synthetic_summary.json` | `code/repro/verify_full_synthetic.py` and `evidence/synthetic/independent_verification.json` |
+| C2 | `code/repro/run_claim2_counterexample.py` | `evidence/claim_2/prior_run_raw_results.json`, trajectory, and controls | `verify_claim2_counterexample.py`, `independent_check_claim2.py`, and frozen verifier |
+| C3 | `code/repro/verify_claim3_proof.py` | `evidence/claim_3/proof_certificate.json` | `independent_check_claim3.py`, contract verifier, and frozen verifier |
+| C6 | release audit, figure digitizer, stall recorder, and falsification route | `evidence/claim_6/*` | four route checkers and `final_blocked_verifier_output.json` |
+
+All claim judgments are fail-closed: a missing input or unresolved assumption does not become a positive result. See [`evidence/claim_summary.json`](evidence/claim_summary.json) for the machine-readable summary.
+
+## Repository and branches
+
+The original `orx/*` branches are renamed to purpose-based names while their distinct evidence histories are preserved. Every branch is explained in [`BRANCH_AUDIT.md`](BRANCH_AUDIT.md), including its original name, original tip, purpose, and final name. The final package uses `main` plus evidence, experiment, audit, proof, fix, baseline, counterexample, and release branches.
+
+The pinned source, paper-version, dataset, environment, and historical-run identifiers are listed in [`SOURCE_MANIFEST.md`](SOURCE_MANIFEST.md).
+
+## Reproduce the focused audit
+
+The repository contains the already-generated evidence artifacts. A fresh checkout can run the lightweight checks without downloading ImageNet:
 
 ```bash
-uv run marimo edit notebooks/cctm_reproduction_summary.py
-uv run marimo run notebooks/cctm_reproduction_summary.py
+cd code
+uv sync --frozen
+uv run pytest -q
+mkdir -p /tmp/cctm-claim2
+uv run python repro/run_claim2_counterexample.py \
+  --output-dir /tmp/cctm-claim2
+uv run python repro/verify_claim2_counterexample.py \
+  --artifact-dir /tmp/cctm-claim2
+uv run python repro/independent_check_claim2.py \
+  --artifact-dir /tmp/cctm-claim2
+mkdir -p /tmp/cctm-claim3
+uv run python repro/verify_claim3_proof.py \
+  --artifact-dir /tmp/cctm-claim3
+uv run python repro/independent_check_claim3.py \
+  --artifact-dir /tmp/cctm-claim3
+uv run python repro/verify_claim6_blocked_routes.py \
+  --artifact-dir ../evidence/claim_6
+cd ..
+python3 code/repro/verify_final.py
 ```
 
-## Experiment log
+The historical full command is `cd code && bash scripts/run_reproduction.sh`. It reproduces the synthetic and theorem evidence, then records Claim 6 as blocked because the official ImageNet-C entropy arrays are not available. It should not be read as a promise that the missing benchmark can run locally.
 
-| Branch/experiment | Purpose or change | Exact run command | Assessment/outcome | Compute |
-|---|---|---|---|---|
-| `main` | Publication surface; not launched as formal experiment in this release step | Not run as an experiment (publication surface) | Mirrors published Space text paths and reader-facing report/notebook | local git only |
-| [`orx/release-prep-with-claim-6-blocked-record`](https://github.com/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG/tree/orx/release-prep-with-claim-6-blocked-record) / `3229d43a-6cb7-46dc-8e70-1973369abaf1` | Cumulative verifier run for Claims 1–6, with Claim 6 blocked record | `uv sync --frozen && bash scripts/run_reproduction.sh` | Run `7e9019e0-e75e-44ab-805d-5fe4dbf06d3f` done; baseline VERIFIED, Claim 2 FALSIFIED, Claim 3 VERIFIED, Claim 6 BLOCKED | Hugging Face `cpu-upgrade`, CPU only, 64 logical CPUs reported |
+## Layout
 
----
+- `code/repro/` — clean-room producers, checkers, tests, and the final gate.
+- `evidence/` — durable JSON/CSV outputs and claim contracts.
+- `pages/` and `reports/` — reader-facing logbook and historical report.
+- `BRANCH_AUDIT.md` — branch purpose and rename map.
+- `CLAIM_EVIDENCE.md` — claim-to-evidence production paths and limitations.
+- `SOURCE_MANIFEST.md` — pinned sources, versions, hashes, and provenance.
+- `CITATION.cff` — software and paper citation metadata.
 
----
-title: CCTM Reproduction Logbook
-emoji: 🎯
-colorFrom: blue
-colorTo: indigo
-sdk: static
-pinned: false
-tags:
-- icml2026-repro
-- paper-B8sTBdGvqG
----
+## Citation
 
-# CCTM reproduction logbook
+```bibtex
+@article{shaer2026conditional_conformal_test_martingales,
+  title   = {Testing For Distribution Shifts with Conditional Conformal Test Martingales},
+  author  = {Shaer, Shalev and Bar, Yarin and Prinster, Drew and Romano, Yaniv},
+  journal = {arXiv preprint arXiv:2602.13848},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2602.13848}
+}
+```
 
-Current evaluator entrypoint: [pages/index.md](pages/index.md).
+## Thank you
 
-This July 26, 2026 candidate preserves the previously judged Space files and adds visible evidence for Claim 2 (FALSIFIED), Claim 3 (VERIFIED), and Claim 6 (BLOCKED). Forecast only: conservative projected score `10/12`; live score changes only after the official judge evaluates this revision.
+Thank you to Shalev Shaer, Yarin Bar, Drew Prinster, and Yaniv Romano for sharing the paper, implementation, and enough experimental detail to make a careful independent audit possible. This repository is grateful for that release and records both its reproducible evidence and its unresolved data limitations.
 
+## Attribution
+
+The maintained repository and approved cleanup commits are attributed to `MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>`. The paper authors retain authorship of the paper and its scientific claims.

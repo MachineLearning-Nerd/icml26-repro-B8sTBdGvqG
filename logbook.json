@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "title": "Repro - Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+  "title": "ICML 2026 audit - Conditional Conformal Test Martingales",
   "emoji": "\ud83c\udfaf",
   "space_id": "DineshAI/B8sTBdGvqG",
   "paper": {
@@ -11,10 +11,10 @@
     "icml2026-repro",
     "paper-B8sTBdGvqG"
   ],
-  "updated_at": "2026-07-26T02:05:00+00:00",
+  "updated_at": "2026-08-15T00:00:00+00:00",
   "root": {
     "slug": "index",
-    "title": "Repro - Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+    "title": "ICML 2026 audit - Conditional Conformal Test Martingales",
     "file": "pages/index.md",
     "children": [
       {
@@ -92,5 +92,5 @@
     ]
   },
   "agent_view_tokens": 2343,
-  "revision": "20260726-claim2-claim3-claim6-release-candidate"
+  "revision": "20260815-scoped-audit-and-branch-cleanup"
 }
