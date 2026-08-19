@@ -87,6 +87,8 @@ The historical full command is `cd code && bash scripts/run_reproduction.sh`. It
 - `CLAIM_EVIDENCE.md` — claim-to-evidence production paths and limitations.
 - `SOURCE_MANIFEST.md` — pinned sources, versions, hashes, and provenance.
 - `CITATION.cff` — software and paper citation metadata.
+- `REPORT.md`, `claims.json`, and `reproduction_verdicts.json` — final scoped verdicts and machine-readable claim status.
+- `ENVIRONMENT.md` and `AUTHOR_THANK_YOU.md` — verification boundary and author acknowledgment.
 
 ## Citation
 

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-conditional-conformal-test-martingales",
+  "former_repository": "MachineLearning-Nerd/icml26-repro-B8sTBdGvqG",
+  "paper": {
+    "title": "Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+    "authors": [
+      "Shalev Shaer",
+      "Yarin Bar",
+      "Drew Prinster",
+      "Yaniv Romano"
+    ],
+    "arxiv": "2602.13848v2",
+    "openreview": "B8sTBdGvqG"
+  },
+  "overall_verdict": "MIXED_RESULTS_SCOPED_AUDIT",
+  "publication_allowed": false,
+  "claims": [
+    {"id": "C1", "status": "VERIFIED_SCOPED", "scope": "Released synthetic shift suites and fixed-reference mechanism control; ImageNet-C excluded.", "producer": "code/repro/run_full_synthetic.py", "evidence": ["evidence/synthetic/full_synthetic_summary.json", "evidence/synthetic/independent_verification.json"]},
+    {"id": "C2", "status": "FALSIFIED_AS_WRITTEN", "scope": "Theorem 3.1 universal any-null-distribution statement; an assumption-matched Dirac-null witness crosses the rejection threshold.", "producer": "code/repro/run_claim2_counterexample.py", "evidence": ["evidence/claim_2/prior_run_raw_results.json", "evidence/claim_2/prior_run_trajectory.csv"]},
+    {"id": "C3", "status": "VERIFIED_PROOF_AUDIT", "scope": "Corrected Theorem 3.3 proof obligations with 952 rational checks and independent validation; not proof-assistant formalization.", "producer": "code/repro/verify_claim3_proof.py", "evidence": ["evidence/claim_3/proof_certificate.json", "evidence/claim_3/verifier_output.json"]},
+    {"id": "C4", "status": "VERIFIED_SCOPED", "scope": "Corrected DKW versus no-DKW synthetic control.", "producer": "code/repro/run_full_synthetic.py", "evidence": ["evidence/synthetic/full_synthetic_summary.json", "evidence/synthetic/independent_verification.json"]},
+    {"id": "C5", "status": "VERIFIED_SCOPED", "scope": "Released synthetic immediate, delayed, and gradual shift suites with null controls.", "producer": "code/repro/run_full_synthetic.py", "evidence": ["evidence/synthetic/full_synthetic_summary.json", "evidence/synthetic/independent_verification.json"]},
+    {"id": "C6", "status": "BLOCKED", "scope": "Full ImageNet-C Figure 4 protocol is blocked by missing entropy arrays and raw tables.", "producer": "code/repro/audit_claim6_release.py and Claim 6 route producers", "evidence": ["evidence/claim_6/release_audit.json", "evidence/claim_6/final_blocked_verifier_output.json"]}
+  ],
+  "non_claims": [
+    "No complete ImageNet-C reproduction is claimed.",
+    "Historical judge scores and projections are provenance, not a current score.",
+    "Finite simulations are not presented as proofs of universal or asymptotic theorems.",
+    "No author endorsement is claimed."
+  ]
+}

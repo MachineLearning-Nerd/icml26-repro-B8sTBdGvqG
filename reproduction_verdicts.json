@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-conditional-conformal-test-martingales",
+  "paper": {
+    "title": "Testing For Distribution Shifts with Conditional Conformal Test Martingales",
+    "arxiv": "2602.13848v2",
+    "openreview": "B8sTBdGvqG"
+  },
+  "overall_verdict": "MIXED_RESULTS_SCOPED_AUDIT",
+  "publication_allowed": false,
+  "claims": [
+    {"id": "C1", "status": "VERIFIED_SCOPED"},
+    {"id": "C2", "status": "FALSIFIED_AS_WRITTEN"},
+    {"id": "C3", "status": "VERIFIED_PROOF_AUDIT"},
+    {"id": "C4", "status": "VERIFIED_SCOPED"},
+    {"id": "C5", "status": "VERIFIED_SCOPED"},
+    {"id": "C6", "status": "BLOCKED"}
+  ],
+  "limitations": [
+    "ImageNet-C inputs and raw Figure 4 tables are unavailable.",
+    "The C3 proof audit is not a proof-assistant formalization.",
+    "Finite evidence does not replace universal or asymptotic proofs."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "openreview_id": "B8sTBdGvqG",
+  "phase": "published_and_verified",
+  "next_action": "select_next_icml_repository",
+  "last_checkpoint": "2026-08-19T13:30:00+05:30",
+  "last_known_git_commit": "e233c9025f846864489ab9e6d7854e56e198c147",
+  "active_run_ids": [],
+  "completed_milestones": [
+    "paper_and_source_pins",
+    "claim_ledger_and_branch_normalization",
+    "synthetic_and_theorem_audit",
+    "claim_6_blocked_data_audit",
+    "standardized_dossier_published",
+    "machine_readable_reproduction_verdicts",
+    "dossier_manifest_and_final_verifier",
+    "fresh_clone_verification"
+  ],
+  "failed_attempts": [],
+  "publication_allowed": false,
+  "overall_verdict": "MIXED_RESULTS_SCOPED_AUDIT",
+  "compute_policy": "Use committed evidence and lightweight checks; do not rerun ImageNet-C or paid/remote compute during final dossier verification.",
+  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-conditional-conformal-test-martingales",
+  "former_github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-B8sTBdGvqG",
+  "official_source": "shaersh/cctm@a9feb795d9fa98cc1d0c075f8f08a5c510c7a844",
+  "branch_count": 31,
+  "claim_statuses": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "FALSIFIED_AS_WRITTEN",
+    "C3": "VERIFIED_PROOF_AUDIT",
+    "C4": "VERIFIED_SCOPED",
+    "C5": "VERIFIED_SCOPED",
+    "C6": "BLOCKED"
+  },
+  "dossier_files": [
+    "CLAIM_EVIDENCE.md",
+    "SOURCE_MANIFEST.md",
+    "ENVIRONMENT.md",
+    "REPORT.md",
+    "BRANCH_AUDIT.md",
+    "CITATION.cff",
+    "AUTHOR_THANK_YOU.md",
+    "claims.json",
+    "reproduction_verdicts.json",
+    "EVIDENCE_MANIFEST.json",
+    "verify_final.py"
+  ]
+}

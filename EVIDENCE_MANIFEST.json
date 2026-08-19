@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "scope": "CCTM paper identity, claim ledger, source/branch audit, durable evidence summaries, and final verification surface",
+  "files": {
+    "README.md": "40ec2ecd88ad559ee00472cc6c19ff2b05c6a3c5b4f2a1c91b9f72165b2ff5d",
+    "STATUS.md": "ffa3d74b8035f441bcfe1ae9a718276a04a0f61df378d6da296419fbf73ee833",
+    "SOURCE_MANIFEST.md": "378daec5df98f68c9d47be49d7ca8e9f5ec05f95f49905e97c35a62290a5e876",
+    "CLAIM_EVIDENCE.md": "49616d7b0118cb036c9d198d058be3fd6747a64c6f39987f6e1e297dc7bc312a",
+    "ENVIRONMENT.md": "3f800e22dffe83c119f85b8d2d2f9c0174d2f432e51823a5ae88809b2f9116cf",
+    "REPORT.md": "f39e7203e2715b669a7548ce9b9b4253965314b70fdce1b26f5dfc36f79bf18f",
+    "BRANCH_AUDIT.md": "2a72f3944c6ebcd179e3da54c9dec65400d221133e0a3c9d2e4d8ee67517f3d0",
+    "CITATION.cff": "e9c9c3cf6978f43ef17e1a46400d8e278f907936a5ee5deaac89b197472f71d5",
+    "AUTHOR_THANK_YOU.md": "6dc607ead5f0fcdbc2319d808f2dd3295a316a028efdd34082e24b0f717f8883",
+    "claims.json": "92d5f68bf3e5354783d0af3f0b88e0b9b7ae87c096982511afde5fab647536dd",
+    "reproduction_verdicts.json": "2e58f034f36a98452d2cdbd47f80fb3bc14512d91ba548db889576d915da5345",
+    "verify_final.py": "d8c6c3ffaee531a08a1ebd237f0e380fecb46652149c099246d8571500981ec6",
+    "evidence/claim_summary.json": "551a0e6c056dbc9b0e4dd5d42d519febe4443469f225ebb2f4f285cafbc9e",
+    "evidence/synthetic/independent_verification.json": "e112de7267e95102dceb144e164990345efc79059e8d846e77e2d20e17845275",
+    "evidence/claim_2/prior_run_verifier_output.json": "1732f98d79abad3a34c2895231f44dd8c3132be180a7c405ce8aa8befdb25277",
+    "evidence/claim_3/verifier_output.json": "7d97752cfac039e0748bd883bf1ef191b2a8cebc9b2f4b3de8d370d28130e30f",
+    "evidence/claim_6/final_blocked_verifier_output.json": "bb513f41fd62ea6fdb9431dbf80eb57fe24c374fd380064cbca5df74d0d5034b",
+    "outputs/full_synthetic_summary.json": "1849a4755a18bfd994f3daf19507692c45ac770582f6ab433e6e3c7f5ba881f4",
+    "outputs/independent_verification.json": "e112de7267e95102dceb144e164990345efc79059e8d846e77e2d20e17845275",
+    "release_manifest.sha256": "c3fac5d1bda1d42c38617e1900db7349711512a7ad7e4c4f238bba9c69b32736",
+    "upload_allowlist.txt": "d94c8ba9008327886becbf059bf557a786f707f5daaaddf82dbccead6ab81ac5",
+    "code/repro/verify_final.py": "9a59901cbb56c0b6dc422145e347eeaeef74150b696363802a25285e5ec38f03"
+  }
+}
