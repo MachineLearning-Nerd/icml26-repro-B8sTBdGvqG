@@ -156,7 +156,7 @@ def verify_artifacts() -> None:
     independent = current_json("outputs/independent_verification.json")
     require(
         all(value is True for value in independent.get("checks", {}).values())
-        and independent.get("source_artifact_is_full") is True,
+        and independent.get("checks", {}).get("source_artifact_is_full") is True,
         "synthetic independent verification changed",
     )
     blocked = current_json("evidence/claim_6/final_blocked_verifier_output.json")
